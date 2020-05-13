@@ -1,0 +1,240 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Live My Life
+subtitle: 淡而无味也是一种味道
+author: Mr.Vincent
+language: zh-CN
+timezone:
+
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://v-vincen.life      # Note: don't forget to modify the CNAME file to your url
+# url: https://wvincen.gitee.io/      # Note: don't forget to modify the CNAME file to your url
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+
+#Custom Setting Start
+
+# Site settings
+SEOTitle: JavaDev | 一如Java深似海
+email: 601521821@qq.com
+description: "It's an IT blog..."
+keyword: "Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"
+header-img: img/header_img/newhome_bg.jpg
+
+
+# Favicon settings
+favicon: img/avatar/favicon.jpg
+
+
+# Signature Setup
+signature: true #show signature
+signature-img: img/signature/vincent-white.png
+
+
+# Wave settings
+wave: true #show wave
+wave-img: img/wave/wave-light.png
+
+
+# SNS Settings
+# RSS: true
+twitter_username:   V_Vincen_
+github_username: V-Vincen
+# facebook_username:  yourAccount
+# zhihu_username: WVincen
+# linkedin_username:  yourAccount
+weibo_username: WVincen
+
+
+# Build Settings
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+# Sidebar Settings
+sidebar: true                       # whether or not using Sidebar.
+sidebar-about-description: "I don't know where I am going ,but I am on my way..."
+sidebar-avatar: img/avatar/vincnet.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+widgets:
+- visitor                           # busuanzi: https://busuanzi.ibruce.info/
+- featured-tags
+- short-about
+- recent-posts
+- friends-blog
+- archive
+- category
+
+# widget behavior
+## Archive
+archive_type: 'monthly'
+show_count: true
+
+## Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0             # A tag will be featured if the size of it is more than this condition value
+
+## Friends
+friends: [
+    {
+        title: "Teacher Ye",
+        href: "http://teacherye.com/"
+    },{
+        title: "Ray",
+        href: "https://tianhualiang2019.github.io/"
+    },{
+        title: "GoldenaArcher",
+        href: "https://goldenaarcher.github.io/"
+    },{
+        title: "鸢羽_颖",
+        href: "https://www.cnblogs.com/guoyinghome/"
+    },{
+        title: "十八岁的夏天",
+        href: "https://www.cnblogs.com/xiaofengwang/"
+      }
+]
+
+
+# Comment Settings
+
+# Disqus settings
+# disqus_username: your-disqus-ID
+
+# valine settings
+# valine:
+#   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
+#   API_Key: YcwQKKzaMzulSIVJAVMpA78F
+#   placeholder: Say something ...
+#   guest_info: nick,mail,link #评论者相关属性
+#   avatar: monsterid  #头像设置
+#   pageSize: 10
+#   language: zh-cn
+
+valine_deserts:
+  API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
+  API_Key: YcwQKKzaMzulSIVJAVMpA78F
+  placeholder: Say something ...
+  guest_info: nick,mail,link #评论者相关属性
+  avatar: monsterid  #头像设置
+  pageSize: 10
+  language: zh-cn
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 49e5faf2bfd6c26c1eb20bad10ef10c7
+
+# Google Analytics
+ga_track_id: UA-164526897-1  # Format: UA-xxxxxx-xx
+
+#sitemap
+sitemap:
+  path: sitemap.xml
+
+
+#Custom Setting End
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+auto_spacing: true
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+home_posts_tag: true # show posts tags
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: archives
+
+archive_generator:
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+# article top
+top: true
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+
+## Search：https://go.kieran.top/post/45/
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+search:
+  enable: true
+  path: search.json
+  zipPath: search.zip
+  versionPath: searchVersion.txt
+  field: post
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+
+# WordCount settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+# Docs: https://www.npmjs.com/package/hexo-wordcount
+wordcount:
+  enable: true
+
+
+## Themes: https://hexo.io/themes/
+theme: livemylife
+
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  # repository: https://github.com/V-Vincen/V-Vincen.github.io.git
+  repository: https://gitee.com/V_Vincen/V_Vincen.git
+  branch: master
