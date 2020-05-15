@@ -9,7 +9,6 @@ author: Mr.Vincent
 language: zh-CN
 timezone:
 
-
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://v-vincen.life      # Note: don't forget to modify the CNAME file to your url
@@ -31,7 +30,6 @@ header-img: img/header_img/newhome_bg.jpg
 
 # Favicon settings
 favicon: img/avatar/favicon.jpg
-
 
 # Signature Setup
 signature: true #show signature
@@ -75,9 +73,11 @@ widgets:
 archive_type: 'monthly'
 show_count: true
 
+
 ## Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 0             # A tag will be featured if the size of it is more than this condition value
+
 
 ## Friends
 friends: [
@@ -202,6 +202,11 @@ markdown:
     quotes: '“”‘’'
 # article top
 top: true
+
+
+# viewer config
+viewer: true
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
