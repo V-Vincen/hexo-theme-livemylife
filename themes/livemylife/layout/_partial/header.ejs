@@ -1,35 +1,36 @@
 <!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
-        <% if (is_home()) { %>
-            background-image: url('<%= config.root + config["header-img"] %>')
-            /*config*/
-        <%} else if (is_post()){%>
-            background-image: url('<%= page["header-img"] %>')
-            /*post*/
-        <%} else {%>
-            background-image: url('<%= config.root + page["header-img"] %>')
-            /*page*/
-        <%} %>
+  header.intro-header {
+    <% if (is_home()) { %>
+      background-image: url('<%= config.root + config["header-img"] %>');
+      /*config*/
+    <% } else if (is_post()) { %>
+      background-image: url('<%= page["header-img"] %>');
+      /*post*/
+    <% } else { %>
+      background-image: url('<%= config.root + page["header-img"] %>');
+      /*page*/
+    <% } %>
+  }
+
+  <% if (config.signature) { %>
+    #signature {
+      background-image: url('<%= config.root + config["signature-img"] %>');
     }
-    <% if (config.signature) {%>
-      #signature{
-          background-image: url('<%= config.root + config["signature-img"] %>');
-      }
-    <%}%>
+  <% } %>
 </style>
 
-<header class="intro-header" >
-    <!-- Signature -->
-    <div id="signature">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <% if (is_post()) { %>
-                    <div class="post-heading">
-                        <div class="tags">
-                          <!--
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <% if (is_post()) { %>
+          <div class="post-heading">
+            <div class="tags">
+              <!--
                           <% if (config.top) { %>
                             <% if (page.top) { %>
                               <div class="top-tag">
@@ -38,52 +39,74 @@
                               <% } %>
                            <% } %>
                            -->
-                            <% page.tags.forEach(function(tag){ %>
-                              <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                            <% }) %>
-                        </div>
-                        <h1><%= page.title %></h1>
-                        <h2 class="subheading"><%= page.subtitle || "" %></h2>
-                        <span class="meta">
-                            Posted by <%- page.author || config.author %> on
-                            <%= page.date.format(config.date_format) %>
-                        </span>
-
-                        <% if(config.wordcount.enable) { %>
-                          <div class="blank_box"></div>
-                            <span class="meta">
-                                Estimated Reading Time <span class="post-count"><%= min2read(page.content) %></span> Minutes
-                            </span>
-                            <div class="blank_box"></div>
-                            <span class="meta">
-                                Words <span class="post-count"><%= wordcount(page.content) %></span> In Total
-                            </span>
-                            <div class="blank_box"></div>
-                            <!-- 不蒜子统计 start -->
-                            <span class="meta">
-                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-                            </span>
-                            <!-- 不蒜子统计 end -->
-                        <% } %>
-
-                    </div>
-                <% } else { %>
-                    <div class="site-heading">
-                        <h1><%= page.title || config.title %></h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"><%= page.description || config.subtitle || "" %></span>
-                    </div>
-                <% } %>
-                </div>
+              <% page.tags.forEach(function(tag){ %>
+              <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+              <% }) %>
             </div>
-        </div>
-    </div>
+            <h1><%= page.title %></h1>
+            <h2 class="subheading"><%= page.subtitle || "" %></h2>
+            <span class="meta">
+              Posted by <%- page.author || config.author %> on
+              <%= page.date.format(config.date_format) %>
+            </span>
 
-    <% if (config.wave) { %>
-    <!-- waveWrapper -->
-    <div class="waveWrapper">
-        <div class="wave wave_before" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
-        <div class="wave wave_after" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
+            <% if(config.wordcount.enable) { %>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count"><%= min2read(page.content) %></span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count"><%= wordcount(page.content) %></span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            <% } %>
+
+          </div>
+          <% } else { %>
+          <div class="site-heading">
+            <h1><%= page.title || config.title %></h1>
+            <!--<hr class="small">-->
+            <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+          </div>
+          <% } %>
+        </div>
+      </div>
     </div>
-    <% } %>
+  </div>
+
+  <!-- waveWrapper start -->
+  <% if (config.wave) { %>
+  <div class="waveWrapper">
+    <div class="wave wave_before" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
+    <div class="wave wave_after" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
+  </div>
+  <% } %>
+  <!-- waveWrapper end -->
+
+
+  <!-- wave start -->
+  <% if (config.waveoverlay) { %>
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+      </g>
+    </svg>
+  </div>
+  <% } %>
+  <!-- wave end -->
+
+
 </header>

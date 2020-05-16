@@ -28,6 +28,8 @@ layout: layout
 
         <hr>
         <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- viewer start -->
         <% if(config['viewer']) { %>
         <script src="<%- config.root %>js/viewer/viewer.min.js"></script>
         <script>
@@ -47,6 +49,8 @@ layout: layout
             });
         </script>
         <% } %>
+        <!-- viewer end -->
+
 
         <!-- disqus comment start -->
         <% if(config['disqus_username']) { %>

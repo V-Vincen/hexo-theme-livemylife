@@ -27,7 +27,6 @@
     "hexo-server": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
     "leancloud-storage": "^4.5.3",
-    "valine": "^1.4.4",
-    "viewerjs": "^1.5.0"
+    "valine": "^1.4.4"
   }
 }

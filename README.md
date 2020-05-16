@@ -108,9 +108,22 @@ signature-img: img/signature/<your-signature>
 
 ### Wave Settings
 ```yml
+# WaveOverLay settings
+waveoverlay: true
+```
+Example:
+
+![waveoverlay](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/waveoverlay.png)
+
+**either or**
+```yml
 waveWrapper: true
 wave-img: img/wave/wave-light.png
 ```
+Example:
+
+![wave](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/wave.png)
+
 
 ### SNS Settings
 If you don’t want to display it, you can delete it directly.

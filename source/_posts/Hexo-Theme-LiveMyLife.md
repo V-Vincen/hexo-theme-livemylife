@@ -20,7 +20,7 @@ categories:
 ## [View Live LiveMyLife Blog →](https://v-vincen.life/)
 
 
-![LiveMyLife Desktop](livemylife-desktop.png)
+![livemylife-desktop](livemylife-desktop.png)
 
 ## Quick Start
 
@@ -120,9 +120,22 @@ signature-img: img/signature/<your-signature>
 
 ### Wave Settings
 ```yml
+# WaveOverLay settings
+waveoverlay: true
+```
+Example:
+
+![waveoverlay](waveoverlay.png)
+
+**either or**
+```yml
 waveWrapper: true
 wave-img: img/wave/wave-light.png
 ```
+Example:
+
+![wave](wave.png)
+
 
 ### SNS Settings
 If you don’t want to display it, you can delete it directly.

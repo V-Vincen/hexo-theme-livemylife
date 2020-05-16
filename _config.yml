@@ -37,8 +37,11 @@ signature-img: img/signature/vincent-white.png
 
 
 # Wave settings
-wave: true #show wave
-wave-img: img/wave/wave-light.png
+# wave: true #show wave
+# wave-img: img/wave/wave-light.png
+
+# WaveOverLay settings
+waveoverlay: true
 
 
 # SNS Settings
