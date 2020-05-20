@@ -45,19 +45,16 @@
     <link rel="stylesheet" href="<%= config.root %>css/beantech.min.css" />
 
     <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="<%= config.root %>css/highlight" />
+    <%- css('css/highlight') %>
 
-    <link rel="stylesheet" href="<%= config.root %>css/widget" />
-
-    <link rel="stylesheet" href="<%= config.root %>css/rocket" />
-
-    <link rel="stylesheet" href="<%= config.root %>css/signature" />
-
+    <%- css('css/widget') %>
+    <%- css('css/rocket') %>
+    <%- css('css/signature') %>
     <%- css('css/catalog') %>
 
     <% if (config.wave) { %>
       <!-- wave start -->
-      <%- css('css/wave.css') %>
+      <link rel="stylesheet" href="<%= config.root %>css/wave.css" />
       <!-- wave end -->
     <% } %>
 
@@ -81,7 +78,7 @@
 
     <% if (config.themecolor) { %>
       <!-- ThemeColor start -->
-      <link rel="stylesheet" href="<%= config.root %>css/themecolor.css" />
+      <link rel="stylesheet" href="<%= config.root %>css/viewer/viewer.min.css" />
       <!-- ThemeColor end -->
     <% } %>
 
