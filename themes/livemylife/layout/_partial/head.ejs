@@ -39,14 +39,20 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js" ></script>
     <!-- Bootstrap Core CSS -->
-    <%- css('css/bootstrap.min.css') %>
+    <link rel="stylesheet" href="<%= config.root %>css/bootstrap.min.css" />
+
     <!-- Custom CSS -->
-    <%- css('css/beantech.min.css') %>
+    <link rel="stylesheet" href="<%= config.root %>css/beantech.min.css" />
+
     <!-- Pygments Highlight CSS -->
-    <%- css('css/highlight') %>
-    <%- css('css/widget') %>
-    <%- css('css/rocket') %>
-    <%- css('css/signature') %>
+    <link rel="stylesheet" href="<%= config.root %>css/highlight" />
+
+    <link rel="stylesheet" href="<%= config.root %>css/widget" />
+
+    <link rel="stylesheet" href="<%= config.root %>css/rocket" />
+
+    <link rel="stylesheet" href="<%= config.root %>css/signature" />
+
     <%- css('css/catalog') %>
 
     <% if (config.wave) { %>
@@ -57,25 +63,25 @@
 
     <% if (config.waveoverlay) { %>
       <!-- waveoverlay start -->
-      <%- css('css/waveoverlay.css') %>
+      <link rel="stylesheet" href="<%= config.root %>css/waveoverlay.css" />
       <!-- waveoverlay end -->
     <% } %>
 
     <% if (config.top) { %>
       <!-- top start (article top hot config) -->
-      <%- css('css/top.css') %>
+      <link rel="stylesheet" href="<%= config.root %>css/top.css" />
       <!-- top end -->
     <% } %>
 
     <% if (config.viewer) { %>
       <!-- viewer start (Picture preview) -->
-      <%- css('css/viewer/viewer.min.css') %>
+      <link rel="stylesheet" href="<%= config.root %>css/viewer/viewer.min.css" />
       <!-- viewer end  -->
     <% } %>
 
     <% if (config.themecolor) { %>
       <!-- ThemeColor start -->
-      <%- css('css/themecolor.css') %>
+      <link rel="stylesheet" href="<%= config.root %>css/themecolor.css" />
       <!-- ThemeColor end -->
     <% } %>
 

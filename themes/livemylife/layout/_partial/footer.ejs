@@ -103,18 +103,19 @@
 
 
 <!-- Bootstrap Core JavaScript -->
-<%- js('js/bootstrap.min.js') %>
+<script type="text/javascript" src="<%- config.root %>js/bootstrap.min.js"></script>
+
 
 <!-- Custom Theme JavaScript -->
-<%- js('js/hux-blog.min.js') %>
+<script type="text/javascript" src="<%- config.root %>js/hux-blog.min.js"></script>
 
 <!-- Busuanzi JavaScript -->
-<%- js('js/busuanzi.pure.mini.js') %>
+<script type="text/javascript" src="<%- config.root %>js/busuanzi.pure.mini.js"></script>
 
 
 <% if (config.themecolor) { %>
   <!-- ThemeColor start -->
-  <%- js('js/themecolor.js') %>
+  <script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
   <!-- ThemeColor end -->
 <% } %>
 
