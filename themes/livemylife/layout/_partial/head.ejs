@@ -2,8 +2,8 @@
     <!-- Google Analytics -->
     <% if (config.ga_track_id) { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= config.ga_track_id %>"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= config.ga_track_id %>" ></script>
+    <script type="text/javascript">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -14,7 +14,7 @@
 
     <!-- Baidu Tongji -->
     <% if (config.ba_track_id) { %>
-    <script>
+    <script type="text/javascript">
         // Originial
         var _hmt = _hmt || [];
         (function() {
@@ -25,31 +25,59 @@
         })();
     </script>
     <% } %>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="google-site-verification" content="WTy2wKrCxKbnIIwrqbOaQ7APLQJKTtY64aAAwQ-tUYE" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<%= config.description %>">
-    <meta name="keyword"  content="<%= config.keyword %>">
-    <link rel="shortcut icon" href="<%= config.root %><%= config.favicon %>">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="<%= config.description %>" />
+    <meta name="keyword"  content="<%= config.keyword %>" />
+    <link rel="shortcut icon" href="<%= config.root %><%= config.favicon %>" />
 
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js" ></script>
     <!-- Bootstrap Core CSS -->
     <%- css('css/bootstrap.min.css') %>
     <!-- Custom CSS -->
-    <%- css('css/beantech.min.css')%>
+    <%- css('css/beantech.min.css') %>
     <!-- Pygments Highlight CSS -->
     <%- css('css/highlight') %>
-    <%- css('css/widget')%>
-    <%- css('css/rocket')%>
-    <%- css('css/signature')%>
-    <%- css('css/toc')%>
-    <%- css('css/waveWrapper.css')%>
-    <%- css('css/waveOverLay.css')%>
-    <%- css('css/top.css')%>
-    <%- css('css/viewer/viewer.min.css')%>
+    <%- css('css/widget') %>
+    <%- css('css/rocket') %>
+    <%- css('css/signature') %>
+    <%- css('css/catalog') %>
 
+    <% if (config.wave) { %>
+      <!-- wave start -->
+      <%- css('css/wave.css') %>
+      <!-- wave end -->
+    <% } %>
+
+    <% if (config.waveoverlay) { %>
+      <!-- waveoverlay start -->
+      <%- css('css/waveoverlay.css') %>
+      <!-- waveoverlay end -->
+    <% } %>
+
+    <% if (config.top) { %>
+      <!-- top start (article top hot config) -->
+      <%- css('css/top.css') %>
+      <!-- top end -->
+    <% } %>
+
+    <% if (config.viewer) { %>
+      <!-- viewer start (Picture preview) -->
+      <%- css('css/viewer/viewer.min.css') %>
+      <!-- viewer end  -->
+    <% } %>
+
+    <% if (config.themecolor) { %>
+      <!-- ThemeColor start -->
+      <%- css('css/themecolor.css') %>
+      <!-- ThemeColor end -->
+    <% } %>
 
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->

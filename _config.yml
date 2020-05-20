@@ -207,9 +207,11 @@ markdown:
 top: true
 
 
-# viewer config
+# Viewer config
 viewer: true
 
+# ThemeColor config
+themecolor: true
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -219,8 +221,8 @@ viewer: true
 search:
   enable: true
   path: search.json
-  zipPath: search.zip
-  versionPath: searchVersion.txt
+  zipPath: search.flv
+  versionPath: searchVersion.json
   field: post
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
@@ -245,4 +247,5 @@ deploy:
   type: git
   # repository: https://github.com/V-Vincen/V-Vincen.github.io.git
   repository: https://gitee.com/V_Vincen/V_Vincen.git
+  # repository: git@gitee.com:V_Vincen/V_Vincen.git
   branch: master

@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head tag -->
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <%- partial('_partial/head') %>
 
 <!-- hack iOS CSS :active style -->
-<body ontouchstart="">
+
+<body ontouchstart="" class="body--home">
+	<!-- ThemeColor  -->
+	<% if (config.themecolor) { %>
+		<%- partial('_partial/themecolor') %>
+	<% } %>
+
+	<!-- Navigation (contains search)-->
 	<%- partial('_partial/nav',{cache: true}) %>
 
+	<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、wave、waveoverlay) -->
 	<%- partial('_partial/header',{cache: true}) %>
 
-    <!-- Main Content -->
-    <%- body %>
+	<!-- Main Content (Post contains
+	Pager、
+	disqus-comment、valine-comment、valine_deserts-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+	<%- body %>
 
-    <!-- Footer -->
-    <%- partial('_partial/footer') %>
+	<!-- Footer (contains ThemeColor、viewer) -->
+	<%- partial('_partial/footer') %>
 
-		<% if (config.search.enable) { %>
-    	<%- partial('_partial/search') %>
-    <% } %>
+	<!-- Search -->
+	<% if (config.search.enable) { %>
+	<%- partial('_partial/search') %>
+	<% } %>
 
 
-	<a id="rocket" href="#top" class=""></a>
-	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-  <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<a id="rocket" href="#top" class=""></a>
+<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+<script type="text/javascript" src="/js/catalog.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <!-- <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" /> -->
 <!-- Migrate from head to bottom, no longer block render and still work -->

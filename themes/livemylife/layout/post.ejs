@@ -27,43 +27,36 @@ layout: layout
         </ul>
 
         <hr>
-        <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <!-- viewer start -->
-        <% if(config['viewer']) { %>
-        <script src="<%- config.root %>js/viewer/viewer.min.js"></script>
-        <script>
-          let imgs = document.getElementsByTagName("img");
-          let img = Array.from(imgs);
-          let options = {
-            navbar: 2,
-            title: 2,
-            toolbar: 2,
-            fullscreen: false
-          };
-          img.filter(item => item.getAttribute("alt"))
-            .forEach(item => {
-              let id = item.getAttribute("alt");
-              item.setAttribute("id", id);
-              const viewer = new Viewer(document.getElementById(id), options);
-            });
-        </script>
-        <% } %>
-        <!-- viewer end -->
-
 
         <!-- disqus comment start -->
         <% if(config['disqus_username']) { %>
         <div class="comment">
           <div id="disqus_thread" class="disqus-thread"></div>
         </div>
+
+        <!-- disqus embedded js code start (one page only need to embed once) -->
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES * * */
+          var disqus_shortname = "<%= config['disqus_username'] %>";
+          var disqus_identifier = "<%= page.permalink %>";
+          var disqus_url = "<%= page.permalink %>";
+
+          (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <!-- disqus embedded js code start end -->
         <% } %>
         <!-- disqus comment end -->
 
         <!-- valine comment start -->
-        <!--
         <% if(config['valine']) { %>
-        <script src="<%- config.root %>js/valine.min.js"></script>
+        <%- js('js/valine.min.js') %>
+
         <div id="vcomments" style="margin-top: 25px;"></div>
         <script>
           var appId = '<%= config.valine.API_ID %>';
@@ -88,13 +81,14 @@ layout: layout
           });
         </script>
         <% } %>
-        -->
         <!-- valine comment end -->
 
         <!-- valine_deserts comment start -->
         <% if(config['valine_deserts']) { %>
-        <script src="<%- config.root %>js/av-min.js"></script>
-        <script src="<%- config.root %>js/Valine-en.min.js"></script>
+        <%- js('js/jquery.min.js') %>
+        <!-- <script type="text/javascript" src="//cd njs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="<%- config.root %>js/valine_deserts/av-min.js"></script>
+        <script src="<%- config.root %>js/valine_deserts/valine_deserts.min.js"></script>
 
         <div id="disqus_thread" class="valine"></div>
         <script>
@@ -107,7 +101,7 @@ layout: layout
               av: AV,
               el: comment_el,
               lang: 'en',
-              emoticon_url: '/css/valine_images',
+              emoticon_url: '/css/valine_deserts_images',
               emoticon_list: ["吐.png", "喷血.png", "狂汗.png", "不说话.png", "汗.png", "坐等.png", "献花.png", "不高兴.png", "中刀.png", "害羞.png", "皱眉.png", "小眼睛.png", "中指.png", "尴尬.png", "瞅你.png", "想一想.png", "中枪.png", "得意.png", "肿包.png", "扇耳光.png", "亲亲.png",
                 "惊喜.png", "脸红.png", "无所谓.png", "便便.png", "愤怒.png", "蜡烛.png", "献黄瓜.png", "内伤.png", "投降.png", "观察.png", "看不见.png", "击掌.png", "抠鼻.png", "邪恶.png", "看热闹.png", "口水.png", "抽烟.png", "锁眉.png", "装大款.png", "吐舌.png", "无奈.png", "长草.png",
                 "赞一个.png", "呲牙.png", "无语.png", "阴暗.png", "不出所料.png", "咽气.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png", "黑线.png", "喜极而泣.png", "喷水.png", "深思.png", "鼓掌.png", "暗地观察.png"
@@ -121,11 +115,10 @@ layout: layout
         <hr>
         <% } %>
         <!-- valine_deserts comment end -->
-
       </div>
 
-      <!-- Tabe of Content -->
-      <%- partial('_partial/toc') %>
+      <!-- Catalog: Tabe of Content -->
+      <%- partial('_partial/catalog') %>
 
       <!-- Sidebar Container -->
       <div class="
@@ -162,29 +155,12 @@ layout: layout
   </div>
 </article>
 
-<% if(config['disqus_username']) { %>
-<!-- disqus embedded js code start (one page only need to embed once) -->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES * * */
-  var disqus_shortname = "<%= config['disqus_username'] %>";
-  var disqus_identifier = "<%= page.permalink %>";
-  var disqus_url = "<%= page.permalink %>";
-
-  (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<!-- disqus embedded js code start end -->
-<% } %>
-
 
 <% if(config['anchorjs']) { %>
 <!-- async load function -->
-<script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
   function async (u, c) {
     var d = document,
       t = 'script',
@@ -197,10 +173,10 @@ layout: layout
       }, false);
     }
     s.parentNode.insertBefore(o, s);
-  }
+  };
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
   async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
     anchors.options = {
       visible: 'hover',
@@ -208,8 +184,9 @@ layout: layout
       icon: 'ℬ'
     };
     anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-  })
+  });
 </script>
+
 <style>
   /* place left on bigger screen */
   @media all and (min-width: 800px) {

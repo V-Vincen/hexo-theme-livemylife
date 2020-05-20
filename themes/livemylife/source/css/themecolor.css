@@ -1,0 +1,64 @@
+:root {}
+
+.body--home {
+  /* body */
+  --background-color: #fff;
+  /* toggle-button */
+  --toggle-border-color: #0085a1;
+  --toggle-color: #1f1f1f;
+  /* post-title、post-subtitle、post-content */
+  --post-content-color-hover: #0085a1;
+}
+
+.body--dark {
+  /* body */
+  --background-color: rgb(34, 38, 49);
+  /* toggle-button */
+  --toggle-border-color: #e01258;
+  --toggle-color: #fff;
+  /* post-title、post-subtitle、post-content */
+  --post-title-subtitle-color: rgba(255, 255, 255, .8);
+  --post-content-color-hover: white;
+  /* waveoverlay */
+  --gentle-wave1: rgba(34, 38, 49, 0.6);
+  --gentle-wave2: rgba(34, 38, 49, 0.4);
+  --gentle-wave3: rgba(34, 38, 49, 0.2);
+  --gentle-wave: rgba(34, 38, 49, 0.8);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.post-title, .post-subtitle {
+  /* 高亮文字颜色 rgb(197, 198, 203) */
+  color: var(--post-title-subtitle-color);
+}
+
+.post-preview>a>.post-title:hover .post-subtitle:hover .post-content-preview:hover {
+  /* hover文字，线条颜色 rgb(199, 200, 206) */
+  color: var(--post-content-color-hover);
+}
+
+.post-preview>a>.post-title:hover,
+.post-preview>a>.post-subtitle:hover,
+.post-preview>a>.post-content-preview:hover {
+  /* hover文字，线条颜色 rgb(199, 200, 206) */
+  color: var(--post-content-color-hover);
+}
+
+.toggle {
+  position: fixed;
+  bottom: 1.875rem;
+  right: 1.5rem;
+  background-color: var(--background-color);
+  color: var(--toggle-color);
+  border: 1px dotted var(--toggle-border-color);
+  border-radius: 3px;
+  font-size: .75019rem;
+  font-weight: 700;
+  margin-left: auto;
+  padding: .25rem .5rem;
+  z-index: 1;
+  cursor: pointer;
+}

@@ -4,7 +4,10 @@
   <div class="short-about">
 
     <% if(config['sidebar-avatar']) { %>
-    <img id="avatar_pic" src="<%= config['root'] %><%= config['sidebar-avatar'] %>" />
+    <img id="avatar_pic" src="<%= config['root'] %><%= config['sidebar-avatar'] %>" alt="avatar_pic"
+    style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);"/>
     <% } %>
 
     <% if(config['sidebar-about-description']) { %>

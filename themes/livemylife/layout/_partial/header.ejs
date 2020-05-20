@@ -2,20 +2,17 @@
 <!-- Post Header -->
 <style type="text/css">
   header.intro-header {
-    <% if (is_home()) { %>
+    <% if (is_home()) { %> /*config*/
       background-image: url('<%= config.root + config["header-img"] %>');
-      /*config*/
-    <% } else if (is_post()) { %>
+    <% } else if (is_post()) { %> /*post*/
       background-image: url('<%= page["header-img"] %>');
-      /*post*/
-    <% } else { %>
+    <% } else { %> /*page*/
       background-image: url('<%= config.root + page["header-img"] %>');
-      /*page*/
     <% } %>
   }
 
   <% if (config.signature) { %>
-    #signature {
+    #signature {/*signature*/
       background-image: url('<%= config.root + config["signature-img"] %>');
     }
   <% } %>
@@ -30,15 +27,6 @@
           <% if (is_post()) { %>
           <div class="post-heading">
             <div class="tags">
-              <!--
-                          <% if (config.top) { %>
-                            <% if (page.top) { %>
-                              <div class="top-tag">
-                                <div class="iconfont icon-hot animated infinite heartBeat"></div>
-                              </div>
-                              <% } %>
-                           <% } %>
-                           -->
               <% page.tags.forEach(function(tag){ %>
               <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
               <% }) %>
@@ -50,7 +38,9 @@
               <%= page.date.format(config.date_format) %>
             </span>
 
+
             <% if(config.wordcount.enable) { %>
+            <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
               Estimated Reading Time <span class="post-count"><%= min2read(page.content) %></span> Minutes
@@ -65,7 +55,9 @@
               Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
             </span>
             <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
             <% } %>
+
 
           </div>
           <% } else { %>
@@ -80,33 +72,33 @@
     </div>
   </div>
 
-  <!-- waveWrapper start -->
+
   <% if (config.wave) { %>
+  <!-- wave start -->
   <div class="waveWrapper">
     <div class="wave wave_before" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
     <div class="wave wave_after" style="background-image: url('<%= config.root + config["wave-img"] %>')"></div>
   </div>
+  <!-- wave end -->
   <% } %>
-  <!-- waveWrapper end -->
 
 
-  <!-- wave start -->
   <% if (config.waveoverlay) { %>
+  <!-- waveoverlay start -->
   <div class="preview-overlay">
     <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
       <defs>
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
       </defs>
       <g class="preview-parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"></use>
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
       </g>
     </svg>
   </div>
+  <!-- waveoverlay end -->
   <% } %>
-  <!-- wave end -->
-
 
 </header>

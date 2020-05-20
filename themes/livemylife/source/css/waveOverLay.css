@@ -1,9 +1,17 @@
+/* Waveoverlay */
+:root{
+  --gentle-wave1: rgba(255, 255, 255, 0.7);
+  --gentle-wave2: rgba(255, 255, 255, 0.5);
+  --gentle-wave3: rgba(255, 255, 255, 0.3);
+  --gentle-wave: #fff;
+}
+
 .preview-overlay {
     width: 100%;
     position: relative;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 2;
 }
 
 .preview-overlay .preview-waves {

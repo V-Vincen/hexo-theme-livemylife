@@ -25,7 +25,6 @@
           </li>
           <% } %>
 
-
           <% if (config.github_username) { %>
           <li>
             <a target="_blank" href="https://github.com/<%= config.github_username %>">
@@ -89,7 +88,7 @@
             <i class="fa fa-heart"></i>
           </span>
           re-Ported by <a href="https://v-vincen.life/">Live My Life</a> |
-          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=WVincen&repo=WVincen.github.io&type=star&count=true">
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true">
           </iframe>
         </p>
       </div>
@@ -98,7 +97,10 @@
 </footer>
 
 <!-- jQuery -->
-<%- js('js/jquery.min.js') %>
+<!-- <%- js('js/jquery.min.js') %> -->
+
+<script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <%- js('js/bootstrap.min.js') %>
@@ -109,8 +111,25 @@
 <!-- Busuanzi JavaScript -->
 <%- js('js/busuanzi.pure.mini.js') %>
 
-<!-- async load function -->
+
+<% if (config.themecolor) { %>
+  <!-- ThemeColor start -->
+  <%- js('js/themecolor.js') %>
+  <!-- ThemeColor end -->
+<% } %>
+
+
+<% if(config['viewer']) { %>
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  <script type="text/javascript" src="<%- config.root %>js/viewer/viewer.min.js"></script>
+  <script type="text/javascript" src="<%- config.root %>js/viewer/pic-viewer.js"></script>
+  <!-- viewer end -->
+<% } %>
+
+
 <script>
+  // async load function
   function async (u, c) {
     var d = document,
       t = 'script',
@@ -124,7 +143,14 @@
     }
     s.parentNode.insertBefore(o, s);
   }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function() {
+    var $nav = document.querySelector("nav");
+    if ($nav) FastClick.attach($nav);
+  })
 </script>
+
 
 <!--
      Because of the native support for backtick-style fenced code blocks
@@ -158,11 +184,3 @@
         })
     }
 </script> -->
-
-<!--fastClick.js -->
-<script>
-  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function() {
-    var $nav = document.querySelector("nav");
-    if ($nav) FastClick.attach($nav);
-  })
-</script>

@@ -118,9 +118,9 @@
   </div>
 </div>
 
-<script src="<%- config.root %>js/ziploader.js"></script>
-
 <% if (config.search.enable) { %>
+  <script src="<%- config.root %>js/ziploader.js"></script>
+
 <script type="text/javascript">
   // Popup Window;
   var isfetched = false;
@@ -410,7 +410,7 @@
     }
   });
   $('.local-search-popup').click(function() {
-    $('.popup-btn-close').click()
+    $('.popup-btn-close').click();
   });
 </script>
 <% } %>
