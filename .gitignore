@@ -35,6 +35,9 @@ source/img/*.jpg
 source/img/*.png
 !source/img/404_bg3.jpg
 !source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png
+!source/_posts/Hexo-Theme-LiveMyLife/wave.png
+!source/_posts/Hexo-Theme-LiveMyLife/waveoverlay.png
+
 !source/img/livemylife-desktop.png
 !source/img/livemylife/lml_bg.jpg
 !source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png
