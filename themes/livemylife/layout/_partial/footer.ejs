@@ -14,16 +14,6 @@
             </a>
           </li>
           <% } %>
-          <% if (config.twitter_username) { %>
-          <li>
-            <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <% } %>
 
           <% if (config.github_username) { %>
           <li>
@@ -36,12 +26,23 @@
           </li>
           <% } %>
 
-          <% if (config.weibo_username) { %>
+          <% if (config.twitter_username) { %>
           <li>
-            <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+            <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <% } %>
+
+          <% if (config.instagram_username) { %>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/<%= config.instagram_username %>">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>
@@ -68,6 +69,7 @@
             </a>
           </li>
           <% } %>
+
           <% if (config.zhihu_username) { %>
           <li>
             <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
@@ -79,6 +81,17 @@
           </li>
           <% } %>
 
+          <% if (config.weibo_username) { %>
+          <li>
+            <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <% } %>
+          
         </ul>
         <p class="copyright text-muted">
           Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %>
@@ -96,11 +109,12 @@
   </div>
 </footer>
 
+<a id="rocket" href="#top" class=""></a>
+
 <!-- jQuery -->
 <!-- <%- js('js/jquery.min.js') %> -->
 
 <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 
 <!-- Bootstrap Core JavaScript -->
 <script type="text/javascript" src="<%- config.root %>js/bootstrap.min.js"></script>
@@ -111,6 +125,19 @@
 
 <!-- Busuanzi JavaScript -->
 <script type="text/javascript" src="<%- config.root %>js/busuanzi.pure.mini.js"></script>
+
+<!-- totop(rocket)  -->
+<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+
+<!-- catalog  -->
+<script type="text/javascript" src="/js/catalog.js?v=1.0.0" async=""></script>
+
+
+<% if (config.scroll) { %>
+  <!-- Scroll start -->
+  <script type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
+  <!-- Scroll end -->
+<% } %>
 
 
 <% if (config.themecolor) { %>

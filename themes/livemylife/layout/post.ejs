@@ -55,7 +55,7 @@ layout: layout
 
         <!-- valine comment start -->
         <% if(config['valine']) { %>
-        <%- js('js/valine.min.js') %>
+        <script src="<%- config.root %>js/jquery.min.js"></script>
 
         <div id="vcomments" style="margin-top: 25px;"></div>
         <script>
@@ -66,7 +66,7 @@ layout: layout
           guest = guest.split(',').filter(function(item) {
             return GUEST.indexOf(item) > -1;
           });
-          var visitor = <%= config.valine.visitor %> == true ? true : false;
+          var visitor = < %= config.valine.visitor % > == true ? true : false;
           new Valine({
             el: '#vcomments',
             appId: appId,
@@ -75,9 +75,9 @@ layout: layout
             avatar: '<%= config.valine.avatar %>',
             meta: guest,
             placeholder: '<%= config.valine.placeholder %>',
-            pageSize: <%= config.valine.pageSize %> || 10,
+            pageSize: < %= config.valine.pageSize % > || 10,
             lang: '<%= config.valine.language %>' || 'zh-cn',
-            visitor: <%= config.valine.visitor %>
+            visitor: < %= config.valine.visitor % >
           });
         </script>
         <% } %>
@@ -85,7 +85,8 @@ layout: layout
 
         <!-- valine_deserts comment start -->
         <% if(config['valine_deserts']) { %>
-        <%- js('js/jquery.min.js') %>
+        <script src="<%- config.root %>js/jquery.min.js"></script>
+
         <!-- <script type="text/javascript" src="//cd njs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
         <script src="<%- config.root %>js/valine_deserts/av-min.js"></script>
         <script src="<%- config.root %>js/valine_deserts/valine_deserts.min.js"></script>
@@ -94,13 +95,15 @@ layout: layout
         <script>
           var appId = '<%= config.valine_deserts.API_ID %>';
           var appKey = '<%= config.valine_deserts.API_Key %>';
+          var language = '<%= config.valine_deserts.language %>';
+          var placeholder = '<%= config.valine_deserts.placeholder %>';
 
           comment_el = '#disqus_thread';
           if ($(comment_el).length > 0) {
             new Valine({
               av: AV,
               el: comment_el,
-              lang: 'en',
+              lang: language,
               emoticon_url: '/css/valine_deserts_images',
               emoticon_list: ["吐.png", "喷血.png", "狂汗.png", "不说话.png", "汗.png", "坐等.png", "献花.png", "不高兴.png", "中刀.png", "害羞.png", "皱眉.png", "小眼睛.png", "中指.png", "尴尬.png", "瞅你.png", "想一想.png", "中枪.png", "得意.png", "肿包.png", "扇耳光.png", "亲亲.png",
                 "惊喜.png", "脸红.png", "无所谓.png", "便便.png", "愤怒.png", "蜡烛.png", "献黄瓜.png", "内伤.png", "投降.png", "观察.png", "看不见.png", "击掌.png", "抠鼻.png", "邪恶.png", "看热闹.png", "口水.png", "抽烟.png", "锁眉.png", "装大款.png", "吐舌.png", "无奈.png", "长草.png",
@@ -108,7 +111,7 @@ layout: layout
               ],
               app_id: appId,
               app_key: appKey,
-              placeholder: 'Write a Comment'
+              placeholder: placeholder
             });
           }
         </script>
@@ -181,12 +184,12 @@ layout: layout
     anchors.options = {
       visible: 'hover',
       placement: 'left',
-      icon: 'ℬ'
+      // icon: 'ℬ'
+      icon: '❡'
     };
     anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
   });
 </script>
-
 <style>
   /* place left on bigger screen */
   @media all and (min-width: 800px) {

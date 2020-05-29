@@ -9,13 +9,15 @@ author: Mr.Vincent
 language: zh-CN
 timezone:
 
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://v-vincen.life      # Note: don't forget to modify the CNAME file to your url
-# url: https://wvincen.gitee.io/      # Note: don't forget to modify the CNAME file to your url
+url: https://v-vincen.life    # Note: don't forget to modify the CNAME file to your url
+# url: https://v_vincen.gitee.io/    # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
 
 
 #Custom Setting Start
@@ -26,7 +28,7 @@ email: 601521821@qq.com
 description: "It's an IT blog..."
 keyword: "Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"
 header-img: img/header_img/newhome_bg.jpg
-
+archives-img: img/header_img/archive_bg2.jpg
 
 # Favicon settings
 favicon: img/avatar/favicon.jpg
@@ -37,8 +39,7 @@ signature-img: img/signature/vincent-white.png
 
 
 # Wave settings
-# wave: true #show wave
-# wave-img: img/wave/wave-light.png
+# wave: true    #show wave
 
 # WaveOverLay settings
 waveoverlay: true
@@ -46,24 +47,21 @@ waveoverlay: true
 
 # SNS Settings
 # RSS: true
-twitter_username:   V_Vincen_
 github_username: V-Vincen
+twitter_username: V_Vincen_
+instagram_username: v_vincen_
 # facebook_username:  yourAccount
-# zhihu_username: WVincen
 # linkedin_username:  yourAccount
+# zhihu_username: WVincen
 weibo_username: WVincen
 
 
-# Build Settings
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
 # Sidebar Settings
-sidebar: true                       # whether or not using Sidebar.
+sidebar: true   # whether or not using Sidebar.
 sidebar-about-description: "I don't know where I am going ,but I am on my way..."
-sidebar-avatar: img/avatar/vincnet.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/avatar/vincnet.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
-- visitor                           # busuanzi: https://busuanzi.ibruce.info/
+- visitor   # busuanzi: https://busuanzi.ibruce.info/
 - featured-tags
 - short-about
 - recent-posts
@@ -76,10 +74,9 @@ widgets:
 archive_type: 'monthly'
 show_count: true
 
-
 ## Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 0             # A tag will be featured if the size of it is more than this condition value
+featured-tags: true   # whether or not using Feature-Tags
+featured-condition-size: 0    # A tag will be featured if the size of it is more than this condition value
 
 
 ## Friends
@@ -108,7 +105,7 @@ friends: [
 # Disqus settings
 # disqus_username: your-disqus-ID
 
-# valine settings
+# valine Settings
 # valine:
 #   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
 #   API_Key: YcwQKKzaMzulSIVJAVMpA78F
@@ -118,14 +115,15 @@ friends: [
 #   pageSize: 10
 #   language: zh-cn
 
+# valine_deserts Settings
+# Doc:https://deserts.io/diy-a-comment-system/
+# Doc:https://deserts.io/valine-admin-document/
 valine_deserts:
   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
   API_Key: YcwQKKzaMzulSIVJAVMpA78F
-  placeholder: Say something ...
-  guest_info: nick,mail,link #评论者相关属性
-  avatar: monsterid  #头像设置
+  placeholder: Write a Comment
   pageSize: 10
-  language: zh-cn
+  language: en
 
 
 # Analytics settings
@@ -133,14 +131,14 @@ valine_deserts:
 ba_track_id: 49e5faf2bfd6c26c1eb20bad10ef10c7
 
 # Google Analytics
-ga_track_id: UA-164526897-1  # Format: UA-xxxxxx-xx
+ga_track_id: UA-164526897-1   # Format: UA-xxxxxx-xx
 
 #sitemap
 sitemap:
   path: sitemap.xml
 
-
 #Custom Setting End
+
 
 # Directory
 source_dir: source
@@ -152,12 +150,13 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md    # File name of new posts
 default_layout: post
 auto_spacing: true
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+titlecase: false    # Transform title into titlecase
+external_link: true   # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -169,11 +168,13 @@ highlight:
   auto_detect: true
   tab_replace:
 
+
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
-home_posts_tag: true # show posts tags
+home_posts_tag: true    # show posts tags
+
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -181,6 +182,7 @@ home_posts_tag: true # show posts tags
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -193,6 +195,7 @@ archive_generator:
   monthly: true
   daily: false
 
+
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
@@ -203,9 +206,22 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
+
+
+# Build Settings
+anchorjs: true    # if you want to customize anchor. check out line:186 of `post.ejs`
+
 # article top
 top: true
 
+# WordCount Settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+# Docs: https://www.npmjs.com/package/hexo-wordcount
+wordcount: true
+
+
+# top scroll progress
+scroll: true
 
 # Viewer config
 viewer: true
@@ -217,7 +233,7 @@ themecolor: true
 ## Plugins: https://hexo.io/plugins/
 
 ## Search：https://go.kieran.top/post/45/
-# Dependencies: https://github.com/flashlab/hexo-generator-search
+# Dependencies: https://github.com/SuperKieran/hexo-generator-search-zip
 search:
   enable: true
   path: search.json
@@ -229,12 +245,6 @@ search:
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
-
-# WordCount settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-# Docs: https://www.npmjs.com/package/hexo-wordcount
-wordcount:
-  enable: true
 
 
 ## Themes: https://hexo.io/themes/

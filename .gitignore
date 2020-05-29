@@ -15,34 +15,30 @@ themes/landscape
 themes/Valine
 
 source/_posts/*/*
-!source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png
+!source/_posts/Hexo-Theme-LiveMyLife/*
 
 source/_posts/*.md
 !source/_posts/Hexo-Theme-LiveMyLife.md
 
 source/img/*/*
-!source/img/header_img/*
 !source/img/avatar/favicon.jpg
-!source/img/404_bg.jpg
+!source/img/avatar/vincnet.jpg
+!source/img/header_img/404_bg.jpg
+!source/img/header_img/categories_bg.jpg
+!source/img/header_img/newhome_bg.jpg
+!source/img/header_img/lml_bg.jpg
+!source/img/header_img/tag_bg.jpg
+!source/img/header_img/archive_bg.jpg
+!source/img/wave/*
+!source/img/signature/vincent-white.png
+!source/img/scenery/about_bg.jpg
 !source/img/scenery/about_bg2.jpg
 !source/img/scenery/about_bg4.jpg
-!source/img/signature/vincent-white.jpg
-!source/img/signature/vincent-black.jpg
-!source/img/wave/wave-dark.png
-!source/img/wave/wave-light.png
+!source/img/scenery/treat_me_to_coffee.png
 
-source/img/*.jpg
-source/img/*.png
-!source/img/404_bg3.jpg
-!source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png
-!source/_posts/Hexo-Theme-LiveMyLife/wave.png
-!source/_posts/Hexo-Theme-LiveMyLife/waveoverlay.png
 
-!source/img/livemylife-desktop.png
-!source/img/livemylife/lml_bg.jpg
-!source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png
-
-package-lock.json
+_config_snail.yml
 _config.yml.bak
 !source/CNAME
 source/LICENSE
+.gitignore
