@@ -408,6 +408,12 @@ hr {
   --post-container-a-color: #337ab7;
   --post-container-a-color-hover: #0085a1;
   --table-border-color: #eee;
+  /* tip */
+  --tip-color: rgba(51, 51, 51, 0.9);
+  /* share */
+  --share-background-color: #1d1f21;
+  --share-color: #f6f9fc;
+  --share-border: #eee;
 }
 
 .body--dark {
@@ -416,6 +422,12 @@ hr {
   --post-container-a-color: #b5154b;
   --post-container-a-color-hover: #e91e63;
   --table-border-color: rgba(255, 255, 255, 0.8);
+  /* tip */
+  --tip-color: #f6f9fc;
+  /* share */
+  --share-background-color: #f6f9fc;
+  --share-color: #1d1f21;
+  --share-border: rgb(34, 38, 49);
 }
 
 blockquote {
@@ -453,6 +465,29 @@ blockquote {
 
 a {
   color: var(--color-default);
+}
+
+/* tip */
+.tip {
+  color: var(--tip-color);
+}
+
+/* share */
+.social-share-ul>.social-share-li>a {
+  background-color: var(--share-background-color);
+}
+
+.social-share-ul li i {
+  color: var(--share-color);
+}
+
+.social-share-ul>.social-share-li>a:hover {
+  background-color: var(--common-color);
+}
+
+.social-share .icon-wechat .wechat-qrcode {
+  background-color: var(--background-color);
+  /* border: 1px solid var(--share-border); */
 }
 
 /* ==================================================== Post End =================================================== */

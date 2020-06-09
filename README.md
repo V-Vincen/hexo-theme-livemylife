@@ -297,6 +297,19 @@ wordcount: true
 scroll: true
 ```
 
+### Tip
+```yml
+tip:
+  enable: true
+  copyright: Say what you think...
+```
+
+### Social Share Post
+```yml
+#Docs:https://github.com/overtrue/share.js
+share: true
+```
+
 ### Viewer Config
 Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `sourcre/js/viewer/pic-viewer.js` to change it.
 ```yml

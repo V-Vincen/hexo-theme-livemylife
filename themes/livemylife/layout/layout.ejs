@@ -9,7 +9,7 @@
 <body ontouchstart="" class="body--home">
 	<!-- ThemeColor  -->
 	<% if (config.themecolor) { %>
-		<%- partial('_partial/themecolor') %>
+	<%- partial('_partial/themecolor') %>
 	<% } %>
 
 	<!-- Navigation (contains search)-->
@@ -20,7 +20,8 @@
 
 	<!-- Main Content (Post contains
 	Pager、
-	disqus-comment、valine-comment、valine_deserts-comment、
+	tip、
+	gitment、disqus-comment、valine-comment、valine_deserts-comment、
 	Catalog、
 	Sidebar、
 	Featured-Tags、
@@ -38,9 +39,9 @@
 	<%- partial('_partial/search') %>
 	<% } %>
 
-<!-- Image to hack wechat -->
-<!-- <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" /> -->
-<!-- Migrate from head to bottom, no longer block render and still work -->
+	<!-- Image to hack wechat -->
+	<!-- <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" /> -->
+	<!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
 

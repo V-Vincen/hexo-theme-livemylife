@@ -91,7 +91,7 @@
             </a>
           </li>
           <% } %>
-          
+
         </ul>
         <p class="copyright text-muted">
           Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %>
@@ -134,25 +134,25 @@
 
 
 <% if (config.scroll) { %>
-  <!-- Scroll start -->
-  <script type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
-  <!-- Scroll end -->
+<!-- Scroll start -->
+<script type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
+<!-- Scroll end -->
 <% } %>
 
 
 <% if (config.themecolor) { %>
-  <!-- ThemeColor start -->
-  <script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
-  <!-- ThemeColor end -->
+<!-- ThemeColor start -->
+<script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
+<!-- ThemeColor end -->
 <% } %>
 
 
 <% if(config['viewer']) { %>
-  <!-- viewer start -->
-  <!-- viewer start (Picture preview) -->
-  <script type="text/javascript" src="<%- config.root %>js/viewer/viewer.min.js"></script>
-  <script type="text/javascript" src="<%- config.root %>js/viewer/pic-viewer.js"></script>
-  <!-- viewer end -->
+<!-- viewer start -->
+<!-- viewer start (Picture preview) -->
+<script type="text/javascript" src="<%- config.root %>js/viewer/viewer.min.js"></script>
+<script type="text/javascript" src="<%- config.root %>js/viewer/pic-viewer.js"></script>
+<!-- viewer end -->
 <% } %>
 
 

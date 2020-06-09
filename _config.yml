@@ -101,9 +101,41 @@ friends: [
 
 
 # Comment Settings
+# Gitalk Settings
+# Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+gitalk:
+  owner: V-Vincen
+  admin: V-Vincen
+  # repo: test-comment
+  # clientID: c81ff43219a616c193e0
+  # clientSecret: 17312e25a3b3c592824c813bd537140f48ee2fcf
+  repo: blog-comment
+  clientID: c5c071e55f689f41560d
+  clientSecret: 1e8aabf73ccb26e519ee937ea1ddd241c5d13b79
+  perPage: 10
+  pagerDirection: last
+  createIssueManually: false
+  language: en
+  maxCommentHeight: 250
 
-# Disqus settings
-# disqus_username: your-disqus-ID
+
+
+## Gitment Settings
+## Doc:https://github.com/imsun/gitment
+# gitment:
+  # owner: V-Vincen
+  # repo: test-comment
+  # client_id: c81ff43219a616c193e0
+  # client_secret: 17312e25a3b3c592824c813bd537140f48ee2fcf
+
+  # repo: blog-comment
+  # client_id: c5c071e55f689f41560d
+  # client_secret: 1e8aabf73ccb26e519ee937ea1ddd241c5d13b79
+
+  # desc:
+  # perPage: 10
+  # maxCommentHeight: 100
+
 
 # valine Settings
 # valine:
@@ -118,12 +150,16 @@ friends: [
 # valine_deserts Settings
 # Doc:https://deserts.io/diy-a-comment-system/
 # Doc:https://deserts.io/valine-admin-document/
-valine_deserts:
-  API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
-  API_Key: YcwQKKzaMzulSIVJAVMpA78F
-  placeholder: Write a Comment
-  pageSize: 10
-  language: en
+# valine_deserts:
+#   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
+#   API_Key: YcwQKKzaMzulSIVJAVMpA78F
+#   placeholder: Write a Comment
+#   pageSize: 10
+#   language: en
+
+
+# Disqus settings
+# disqus_username: your-disqus-ID
 
 
 # Analytics settings
@@ -223,11 +259,26 @@ wordcount: true
 # top scroll progress
 scroll: true
 
+
+# Tip
+tip:
+  enable: true
+  copyright: If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+
+
+# Social Share Post
+#Docs:https://github.com/overtrue/share.js
+socialshare: true
+
+
 # Viewer config
 viewer: true
 
+
 # ThemeColor config
 themecolor: true
+
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
