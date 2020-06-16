@@ -130,7 +130,7 @@ Example:
 If you don’t want to display it, you can delete it directly.
 ```yml
 # SNS settings
-RSS: true
+# RSS: true
 github_username: V-Vincen
 twitter_username: V_Vincen_
 instagram_username: V_Vincen_
@@ -141,7 +141,7 @@ weibo_username: WVincen
 ```
 
 ### Sidebar Settings
-Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
+Copy your avatar image to `<root>/img/avatar` and modify the `_config.yml`:
 ```yml
 sidebar: true   # whether or not using Sidebar.
 sidebar-about-description: "I don't know where I am going ,but I am on my way..."
@@ -177,11 +177,51 @@ friends: [
 ```
 
 ### Comment Settings
-If you want use [Disqus](https://disqus.com/), you must have a circumvention (bypass, bypass) technology. See [Valine](https://valine.js.org/) for detailed configuration method.
+Hexo-Theme-LiveMyLife temporarily supports five Comments. I use gitalk comment system.
+
+#### Gitalk
+Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gitalk](https://github.com/gitalk/gitalk) for detailed configuration method.
+```yml
+# Gitalk Settings
+# Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+gitalk:
+  owner:                          # 'GitHub repo owner'
+  admin:                          # 'GitHub repo'
+  repo:                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  clientID:                       # 'GitHub Application Client ID'
+  clientSecret:                   # 'GitHub Application Client Secret'
+  perPage: 10                     # Pagination size, with maximum 100.
+  pagerDirection: last            # Comment sorting direction, available values are last and first.
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
+  language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+```
+
+#### Gitment
+Gitment is a comment system based on GitHub Issues, which can be used in the frontend without any server-side implementation. See [Gitment](https://github.com/imsun/gitment) for detailed configuration method.
+```yml
+## Gitment Settings
+## Doc:https://github.com/imsun/gitment
+gitment:
+  owner:                          # Your GitHub ID. Required.
+  repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
+  client_id:                      # GitHub client ID. Required.
+  client_secret:                  # GitHub client secret. Required.
+  desc:                           # An optional description for your page, used in issue's body. Default ''.
+  perPage: 10                     # An optional number to which comments will be paginated. Default 20.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded. Default 250.
+```
+
+#### Disqus
+If you want use [Disqus](https://disqus.com/), you must have a circumvention (proxy, clime over the firewall) technology.
 ```yml
 # Disqus settings
-# disqus_username: your-disqus-ID
+disqus_username: your-disqus-ID
+```
 
+#### Valine
+Valine is A fast, simple and powerful comment system. See [Valine](https://valine.js.org/) for detailed configuration method.
+```yml
 # valine settings
 valine:
   enable: true
@@ -195,14 +235,14 @@ valine:
   language: zh-cn
 ```
 
-**either or**
-
+#### Valine_Deserts
+Valine_Deserts modified from the original [Valine](https://valine.js.org/). See [Valine_Deserts](https://deserts.io/diy-a-comment-system/) for detailed configuration method. [Valine Admin](https://github.com/DesertsP/Valine-Admin) is an extension and enhancement of the Valine comment system. How to use Valine Admin -> Docs: https://deserts.io/valine-admin-document/.
 ```yml
 # Doc:https://deserts.io/diy-a-comment-system/
 # Doc:https://deserts.io/valine-admin-document/
 valine_deserts:
   API_ID: API_ID
-  API_Key: API_Key
+  API_Key: API_KeyP
   placeholder: Write a Comment
   language: en
 ```

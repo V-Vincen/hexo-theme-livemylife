@@ -134,7 +134,7 @@ gitalk:
 
   # desc:
   # perPage: 10
-  # maxCommentHeight: 100
+  # maxCommentHeight: 250
 
 
 # valine Settings
@@ -279,14 +279,12 @@ viewer: true
 themecolor: true
 
 
-
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 
 ## Search：https://go.kieran.top/post/45/
 # Dependencies: https://github.com/SuperKieran/hexo-generator-search-zip
 search:
-  enable: true
   path: search.json
   zipPath: search.flv
   versionPath: searchVersion.json

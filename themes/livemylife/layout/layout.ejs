@@ -21,7 +21,8 @@
 	<!-- Main Content (Post contains
 	Pager、
 	tip、
-	gitment、disqus-comment、valine-comment、valine_deserts-comment、
+	socialshare、
+	gitalk、gitment、disqus-comment、valine-comment、valine_deserts-comment、
 	Catalog、
 	Sidebar、
 	Featured-Tags、
@@ -35,7 +36,7 @@
 	<%- partial('_partial/footer') %>
 
 	<!-- Search -->
-	<% if (config.search.enable) { %>
+	<% if (config.search) { %>
 	<%- partial('_partial/search') %>
 	<% } %>
 

@@ -68,10 +68,22 @@
       <!-- top end -->
     <% } %>
 
+    <% if (config.scroll) { %>
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="<%= config.root %>css/scroll.css"/>
+      <!-- ThemeColor end -->
+    <% } %>
+
     <% if (config.viewer) { %>
       <!-- viewer start (Picture preview) -->
-      <link rel="stylesheet" href="<%= config.root %>css/viewer/viewer.min.css"/>
+      <link rel="stylesheet" href="<%= config.root %>css/viewer.min.css"/>
       <!-- viewer end -->
+    <% } %>
+
+    <% if (config.search) { %>
+      <!-- Search start -->
+      <link rel="stylesheet" href="<%= config.root %>css/search.css"/>
+      <!-- Search end -->
     <% } %>
 
     <% if (config.themecolor) { %>
@@ -80,19 +92,17 @@
       <!-- ThemeColor end -->
     <% } %>
 
-    <% if (config.scroll) { %>
-      <!-- ThemeColor start -->
-      <link rel="stylesheet" href="<%= config.root %>css/scroll.css"/>
-      <!-- ThemeColor end -->
-    <% } %>
-
     <% if(config['gitment']){ %>
+      <!-- gitment start -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
     <% } %>
 
     <% if(config['gitalk']){ %>
+      <!-- gitalk start -->
       <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
-      <link rel="stylesheet" href="<%= config.root %>css/comment/gitalk.css"/>
+      <link rel="stylesheet" href="<%= config.root %>css/gitalk.css"/>
+      <!-- gitalk end -->
     <% } %>
 
     <!-- Custom Fonts -->

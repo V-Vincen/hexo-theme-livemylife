@@ -414,6 +414,31 @@ hr {
   --share-background-color: #1d1f21;
   --share-color: #f6f9fc;
   --share-border: #eee;
+  /* gitalk comment */
+  --gt-avatar-github: inherit;
+  --gt-color-default: #404040;
+  --gt-basic-color: #2196f3;
+  --gt-btn-preview-color: #ffffff;
+  --gt-btn-preview-color-hovor: #f6f9fe;
+  --gt-container-a-hovor: #03a9f4;
+  --gt-comments-null-color: #03A9F4;
+  --gt-container-border-color: #CFD8DC;
+  --gt-container-background-color: #f6f9fc;
+  --gt-container-background-color-hover: #ffffff;
+  --gt-comment-content-color: #f9f9f9;
+  --gt-textarea-placeholder: #747474;
+  --gt-box-shadow-border: rgba(102, 175, 233, 0.6);
+  --gt-box-shadow: rgba(102, 175, 233, 0.6);
+  --gt-comment-body-folded: #337ab7;
+  --gt-popup: #e9e9e9;
+  --gt-comment-body: #333;
+  --gt-comment-text-date: #a1a1a1;
+  --gt-blockquote: #6a737d;
+  --gt-markdown-body-h: black;
+  --gt-highlight: #1d1f21;
+  --gt-pre: #ffffff;
+  --gt-linear-gradient-before: rgba(255, 255, 255, .8);
+  --gt-linear-gradient-after: rgba(255, 255, 255, 1);
 }
 
 .body--dark {
@@ -428,6 +453,31 @@ hr {
   --share-background-color: #f6f9fc;
   --share-color: #1d1f21;
   --share-border: rgb(34, 38, 49);
+  /* gitalk comment */
+  --gt-avatar-github: #f6f9fc;
+  --gt-color-default: #f6f9fc;
+  --gt-basic-color: #b5154b;
+  --gt-btn-preview-color: #f6f9fe;
+  --gt-btn-preview-color-hovor: #f6f9fc;
+  --gt-container-a-hovor: #e91e63;
+  --gt-comments-null-color: #ff3860;
+  --gt-container-border-color: #f6f9fc;
+  --gt-container-background-color: rgb(34, 38, 49);
+  --gt-container-background-color-hover: rgb(44, 49, 62);
+  --gt-comment-content-color: rgb(44, 49, 62);
+  --gt-textarea-placeholder: #f6f9fc;
+  --gt-box-shadow-border: #ffffff;
+  --gt-box-shadow: rgb(191, 191, 191);
+  --gt-comment-body-folded: #b5154b;
+  --gt-popup: #ffffff;
+  --gt-comment-body: #f6f9fc;
+  --gt-comment-text-date: #f6f9fc;
+  --gt-blockquote: #dfe2e5;
+  --gt-markdown-body-h: #ffffff;
+  --gt-highlight: #222631;
+  --gt-pre: #f6f9fc;
+  --gt-linear-gradient-before: rgba(35, 38, 49, 0.8);
+  --gt-linear-gradient-after: rgba(35, 38, 49, 1);
 }
 
 blockquote {
@@ -472,7 +522,7 @@ a {
   color: var(--tip-color);
 }
 
-/* share */
+/* social share */
 .social-share-ul>.social-share-li>a {
   background-color: var(--share-background-color);
 }
@@ -490,6 +540,207 @@ a {
   /* border: 1px solid var(--share-border); */
 }
 
+/* gitalk comment */
+.gt-container .gt-loader {
+  border: 1px solid var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-loader:before {
+  background-color: var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-initing-text {
+  color: var(--gt-container-a-hovor);
+}
+
+.gt-container .gt-ico-github svg {
+  fill: var(--gt-avatar-github) !important;
+}
+
+.gt-container .gt-counts {
+  color: var(--gt-color-default);
+}
+
+.gt-container .gt-link {
+  border-bottom: 1px dotted var(--gt-basic-color) !important;
+}
+
+.gt-container .gt-popup {
+  background: var(--background-color) !important;
+  border: 1px solid var(--gt-popup) !important;
+}
+
+.gt-container .gt-popup .gt-action.is--active:before {
+  background: var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-version {
+  color: var(--gt-color-default) !important;
+}
+
+.gt-container a {
+  color: var(--gt-basic-color) !important;
+}
+
+.gt-container a:hover {
+  color: var(--gt-container-a-hovor) !important;
+  border-color: var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-header-controls-tip .gt-svg svg {
+  fill: var(--gt-basic-color);
+}
+
+.gt-container .gt-comment-reply .gt-svg svg {
+  fill: var(--gt-basic-color);
+}
+
+.gt-container .gt-comment-reply .gt-svg svg:hover {
+  fill: var(--gt-container-a-hovor);
+}
+
+.gt-container .gt-ico-edit .gt-svg svg {
+  fill: var(--gt-basic-color);
+}
+
+.gt-container .gt-ico-edit .gt-svg svg:hover {
+  fill: var(--gt-container-a-hovor);
+}
+
+.gt-container .gt-header-controls-tip:hover {
+  color: var(--gt-container-a-hovor) !important;
+  border-color: var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-user .gt-ico svg {
+  fill: var(--gt-color-default) !important;
+}
+
+span.gt-user-name:hover {
+  color: var(--gt-container-a-hovor);
+}
+
+.gt-container .gt-user-inner {
+  color: var(--gt-basic-color) !important;
+}
+
+.gt-container .gt-btn {
+  border: 1px solid var(--gt-basic-color) !important;
+  background-color: var(--gt-basic-color) !important;
+}
+
+.gt-container .gt-btn-preview {
+  background-color: var(--gt-btn-preview-color) !important;
+  color: var(--gt-basic-color) !important;
+}
+
+.gt-container .gt-btn-preview:hover {
+  background-color: var(--gt-btn-preview-color-hovor) !important;
+  border-color: var(--gt-container-a-hovor) !important;
+  color: var(--gt-container-a-hovor) !important;
+}
+
+button.gt-btn.gt-btn-login:hover {
+  background-color: var(--gt-container-a-hovor) !important;
+  border-color: var(--gt-container-a-hovor) !important;
+}
+
+button.gt-btn.gt-btn-public:hover {
+  background-color: var(--gt-container-a-hovor) !important;
+  border-color: var(--gt-container-a-hovor) !important;
+}
+
+.gt-container .gt-comments-null {
+  color: var(--gt-comments-null-color) !important;
+}
+
+.gt-container .gt-header-textarea {
+  background-color: var(--gt-container-background-color-hover) !important;
+  border: 1px solid var(--gt-container-border-color) !important;
+  color: var(--toggle-color);
+}
+
+.gt-container .gt-header-textarea:hover {
+  background-color: var(--gt-container-background-color) !important;
+}
+
+/* .gt-container .gt-header-textarea:hover::placeholder {
+  color: #747474 !important;
+} */
+textarea.gt-header-textarea::placeholder {
+  color: var(--gt-textarea-placeholder);
+}
+
+.gt-container .gt-header-preview {
+  border: 1px solid var(--gt-container-border-color) !important;
+  background-color: var(--gt-container-background-color) !important;
+}
+
+.gt-container .gt-comment-admin .gt-comment-content {
+  background-color: var(--gt-container-background-color) !important;
+}
+
+.gt-container .gt-comment-content {
+  background-color: var(--gt-comment-content-color) !important;
+}
+
+.gt-container .gt-comment-content:hover {
+  border: 1px solid var(--gt-box-shadow-border) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--gt-box-shadow) !important;
+}
+
+.gt-comment-body .highlight {
+  background: var(--gt-highlight) !important;
+}
+
+.gt-comment-content .highlight pre {
+  background-color: var(--gt-pre) !important;
+}
+
+.gt-comment-body-folded::after {
+  /* background: rgba(255, 255, 255, .9); */
+  color: var(--gt-comment-body-folded);
+}
+
+.gt-container .gt-comment-body {
+  color: var(--toggle-color) !important;
+}
+
+.gt-container .gt-comment-text {
+  color: var(--gt-comment-text-date) !important;
+}
+
+.gt-container .gt-comment-date {
+  color: var(--gt-comment-text-date) !important;
+}
+
+.markdown-body blockquote {
+  color: var(--gt-blockquote) !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  color: var(--gt-markdown-body-h) !important
+}
+
+.gt-container .gt-no-init {
+  color: var(--gt-color-default);
+}
+
+.gt-comment-body-folded::before {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), var(--gt-linear-gradient-before));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--gt-linear-gradient-before));
+}
+
+.gt-comment-body-folded::after {
+  background: -webkit-linear-gradient(top, var(--gt-linear-gradient-before), var(--gt-linear-gradient-after));
+  background: linear-gradient(180deg, var(--gt-linear-gradient-before), var(--gt-linear-gradient-after));
+}
+
 /* ==================================================== Post End =================================================== */
 /* ================================================ Switch color mode button Start ======================================================= */
 .toggle {
@@ -504,7 +755,7 @@ a {
   font-weight: 700;
   margin-left: auto;
   padding: .25rem .5rem;
-  z-index: 1;
+  z-index: 20;
   cursor: pointer;
 }
 

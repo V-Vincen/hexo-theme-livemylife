@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+nav.navbar.navbar-default.navbar-custom.navbar-fixed-top.is-fixed.is-visible {
+  z-index: 31 !important;
+}
+
 /* tip */
 .tip {
   color: rgba(51, 51, 51, 0.9);
@@ -138,21 +142,28 @@ h1, h2, h3, h4, h5, h6 {
 /* gitalk comment */
 .gt-container .gt-header-textarea {
   border-radius: 0px !important;
-  border: 1px solid #CFD8DC;
+  border: 1px solid #CFD8DC !important;
 }
 
 .gt-container .gt-header-preview {
   min-height: 72px;
+  border-radius: 0px !important;
+  border: 1px solid #CFD8DC !important;
+}
+
+.gt-container .gt-popup {
+  border: 1px solid #cfd8dc;
 }
 
 .gt-container .gt-comment-admin .gt-comment-content {
   border: 1px solid #CFD8DC;
 }
+
 .gt-container .gt-comment-content {
-    border: 1px solid #CFD8DC;
+  border: 1px solid #CFD8DC;
 }
 
-.gt-comment-like{
+.gt-comment-like {
   display: none;
 }
 
@@ -166,7 +177,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.gt-comment-body-folded{
+.gt-container .gt-comment-content {
+  position: relative;
+}
+
+.gt-comment-body-folded {
   overflow: hidden;
 }
 
@@ -197,4 +212,61 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   background: rgba(255, 255, 255, .9);
   color: #337ab7;
+}
+
+.gt-container .gt-svg {
+  vertical-align: text-top !important;
+}
+
+.gt-avatar.gt-comment-avatar img {
+  background-color: #f6f9fc;
+}
+
+.gt-comment-content .highlight {
+  padding: 0px !important;
+}
+
+.gt-comment-content .highlight pre {
+  background-color: #ffffff !important;
+  border-radius: 5px !important;
+  color: black !important;
+}
+
+.gt-header-comment .highlight {
+  padding: 0px !important;
+}
+
+.gt-header-comment .highlight pre {
+  background-color: #ffffff !important;
+  border-radius: 5px !important;
+  color: black !important;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+  padding: 16px !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  color: black !important
+}
+
+/* search */
+.search-result-list a {
+  color: #151515;
+  text-decoration: none;
+}
+
+.search-result-list a:hover {
+  color: #151515 !important;
+}
+
+.search-result-list p {
+  margin: 10px 0 !important;
+  color: #666;
+  font-size: 14px;
 }
