@@ -1,18 +1,22 @@
 
-_post:´æ·ÅÎª $ hexo new [layout] <title>
+_post: å­˜æ”¾ä¸º $ hexo new [layout] <title>
 
-about:
+about: å¯¼èˆªæ  about
 
-categories:
+archive: å¯¼èˆªæ  archive
 
-image_blog:²©¿ÍÊ×Ò³µÄ±³¾°Í¼Æ¬
+categories: å¯¼èˆªæ  categories
 
-image_title:²©¿ÍÊ×Ò³µÄ±êÌâÀ¸Ä¿Í¼
+img: åšå®¢å›¾ç‰‡
+  avatar: å¤´åƒ
+  header_img: åšå®¢èƒŒæ™¯å›¾ç‰‡
+  scenery: å¯¼èˆªæ  about çš„å›¾ç‰‡
+  signature: ç­¾å
+  wave: æ³¢æµªå›¾ç‰‡
+  
+tags: å¯¼èˆªæ  tags
 
-image_title_header:²©¿Í¾ßÌåµã»÷ÎÄÕÂÄÚÈİºóµÄ£¬±³¾°Í¼
+404.md
 
-links:
+CNAME: åŸŸå
 
-tags:
-
-works:
