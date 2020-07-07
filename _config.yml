@@ -329,7 +329,7 @@ gitter:
 ##
 deploy:
   type: git
-  repository: https://github.com/V-Vincen/V-Vincen.github.io.git
+  # repository: https://github.com/V-Vincen/V-Vincen.github.io.git
   # repository: git@gitee.com:V_Vincen/V_Vincen.git
-  # repository: https://gitee.com/V_Vincen/V_Vincen.git
+  repository: https://gitee.com/V_Vincen/V_Vincen.git
   branch: master
