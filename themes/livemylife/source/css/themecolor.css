@@ -746,17 +746,19 @@ textarea.gt-header-textarea::placeholder {
 .toggle {
   position: fixed;
   bottom: 1.875rem;
-  right: 1.5rem;
+  left: 2.5rem;
   background-color: var(--background-color);
   color: var(--toggle-color);
   border: 1px dotted var(--toggle-border-color);
   border-radius: 3px;
   font-size: .75019rem;
+  /* font-size: 12px; */
   font-weight: 700;
   margin-left: auto;
   padding: .25rem .5rem;
   z-index: 20;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 /* ================================================ Switch color mode button End ======================================================= */

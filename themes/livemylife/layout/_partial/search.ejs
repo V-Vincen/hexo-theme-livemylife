@@ -1,3 +1,7 @@
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
 <div class="popup search-popup local-search-popup">
   <span class="popup-btn-close">
     ESC
@@ -5,14 +9,15 @@
   <div class="container">
     <div class="row">
       <!-- <div class="col-md-9 col-md-offset-1"> -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1">
 
         <div class="local-search-header clearfix">
-          <span class="search-icon">
-            <!-- <i class="fa fa-search"></i> -->
-          </span>
+
           <div class="local-search-input-wrapper">
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input" style="height:50px">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -102,6 +107,12 @@
             var content = data.content ? data.content.trim().replace(/<[^>]+>/g, "") : '';
             var contentInLowerCase = content.toLowerCase();
             var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/," ").replace(/.000Z/,"");
+            var imgUrl = data.header_img;
+
+
             var indexOfTitle = [];
             var indexOfContent = [];
             // only match articles with not empty titles
@@ -224,19 +235,34 @@
                 return result;
               }
               var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {
+              //   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              // } else {
+              //   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              // }
+              // slicesOfContent.forEach(function (slice) {
+              //   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) + "...</p></a>";
+              // });
+              // resultItem += "</li>";
+
+
               if (slicesOfTitle.length != 0) {
-                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
               } else {
-                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title +"</div><time class='search-result-date'>" + dateTime + "</time>";
               }
               slicesOfContent.forEach(function (slice) {
-                resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) + "...</p></a>";
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
               });
-              resultItem += "</li>";
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
           })
         };
+
         if (keywords.length === 1 && keywords[0] === "") {
           resultContent.innerHTML = '<div id="no-result"></div>'
         } else if (resultItems.length === 0) {
@@ -251,11 +277,11 @@
               return resultRight.id - resultLeft.id;
             }
           });
-          var searchResultList = '<ul class=\"search-result-list\">';
+          var searchResultList = '<div class=\"search-result-list\">';
           resultItems.forEach(function (result) {
             searchResultList += result.item;
           })
-          searchResultList += "</ul>";
+          searchResultList += "</div>";
           resultContent.innerHTML = searchResultList;
         }
       }
