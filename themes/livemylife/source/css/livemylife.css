@@ -319,7 +319,7 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top.is-fixed.is-visible {
 
 .gitter-open-chat-button.is-collapsed {
   box-sizing: border-box;
-  transform: translateY(180%);
+  transform: translateY(200%);
 }
 
 .gitter-open-chat-button:focus, .gitter-open-chat-button:hover {

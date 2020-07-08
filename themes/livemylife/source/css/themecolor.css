@@ -57,6 +57,8 @@
   /* toggle-button */
   --toggle-border-color: #0085a1;
   --toggle-color: #1f1f1f;
+  --toggle-hover: rgba(0, 0, 0, .1);
+
 }
 
 .body--dark {
@@ -124,6 +126,7 @@
   /* toggle-button */
   --toggle-border-color: #e01258;
   --toggle-color: #fff;
+  --toggle-hover: rgba(255,255,255,.1);
 }
 
 /* ================================================ Common Menu Start ======================================================= */
@@ -743,7 +746,7 @@ textarea.gt-header-textarea::placeholder {
 
 /* ==================================================== Post End =================================================== */
 /* ================================================ Switch color mode button Start ======================================================= */
-.toggle {
+/* .toggle {
   position: fixed;
   bottom: 1.875rem;
   left: 2.5rem;
@@ -752,13 +755,39 @@ textarea.gt-header-textarea::placeholder {
   border: 1px dotted var(--toggle-border-color);
   border-radius: 3px;
   font-size: .75019rem;
-  /* font-size: 12px; */
   font-weight: 700;
   margin-left: auto;
   padding: .25rem .5rem;
   z-index: 20;
   cursor: pointer;
   text-transform: uppercase;
+} */
+.toggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 2.5rem;
+  /* background-color: var(--background-color); */
+  color: var(--toggle-color);
+  /* border: 1px dotted var(--toggle-border-color); */
+  padding: 1.5rem 1.5rem;
+  z-index: 20;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: normal;
+  border-radius: 50%;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+}
+
+.material-icons {
+  font-size: 30px !important;
+}
+
+.toggle:hover {
+  /* text-decoration: none; */
+  background-color: var(--toggle-hover);
+  cursor: pointer;
 }
 
 /* ================================================ Switch color mode button End ======================================================= */

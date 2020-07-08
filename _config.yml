@@ -15,7 +15,6 @@ timezone:
 url: https://v-vincen.life    # Note: don't forget to modify the CNAME file to your url
 # url: https://v_vincen.gitee.io/    # Note: don't forget to modify the CNAME file to your url
 root: /
-# root: https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -40,10 +39,7 @@ signature-img: img/signature/vincent-white.png
 
 
 # Wave settings
-# wave: true    # show wave
-
-# WaveOverLay settings
-waveoverlay: true
+wave: true
 
 
 # SNS Settings
@@ -141,30 +137,6 @@ gitalk:
   # maxCommentHeight: 250
 
 
-## valine Settings
-## https://valine.js.org/
-##
-# valine:
-#   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
-#   API_Key: YcwQKKzaMzulSIVJAVMpA78F
-#   placeholder: Say something ...
-#   guest_info: nick,mail,link #评论者相关属性
-#   avatar: monsterid  #头像设置
-#   pageSize: 10
-#   language: zh-cn
-
-## valine_deserts Settings
-## Doc:https://deserts.io/diy-a-comment-system/
-## Doc:https://deserts.io/valine-admin-document/
-##
-# valine_deserts:
-#   API_ID: FSJ1zn7oYNyOFi3KTSzu7uE7-gzGzoHsz
-#   API_Key: YcwQKKzaMzulSIVJAVMpA78F
-#   placeholder: Write a Comment
-#   pageSize: 10
-#   language: en
-
-
 ## Disqus settings
 ##
 # disqus_username: your-disqus-ID
@@ -177,9 +149,14 @@ ba_track_id: 49e5faf2bfd6c26c1eb20bad10ef10c7
 # Google Analytics
 ga_track_id: UA-164526897-1   # Format: UA-xxxxxx-xx
 
-#sitemap
+# Sitemap
 sitemap:
   path: sitemap.xml
+
+# Baidusitemap
+baidusitemap:
+    path: baidusitemap.xml
+    baidu_push: true
 
 # Custom Setting End
 

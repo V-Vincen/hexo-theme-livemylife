@@ -47,29 +47,23 @@ header-img: "img/scenery/about_bg.jpg"
 >  On the way to meet myself …
 
 
-## Follow With Interest Blogs and Hexo Themes
+## Follow With Interest Blogs
 
-> Neo Peng：<https://zhile.io>
+> Neo Peng：https://zhile.io
 >
 > 李卫民：https://www.funtl.com/zh/guide
 >
-> Deserts：https://deserts.io/
+> duanxz：https://www.cnblogs.com/duanxz/tag
+> 
+> Java1234_小锋：http://blog.java1234.com/index.html
+> 
+> Deserts：https://deserts.io
 >
-> Bean Tech：http://beantech.org
+> Super Snail：https://www.dusign.net
 >
 > KIERAN'S BLOG：https://go.kieran.top
 >
-> Mr.Seven：<https://itimetraveler.github.io>
->
-> LanMiao Themes：<https://lanmiao.oschina.io>
->
-> Hexo：<https://hexo.io>
->
-> Java1234_小锋：http://blog.java1234.com/index.html
->
-> duanxz：https://www.cnblogs.com/duanxz/tag/
-
-
+> Mr.Seven：https://itimetraveler.github.io
 
 ## Contact me
 

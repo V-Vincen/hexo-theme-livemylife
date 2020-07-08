@@ -126,15 +126,6 @@ waveoverlay: true
 ```
 Example:
 
-![waveoverlay](waveoverlay.png)
-
-**either or**
-```yml
-# Wave settings
-wave: true    #show wave
-```
-Example:
-
 ![wave](wave.png)
 
 
@@ -231,34 +222,6 @@ If you want use [Disqus](https://disqus.com/), you must have a circumvention (pr
 disqus_username: your-disqus-ID
 ```
 
-#### Valine
-Valine is A fast, simple and powerful comment system. See [Valine](https://valine.js.org/) for detailed configuration method.
-```yml
-# valine settings
-valine:
-  enable: true
-  API_ID: API_ID
-  API_Key: API_Key
-  placeholder: Say something ...
-  guest_info: nick,mail,link    #评论者相关属性
-  avatar: monsterid   #头像设置
-  pageSize: 10
-  visitor: true   #阅读量统计
-  language: zh-cn
-```
-
-#### Valine_Deserts
-Valine_Deserts modified from the original [Valine](https://valine.js.org/). See [Valine_Deserts](https://deserts.io/diy-a-comment-system/) for detailed configuration method. [Valine Admin](https://github.com/DesertsP/Valine-Admin) is an extension and enhancement of the Valine comment system. How to use Valine Admin -> Docs: https://deserts.io/valine-admin-document/.
-```yml
-# Doc:https://deserts.io/diy-a-comment-system/
-# Doc:https://deserts.io/valine-admin-document/
-valine_deserts:
-  API_ID: API_ID
-  API_Key: API_KeyP
-  placeholder: Write a Comment
-  language: en
-```
-
 
 ### Analytics Settings
 ```yml
@@ -275,6 +238,7 @@ ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 #sitemap
 sitemap:
   path: sitemap.xml
+  baidu_push: true
 ```
 
 ### Go to top icon Setup
@@ -409,4 +373,3 @@ hexo deploy   # hexo will push the static files automatically into the specific 
 ## Have fun ^\_^
 
 Please [Star](https://github.com/V-Vincen/hexo-theme-livemylife) this Project if you like it! [Follow](https://github.com/V-Vincen) would also be appreciated! Peace!
-

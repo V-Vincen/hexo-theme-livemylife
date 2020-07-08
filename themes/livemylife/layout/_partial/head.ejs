@@ -29,10 +29,29 @@
     </script>
   <% } %>
 
+  <!-- Baidu Push -->
+  <% if (config.baidusitemap.baidu_push) { %>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+  <% } %>
+
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <meta name="google-site-verification" content="WTy2wKrCxKbnIIwrqbOaQ7APLQJKTtY64aAAwQ-tUYE"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="<%= config.description %>"/>
@@ -54,12 +73,6 @@
       <!-- wave start -->
       <link rel="stylesheet" href="<%= config.root %>css/wave.css"/>
       <!-- wave end -->
-    <% } %>
-
-    <% if (config.waveoverlay) { %>
-      <!-- waveoverlay start -->
-      <link rel="stylesheet" href="<%= config.root %>css/waveoverlay.css"/>
-      <!-- waveoverlay end -->
     <% } %>
 
     <% if (config.top) { %>
@@ -109,6 +122,7 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
     href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->

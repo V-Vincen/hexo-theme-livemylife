@@ -1,140 +1,91 @@
-/* Wave */
-@media (min-width: 889px) {
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0%) translateZ(0) scaleY(1);
-      -ms-transform: translateX(0%) translateZ(0) scaleY(1);
-      -moz-transform: translateX(0%) translateZ(0) scaleY(1);
-      -webkit-transform: translateX(0%) translateZ(0) scaleY(1);
-      -o-transform: translateX(0%) translateZ(0) scaleY(1);
-    }
-
-    50% {
-      transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -ms-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -moz-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -webkit-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -o-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-    }
-
-    100% {
-      transform: translateX(-100%) translateZ(0) scaleY(1);
-      -ms-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -moz-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -webkit-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -o-transform: translateX(-100%) translateZ(0) scaleY(1);
-    }
-  }
-
-  .waveWrapper {
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    bottom: -1px;
-    width: 100%;
-    height: 60px;
-    margin: 0px;
-    padding: 0px;
-    background-color: transparent;
-    z-index: 5;
-  }
-
-  .wave {
-    border: 0px;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    width: calc(100% + 0.5px);
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0px bottom;
-    transform-origin: left bottom;
-    background-size: 100% 60px;
-  }
-
-  .wave_before {
-    left: 0px;
-    bottom: 0px;
-    animation: move_wave 20s linear infinite;
-    -webkit-animation: move_wave 20s linear infinite;
-  }
-
-  .wave_after {
-    left: 100%;
-    bottom: 0px;
-    animation: move_wave 20s linear infinite;
-    -webkit-animation: move_wave 20s linear infinite;
-    /*animation-delay:10s;*/
-    /*-webkit-animation-delay:10s;*/
-  }
+/* Waveoverlay */
+:root{
+  --gentle-wave1: rgba(255, 255, 255, 0.7);
+  --gentle-wave2: rgba(255, 255, 255, 0.5);
+  --gentle-wave3: rgba(255, 255, 255, 0.3);
+  --gentle-wave: #fff;
 }
 
-@media (max-width: 888px) {
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0%) translateZ(0) scaleY(1);
-      -ms-transform: translateX(0%) translateZ(0) scaleY(1);
-      -moz-transform: translateX(0%) translateZ(0) scaleY(1);
-      -webkit-transform: translateX(0%) translateZ(0) scaleY(1);
-      -o-transform: translateX(0%) translateZ(0) scaleY(1);
-    }
-
-    50% {
-      transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -ms-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -moz-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -webkit-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-      -o-transform: translateX(-50%) translateZ(0) scaleY(0.9);
-    }
-
-    100% {
-      transform: translateX(-100%) translateZ(0) scaleY(1);
-      -ms-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -moz-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -webkit-transform: translateX(-100%) translateZ(0) scaleY(1);
-      -o-transform: translateX(-100%) translateZ(0) scaleY(1);
-    }
-  }
-
-  .waveWrapper {
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    bottom: -1px;
+.preview-overlay {
     width: 100%;
-    height: 60px;
-    margin: 0px;
-    padding: 0px;
-    background-color: transparent;
-    z-index: 5;
-    display: none;
-  }
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
 
-  .wave {
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    width: calc(200% + 0.5px);
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0px bottom;
-    transform-origin: left bottom;
-    background-size: 100% 60px;
-  }
+.preview-overlay .preview-waves {
+    position: relative;
+    width: 100%;
+    height: 0vh;
+    margin-bottom: -8px;
+    min-height: 100px;
+    max-height: 150px;
+}
 
-  .wave_before {
-    left: 0px;
-    bottom: 0px;
-    animation: move_wave 20s linear infinite;
-    -webkit-animation: move_wave 20s linear infinite;
-  }
+@media (max-width: 768px) {
+    .preview-overlay .preview-waves {
+        height: 40px;
+        min-height: 40px;
+    }
+}
 
-  .wave_after {
-    left: 200%;
-    bottom: 0px;
-    animation: move_wave 20s linear infinite;
-    -webkit-animation: move_wave 20s linear infinite;
-    /*animation-delay:10s;*/
-    /*-webkit-animation-delay:10s;*/
-  }
+.preview-overlay .preview-parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@-moz-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@-webkit-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@-o-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }

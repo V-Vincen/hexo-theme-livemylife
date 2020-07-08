@@ -37,30 +37,43 @@ function lightRocket() {
 }
 
 //dork wave
-function darkWave() {
-  let eltBefore = document.querySelector(".wave_before");
-  if (eltBefore) {
-    let urlBefore = eltBefore.style.backgroundImage;
-    eltBefore.style.backgroundImage = urlBefore.replace("wave-light.png", "wave-dark.png");
+// function darkWave() {
+//   let eltBefore = document.querySelector(".wave_before");
+//   if (eltBefore) {
+//     let urlBefore = eltBefore.style.backgroundImage;
+//     eltBefore.style.backgroundImage = urlBefore.replace("wave-light.png", "wave-dark.png");
+//
+//     let eltAfter = document.querySelector(".wave_after");
+//     let urlAfter = eltAfter.style.backgroundImage;
+//     eltAfter.style.backgroundImage = urlAfter.replace("wave-light.png", "wave-dark.png");
+//   }
+// }
+//
+// function lightWave() {
+//   let eltBefore = document.querySelector(".wave_before");
+//   if (eltBefore) {
+//     let urlBefore = eltBefore.style.backgroundImage;
+//     eltBefore.style.backgroundImage = urlBefore.replace("wave-dark.png", "wave-light.png");
+//
+//     let eltAfter = document.querySelector(".wave_after");
+//     let urlAfter = eltAfter.style.backgroundImage;
+//     eltAfter.style.backgroundImage = urlAfter.replace("wave-dark.png", "wave-light.png");
+//   }
+// }
 
-    let eltAfter = document.querySelector(".wave_after");
-    let urlAfter = eltAfter.style.backgroundImage;
-    eltAfter.style.backgroundImage = urlAfter.replace("wave-light.png", "wave-dark.png");
-  }
+function brightMode() {
+  let brightMode = document.querySelector(".bright-mode");
+  brightMode.style.display = "none";
+  let darkMode = document.querySelector(".dark-mode");
+  darkMode.style.display = "block";
 }
 
-function lightWave() {
-  let eltBefore = document.querySelector(".wave_before");
-  if (eltBefore) {
-    let urlBefore = eltBefore.style.backgroundImage;
-    eltBefore.style.backgroundImage = urlBefore.replace("wave-dark.png", "wave-light.png");
-
-    let eltAfter = document.querySelector(".wave_after");
-    let urlAfter = eltAfter.style.backgroundImage;
-    eltAfter.style.backgroundImage = urlAfter.replace("wave-dark.png", "wave-light.png");
-  }
+function darkMode() {
+  let brightMode = document.querySelector(".bright-mode");
+  brightMode.style.display = "block";
+  let darkMode = document.querySelector(".dark-mode");
+  darkMode.style.display = "none";
 }
-
 
 //getCookieValue
 function getCookieValue(a) {
@@ -72,7 +85,8 @@ if (getCookieValue('sb-color-mode') === 'dark') {
   loadHighlightNormalLink();
   darkBackgroundImage();
   darkRocket();
-  darkWave();
+  // darkWave();
+  darkMode();
 }
 
 //setCookieValue
@@ -88,11 +102,13 @@ toggleBtn.addEventListener("click", function() {
     loadHighlightNormalLink();
     darkBackgroundImage();
     darkRocket();
-    darkWave();
+    // darkWave();
+    darkMode();
   } else {
     deleteHighlightNormalLink();
     deleteDarkBackgroundImage();
     lightRocket();
-    lightWave();
+    // lightWave();
+    brightMode();
   }
 });
