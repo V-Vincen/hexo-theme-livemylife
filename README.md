@@ -227,8 +227,15 @@ ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 #sitemap
 sitemap:
   path: sitemap.xml
-  baidu_push: true
 ```
+
+### Baidusitemap Settings
+```yml
+baidusitemap:
+    path: baidusitemap.xml
+    baidu_push: true
+```
+
 
 ### Go to top icon Setup
 My icon is using point, you can change to your own icon at `sourcre/css/images`.
