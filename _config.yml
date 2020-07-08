@@ -143,11 +143,12 @@ gitalk:
 
 
 # Analytics settings
+# Google Analytics
+ga_track_id: UA-164526897-1   # Format: UA-xxxxxx-xx
+
 # Baidu Analytics
 ba_track_id: 49e5faf2bfd6c26c1eb20bad10ef10c7
 
-# Google Analytics
-ga_track_id: UA-164526897-1   # Format: UA-xxxxxx-xx
 
 # Sitemap
 sitemap:

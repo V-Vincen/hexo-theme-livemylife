@@ -215,25 +215,23 @@ disqus_username: your-disqus-ID
 ### Analytics Settings
 ```yml
 # Analytics settings
-# Baidu Analytics
-ba_track_id: ba_track_id
-
 # Google Analytics
 ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
+
+# Baidu Analytics
+ba_track_id: ba_track_id
 ```
 
 ### Sitemap Settings
 ```yml
-#sitemap
+# Google sitemap
 sitemap:
   path: sitemap.xml
-```
 
-### Baidusitemap Settings
-```yml
+# Baidu sitemap 
 baidusitemap:
-    path: baidusitemap.xml
-    baidu_push: true
+  path: baidusitemap.xml
+  baidu_push: true
 ```
 
 
