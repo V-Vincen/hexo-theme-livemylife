@@ -12,11 +12,9 @@ img: 博客图片
   header_img: 博客背景图片
   scenery: 导航栏 about 的图片
   signature: 签名
-  wave: 波浪图片
   
 tags: 导航栏 tags
 
 404.md
 
 CNAME: 域名
-
