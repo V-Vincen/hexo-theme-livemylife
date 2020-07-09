@@ -36,31 +36,6 @@ function lightRocket() {
   elt.style.background = url.replace("beside_up_white.png", "beside_up.png");
 }
 
-//dork wave
-// function darkWave() {
-//   let eltBefore = document.querySelector(".wave_before");
-//   if (eltBefore) {
-//     let urlBefore = eltBefore.style.backgroundImage;
-//     eltBefore.style.backgroundImage = urlBefore.replace("wave-light.png", "wave-dark.png");
-//
-//     let eltAfter = document.querySelector(".wave_after");
-//     let urlAfter = eltAfter.style.backgroundImage;
-//     eltAfter.style.backgroundImage = urlAfter.replace("wave-light.png", "wave-dark.png");
-//   }
-// }
-//
-// function lightWave() {
-//   let eltBefore = document.querySelector(".wave_before");
-//   if (eltBefore) {
-//     let urlBefore = eltBefore.style.backgroundImage;
-//     eltBefore.style.backgroundImage = urlBefore.replace("wave-dark.png", "wave-light.png");
-//
-//     let eltAfter = document.querySelector(".wave_after");
-//     let urlAfter = eltAfter.style.backgroundImage;
-//     eltAfter.style.backgroundImage = urlAfter.replace("wave-dark.png", "wave-light.png");
-//   }
-// }
-
 function brightMode() {
   let brightMode = document.querySelector(".bright-mode");
   brightMode.style.display = "none";
@@ -69,10 +44,10 @@ function brightMode() {
 }
 
 function darkMode() {
-  let brightMode = document.querySelector(".bright-mode");
-  brightMode.style.display = "block";
   let darkMode = document.querySelector(".dark-mode");
   darkMode.style.display = "none";
+  let brightMode = document.querySelector(".bright-mode");
+  brightMode.style.display = "block";
 }
 
 //getCookieValue
@@ -82,11 +57,10 @@ function getCookieValue(a) {
 }
 if (getCookieValue('sb-color-mode') === 'dark') {
   document.body.classList.add('body--dark');
+  darkMode();
   loadHighlightNormalLink();
   darkBackgroundImage();
   darkRocket();
-  // darkWave();
-  darkMode();
 }
 
 //setCookieValue
@@ -99,16 +73,14 @@ toggleBtn.addEventListener("click", function() {
   document.cookie = "sb-color-mode" + "=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
 
   if (e) {
+    darkMode();
     loadHighlightNormalLink();
     darkBackgroundImage();
     darkRocket();
-    // darkWave();
-    darkMode();
   } else {
+    brightMode();
     deleteHighlightNormalLink();
     deleteDarkBackgroundImage();
     lightRocket();
-    // lightWave();
-    brightMode();
   }
 });

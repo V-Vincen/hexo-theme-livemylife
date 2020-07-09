@@ -74,7 +74,7 @@ time.search-result-date {
 
   .popup-btn-close:hover {
     background: #151515;
-    opacity: .9;
+    /* opacity: .9; */
     color: #fff;
   }
 }

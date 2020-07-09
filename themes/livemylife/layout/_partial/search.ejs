@@ -1,7 +1,3 @@
-<div id="progress">
-  <div class="line" style="width: 0%;"></div>
-</div>
-
 <div class="popup search-popup local-search-popup">
   <span class="popup-btn-close">
     ESC
@@ -9,7 +5,7 @@
   <div class="container">
     <div class="row">
       <!-- <div class="col-md-9 col-md-offset-1"> -->
-      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1">
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
 
         <div class="local-search-header clearfix">
 
@@ -102,16 +98,19 @@
             var isMatch = false;
             var hitCount = 0;
             var searchTextCount = 0;
-            var title = data.title ? data.title.trim() : '';
+            var title = data.title
+              ? data.title.trim()
+              : '';
             var titleInLowerCase = title.toLowerCase();
-            var content = data.content ? data.content.trim().replace(/<[^>]+>/g, "") : '';
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
             var contentInLowerCase = content.toLowerCase();
             var articleUrl = decodeURIComponent(data.url);
 
             var date = data.date;
-            var dateTime = date.replace(/T/," ").replace(/.000Z/,"");
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
             var imgUrl = data.header_img;
-
 
             var indexOfTitle = [];
             var indexOfContent = [];
@@ -236,27 +235,19 @@
               }
               var resultItem = '';
 
-              // if (slicesOfTitle.length != 0) {
-              //   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-              // } else {
-              //   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-              // }
-              // slicesOfContent.forEach(function (slice) {
-              //   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) + "...</p></a>";
-              // });
-              // resultItem += "</li>";
-
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
 
               if (slicesOfTitle.length != 0) {
                 resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
               } else {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title +"</div><time class='search-result-date'>" + dateTime + "</time>";
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
               }
               slicesOfContent.forEach(function (slice) {
                 resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
               });
               resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
-
 
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
@@ -318,6 +309,14 @@
         onPopupClose();
       }
     });
-    // $('.local-search-popup').click(function () {   $('.popup-btn-close').click(); });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
   </script>
 <% } %>

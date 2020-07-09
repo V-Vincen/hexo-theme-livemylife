@@ -58,7 +58,6 @@
   --toggle-border-color: #0085a1;
   --toggle-color: #1f1f1f;
   --toggle-hover: rgba(0, 0, 0, .1);
-
 }
 
 .body--dark {
@@ -126,7 +125,7 @@
   /* toggle-button */
   --toggle-border-color: #e01258;
   --toggle-color: #fff;
-  --toggle-hover: rgba(255,255,255,.1);
+  --toggle-hover: rgba(255, 255, 255, .1);
 }
 
 /* ================================================ Common Menu Start ======================================================= */
@@ -304,6 +303,14 @@ a:hover, a:focus {
   color: var(--sidebar-tags-color-hovor);
 }
 
+li.archive-list-item:hover {
+  color: var(--sidebar-tags-color-hovor);
+}
+
+li.archive-list-item:hover a {
+  color: var(--sidebar-tags-color-hovor) !important;
+}
+
 /* pager */
 .pager li>a {
   background: var(--pager-background);
@@ -442,6 +449,13 @@ hr {
   --gt-pre: #ffffff;
   --gt-linear-gradient-before: rgba(255, 255, 255, .8);
   --gt-linear-gradient-after: rgba(255, 255, 255, 1);
+  --search-background-color: rgba(255, 255, 255, .91);
+  --search-base-background-color: #f6f9fc;
+  --search-result-background-color-hovor: #e3f2fd;
+  --search-btn-close-color-1080: #151515;
+  --search-result-p-color: #5d686f;
+  --search-keyword-color: #c00;
+  --search-btn-close-color: #5d738d;
 }
 
 .body--dark {
@@ -481,6 +495,13 @@ hr {
   --gt-pre: #f6f9fc;
   --gt-linear-gradient-before: rgba(35, 38, 49, 0.8);
   --gt-linear-gradient-after: rgba(35, 38, 49, 1);
+  --search-background-color: rgba(158, 158, 158, 0.3);
+  --search-base-background-color: rgb(34, 38, 49);
+  --search-result-background-color-hovor: #323848;
+  --search-btn-close-color-1080: #323848;
+  --search-result-p-color: #bfbfbf;
+  --search-keyword-color: #e91e63;
+  --search-btn-close-color: rgba(255, 255, 255, 0.8);
 }
 
 blockquote {
@@ -745,6 +766,63 @@ textarea.gt-header-textarea::placeholder {
 }
 
 /* ==================================================== Post End =================================================== */
+/* ==================================================== Search Start =================================================== */
+.local-search-popup {
+  background-color: var(--search-background-color);
+}
+
+.local-search-input-wrapper {
+  background-color: var(--search-base-background-color);
+}
+
+.search-icon .fa-lg {
+  color: var(--post-title-subtitle-color);
+}
+
+#local-search-input {
+  color: var(--post-title-subtitle-color) !important;
+  background-color: var(--search-base-background-color);
+}
+
+.search-result-list a {
+  color: var(--post-title-subtitle-color) !important;
+  background-color: var(--search-base-background-color);
+}
+
+.search-result-list a:hover {
+  background-color: var(--search-result-background-color-hovor);
+}
+
+.popup-btn-close {
+  color: var(--search-btn-close-color);
+  background-color: var(--search-base-background-color);
+}
+
+@media (max-width: 1080px) {
+  span.popup-btn-close:hover {
+    background-color: var(--search-result-background-color-hovor);
+  }
+}
+
+@media (min-width: 1080px) {
+  .popup-btn-close:hover {
+    background: var(--search-btn-close-color-1080);
+  }
+}
+
+.search-result-list p {
+  color: var(--search-result-p-color);
+}
+
+.search-keyword {
+  color: var(--search-keyword-color);
+}
+
+.popup-btn-close::after {
+  color: var(--search-btn-close-color);
+}
+
+/* ==================================================== Search End =================================================== */
 /* ================================================ Switch color mode button Start ======================================================= */
 /* .toggle {
   position: fixed;
