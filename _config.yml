@@ -19,7 +19,7 @@ permalink_defaults:
 
 
 
-#Custom Setting Start
+# Custom Setting Start
 
 # Site settings
 SEOTitle: JavaDev | 一如Java深似海
@@ -29,8 +29,10 @@ keyword: "Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"
 header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 
+
 # Favicon settings
 favicon: img/avatar/roguerabbit.jpg
+
 
 # Signature Setup
 signature: true # show signature
@@ -65,6 +67,7 @@ widgets:
 - archive
 - category
 
+
 # widget behavior
 ## Archive
 archive_type: 'monthly'
@@ -73,7 +76,6 @@ show_count: true
 ## Featured Tags
 featured-tags: true   # whether or not using Feature-Tags
 featured-condition-size: 0    # A tag will be featured if the size of it is more than this condition value
-
 
 ## Friends
 friends: [
@@ -110,9 +112,6 @@ gitalk:
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
 
-
-
-
 ## Gitment Settings
 ## Doc:https://github.com/imsun/gitment
 ##
@@ -125,30 +124,30 @@ gitalk:
 #   perPage: 10                     # An optional number to which comments will be paginated. Default 20.
 #   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded. Default 250.
 
-
 ## Disqus settings
 ##
 # disqus_username: your-disqus-ID
 
 
 # Analytics settings
-# Google Analytics
+
+## Google Analytics
 ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 
-# Baidu Analytics
+## Baidu Analytics
 ba_track_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-
-# Sitemap
+## Sitemap
 sitemap:
   path: sitemap.xml
 
-# Baidusitemap
+## Baidusitemap
 baidusitemap:
     path: baidusitemap.xml
     baidu_push: true
 
 # Custom Setting End
+
 
 
 # Directory
@@ -225,8 +224,10 @@ markdown:
 # Build Settings
 anchorjs: true    # if you want to customize anchor. check out line:186 of `post.ejs`
 
+
 # article top
 top: true
+
 
 # WordCount Settings
 ## Dependencies: https://github.com/willin/hexo-wordcount
@@ -261,9 +262,6 @@ viewer: true
 # ThemeColor config
 themecolor: true
 
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
 
 # Search Setting
 ## Search: https://go.kieran.top/post/45/
