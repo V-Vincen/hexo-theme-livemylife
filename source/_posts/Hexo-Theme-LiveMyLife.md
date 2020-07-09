@@ -60,6 +60,7 @@ cd bolg
 rm -rf _config.yml package.json scaffolds source themes yarn.lock #just keep node_modules
 git clone https://github.com/V-Vincen/hexo-theme-livemylife.git
 mv hexo-theme-livemylife/* ./
+rm -rf hexo-theme-livemylife
 npm install
 ```
 
@@ -121,8 +122,8 @@ signature-img: img/signature/<your-signature>
 
 ### Wave Settings
 ```yml
-# WaveOverLay settings
-waveoverlay: true
+# Wave settings
+wave: true
 ```
 Example:
 
@@ -170,11 +171,11 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 ## Friends
 friends: [
     {
-        title: "Teacher Ye",
-        href: "http://teacherye.com/"
-    },{
         title: "V_Vincen",
         href: "https://v-vincen.life/"
+    },{
+        title: "Teacher Ye",
+        href: "http://teacherye.com/"
     }
 ]
 ```
@@ -186,7 +187,7 @@ Hexo-Theme-LiveMyLife temporarily supports five Comments. I use gitalk comment s
 Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gitalk](https://github.com/gitalk/gitalk) for detailed configuration method.
 ```yml
 # Gitalk Settings
-# Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+# Doc: https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 gitalk:
   owner:                          # 'GitHub repo owner'
   admin:                          # 'GitHub repo'
@@ -204,7 +205,7 @@ gitalk:
 Gitment is a comment system based on GitHub Issues, which can be used in the frontend without any server-side implementation. See [Gitment](https://github.com/imsun/gitment) for detailed configuration method.
 ```yml
 ## Gitment Settings
-## Doc:https://github.com/imsun/gitment
+## Doc: https://github.com/imsun/gitment
 gitment:
   owner:                          # Your GitHub ID. Required.
   repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
@@ -239,12 +240,11 @@ ba_track_id: ba_track_id
 sitemap:
   path: sitemap.xml
 
-# Baidu sitemap 
+# Baidu sitemap
 baidusitemap:
   path: baidusitemap.xml
   baidu_push: true
 ```
-
 
 
 ### Go to top icon Setup
@@ -319,6 +319,19 @@ wordcount: true
 scroll: true
 ```
 
+### Tip
+```yml
+tip:
+  enable: true
+  copyright: Say what you think...
+```
+
+### Social Share Post
+```yml
+#Docs: https://github.com/overtrue/share.js
+share: true
+```
+
 ### Viewer Config
 Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `sourcre/js/viewer/pic-viewer.js` to change it.
 ```yml
@@ -341,12 +354,12 @@ Dark theme preview：
 
 ### Search Settings
 ```yml
-# Dependencies: https://github.com/SuperKieran/hexo-generator-search-zip
+# Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
 search:
   enable: true
   path: search.json
-  zipPath: search.zip
-  versionPath: searchVersion.txt
+  zipPath: search.flv
+  versionPath: searchVersion.json
   field: post
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button

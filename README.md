@@ -159,11 +159,11 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 ## Friends
 friends: [
     {
-        title: "Teacher Ye",
-        href: "http://teacherye.com/"
-    },{
         title: "V_Vincen",
         href: "https://v-vincen.life/"
+    },{
+        title: "Teacher Ye",
+        href: "http://teacherye.com/"
     }
 ]
 ```
@@ -193,7 +193,7 @@ gitalk:
 Gitment is a comment system based on GitHub Issues, which can be used in the frontend without any server-side implementation. See [Gitment](https://github.com/imsun/gitment) for detailed configuration method.
 ```yml
 ## Gitment Settings
-## Doc:https://github.com/imsun/gitment
+## Doc: https://github.com/imsun/gitment
 gitment:
   owner:                          # Your GitHub ID. Required.
   repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
@@ -228,7 +228,7 @@ ba_track_id: ba_track_id
 sitemap:
   path: sitemap.xml
 
-# Baidu sitemap 
+# Baidu sitemap
 baidusitemap:
   path: baidusitemap.xml
   baidu_push: true
@@ -316,7 +316,7 @@ tip:
 
 ### Social Share Post
 ```yml
-#Docs:https://github.com/overtrue/share.js
+#Docs: https://github.com/overtrue/share.js
 share: true
 ```
 
@@ -341,12 +341,12 @@ Dark theme preview：
 
 ### Search Settings
 ```yml
-# Dependencies: https://github.com/SuperKieran/hexo-generator-search-zip
+# Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
 search:
   enable: true
   path: search.json
-  zipPath: search.zip
-  versionPath: searchVersion.txt
+  zipPath: search.flv
+  versionPath: searchVersion.json
   field: post
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button

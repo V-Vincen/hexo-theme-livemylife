@@ -3,17 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Live My Life
-subtitle: 淡而无味也是一种味道
-author: Mr.Vincent
+title: Your Title
+subtitle: This is hexo theme
+author: Your Name
 language: en
 timezone:
 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://v-vincen.life    # Note: don't forget to modify the CNAME file to your url
-# url: https://v_vincen.gitee.io/    # Note: don't forget to modify the CNAME file to your url
+url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -31,7 +30,7 @@ header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 
 # Favicon settings
-favicon: img/avatar/favicon.jpg
+favicon: img/avatar/roguerabbit.jpg
 
 # Signature Setup
 signature: true # show signature
@@ -55,8 +54,8 @@ weibo_username: WVincen
 
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
-sidebar-about-description: "I don't know where I am going ,but I am on my way..."
-sidebar-avatar: img/avatar/vincnet.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Fat people have no future, either thin or die..."
+sidebar-avatar: img/avatar/fatpeople.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - visitor   # busuanzi: https://busuanzi.ibruce.info/
 - featured-tags
@@ -79,21 +78,18 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 ## Friends
 friends: [
     {
-        title: "Teacher Ye",
-        href: "http://teacherye.com/"
+        title: "V_Vincen",
+        href: "https://v-vincen.life/"
     },{
-        title: "Ray",
-        href: "https://tianhualiang2019.github.io/"
+        title: "Bean Tech",
+        href: "http://beantech.org"
     },{
-        title: "GoldenaArcher",
-        href: "https://goldenaarcher.github.io/"
+        title: "Hux Blog",
+        href: "http://huangxuan.me"
     },{
-        title: "鸢羽_颖",
-        href: "https://www.cnblogs.com/guoyinghome/"
-    },{
-        title: "十八岁的夏天",
-        href: "https://www.cnblogs.com/xiaofengwang/"
-      }
+        title: "Hexo",
+        href: "https://hexo.io/"
+    }
 ]
 
 
@@ -103,19 +99,17 @@ friends: [
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  owner: V-Vincen
-  admin: V-Vincen
-  repo: test-comment
-  clientID: c81ff43219a616c193e0
-  clientSecret: 17312e25a3b3c592824c813bd537140f48ee2fcf
-  # repo: blog-comment
-  # clientID: c5c071e55f689f41560d
-  # clientSecret: 1e8aabf73ccb26e519ee937ea1ddd241c5d13b79
-  perPage: 10
-  pagerDirection: last
-  createIssueManually: false
-  language: en
-  maxCommentHeight: 250
+  owner:                          # 'GitHub repo owner'
+  admin:                          # 'GitHub repo'
+  repo:                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  clientID:                       # 'GitHub Application Client ID'
+  clientSecret:                   # 'GitHub Application Client Secret'
+  perPage: 10                     # Pagination size, with maximum 100.
+  pagerDirection: last            # Comment sorting direction, available values are last and first.
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
+  language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+
 
 
 
@@ -123,18 +117,13 @@ gitalk:
 ## Doc:https://github.com/imsun/gitment
 ##
 # gitment:
-  # owner: V-Vincen
-  # repo: test-comment
-  # client_id: c81ff43219a616c193e0
-  # client_secret: 17312e25a3b3c592824c813bd537140f48ee2fcf
-
-  # repo: blog-comment
-  # client_id: c5c071e55f689f41560d
-  # client_secret: 1e8aabf73ccb26e519ee937ea1ddd241c5d13b79
-
-  # desc:
-  # perPage: 10
-  # maxCommentHeight: 250
+#   owner:                          # Your GitHub ID. Required.
+#   repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
+#   client_id:                      # GitHub client ID. Required.
+#   client_secret:                  # GitHub client secret. Required.
+#   desc:                           # An optional description for your page, used in issue's body. Default ''.
+#   perPage: 10                     # An optional number to which comments will be paginated. Default 20.
+#   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded. Default 250.
 
 
 ## Disqus settings
@@ -144,10 +133,10 @@ gitalk:
 
 # Analytics settings
 # Google Analytics
-ga_track_id: UA-164526897-1   # Format: UA-xxxxxx-xx
+ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 
 # Baidu Analytics
-ba_track_id: 49e5faf2bfd6c26c1eb20bad10ef10c7
+ba_track_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 # Sitemap
@@ -277,8 +266,8 @@ themecolor: true
 ## Plugins: https://hexo.io/plugins/
 
 # Search Setting
-## Search:https://go.kieran.top/post/45/
-## Dependencies: https://github.com/SuperKieran/hexo-generator-search-zip
+## Search: https://go.kieran.top/post/45/
+## Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
 ##
 search:
   path: search.json
@@ -299,7 +288,7 @@ theme: livemylife
 ## Docs:https://gitter.im/?utm_source=left-menu-logo
 ##
 gitter:
-  room: hexo-theme-livemylife/blog
+  room: your-community/your-room
 
 
 # Deployment
@@ -307,7 +296,5 @@ gitter:
 ##
 deploy:
   type: git
-  # repository: https://github.com/V-Vincen/V-Vincen.github.io.git
-  # repository: git@gitee.com:V_Vincen/V_Vincen.git
-  repository: https://gitee.com/V_Vincen/V_Vincen.git
+  repository: https://github.com/V-Vincen/V-Vincen.github.io.git
   branch: master
