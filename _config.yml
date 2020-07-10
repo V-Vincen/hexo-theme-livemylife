@@ -22,10 +22,10 @@ permalink_defaults:
 # Custom Setting Start
 
 # Site settings
-SEOTitle: JavaDev | 一如Java深似海
-email: 601521821@qq.com
+SEOTitle: either thin | or die
+email: hexo-theme-livemylife@gmail.com
 description: "It's an IT blog..."
-keyword: "Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"
+keyword: "v-vincen,v-vincen,livemylife,IT  blog,Blog"
 header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 
@@ -294,5 +294,5 @@ gitter:
 ##
 deploy:
   type: git
-  repository: https://github.com/V-Vincen/V-Vincen.github.io.git
-  branch: master
+  repo: https://github.com/<yourAccount>/<repo> # or https://gitee.com/<yourAccount>/<repo>
+  branch: <your-branch>
