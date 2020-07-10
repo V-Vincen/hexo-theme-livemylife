@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<%- partial('_partial/head') %>
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="body--home">
+	<!-- ThemeColor -->
+	<% if (config.themecolor) { %>
+	<%- partial('_partial/themecolor') %>
+	<% } %>
+
+	<!-- Gitter -->
+	<% if(config.gitter){ %>
+	<%- partial('_partial/gitter',{cache: true}) %>
+	<% } %>
+
+	<!-- Navigation (contains search)-->
+	<%- partial('_partial/nav',{cache: true}) %>
+
+	<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+	<%- partial('_partial/header',{cache: true}) %>
+
+	<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+	<%- body %>
+
+	<!-- Footer (contains ThemeColor、viewer) -->
+	<%- partial('_partial/footer',{cache: true}) %>
+
+	<!-- Search -->
+	<% if (config.search) { %>
+	<%- partial('_partial/search') %>
+	<% } %>
+
+	<!-- Image to hack wechat -->
+	<!-- <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" /> -->
+	<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

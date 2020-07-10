@@ -1,0 +1,137 @@
+<!-- 1. gitalk comment -->
+<% if(config['gitalk']){ %>
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<script src="/js/comment/gitalk.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '<%= config.gitalk.clientID %>',
+    clientSecret: '<%= config.gitalk.clientSecret %>',
+    repo: '<%= config.gitalk.repo %>',
+    owner: '<%= config.gitalk.owner %>',
+    admin: '<%= config.gitalk.admin %>',
+    id: '<%= page.date %>', // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: <%= config.gitalk.perPage %> ,
+    pagerDirection: '<%= config.gitalk.pagerDirection %>',
+    createIssueManually: <%= config.gitalk.createIssueManually %> ,
+    language: '<%= config.gitalk.language %>'
+  });
+  gitalk.render('gitalk-container');
+
+  var gtFolded = () => {
+    setTimeout(function() {
+      let markdownBody = document.getElementsByClassName("markdown-body");
+      let list = Array.from(markdownBody);
+      list.forEach(item => {
+        if (item.clientHeight > 250) {
+          item.classList.add('gt-comment-body-folded');
+          item.style.maxHeight = '<%= config.gitalk.maxCommentHeight %>px';
+          item.title = 'Click to Expand';
+          item.onclick = function() {
+            item.classList.remove('gt-comment-body-folded');
+            item.style.maxHeight = '';
+            item.title = '';
+            item.onclick = null;
+          };
+        }
+      })
+    }, 800);
+  }
+</script>
+
+<!-- gitalk end -->
+<% } %>
+
+
+<!-- 2. gitment comment -->
+<% if(config['gitment']){ %>
+<!-- gitment start -->
+<!-- Docs:https://github.com/imsun/gitment -->
+
+<div id="blog_comments"></div>
+<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+<script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'gitment-container gitment-root-container'
+
+      // your custom component
+      container.appendChild(instance.renderSomething(state, instance))
+      container.appendChild(instance.renderHeader(state, instance))
+      container.appendChild(instance.renderEditor(state, instance))
+      container.appendChild(instance.renderComments(state, instance))
+      container.appendChild(instance.renderFooter(state, instance))
+      return container
+    },
+    renderSomething(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'hello_visitor'
+      if (state.user.login) {
+        container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+      }
+      return container
+    }
+  }
+
+  const gitment = new Gitment({
+    id: '<%= page.date %>', // optional
+    owner: '<%= config.gitment.owner %>',
+    repo: '<%= config.gitment.repo %>',
+    oauth: {
+      client_id: '<%= config.gitment.client_id %>',
+      client_secret: '<%= config.gitment.client_secret %>'
+    },
+    desc: '<%= config.gitment.desc %>',
+    perPage: '<%= config.gitment.perPage %>',
+    maxCommentHeight: '<%= config.gitment.maxCommentHeight %>',
+    theme: myTheme,
+    // ... For more available options, check out the documentation below
+  })
+
+  gitment.render('blog_comments')
+  // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+</script>
+
+<!-- gitment end -->
+<% } %>
+
+
+<!-- 3. disqus comment -->
+<% if(config['disqus_username']) { %>
+<!-- disqus comment start -->
+
+<div class="comment">
+  <div id="disqus_thread" class="disqus-thread"></div>
+</div>
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES * * */
+  var disqus_shortname = "<%= config['disqus_username'] %>";
+  var disqus_identifier = "<%= page.permalink %>";
+  var disqus_url = "<%= page.permalink %>";
+
+  (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<!-- disqus embedded js code start end -->
+
+<!-- disqus comment end -->
+<% } %>

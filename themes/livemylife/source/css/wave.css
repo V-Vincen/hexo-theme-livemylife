@@ -1,0 +1,91 @@
+/* Waveoverlay */
+:root{
+  --gentle-wave1: rgba(255, 255, 255, 0.7);
+  --gentle-wave2: rgba(255, 255, 255, 0.5);
+  --gentle-wave3: rgba(255, 255, 255, 0.3);
+  --gentle-wave: #fff;
+}
+
+.preview-overlay {
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.preview-overlay .preview-waves {
+    position: relative;
+    width: 100%;
+    height: 0vh;
+    margin-bottom: -8px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+@media (max-width: 768px) {
+    .preview-overlay .preview-waves {
+        height: 40px;
+        min-height: 40px;
+    }
+}
+
+.preview-overlay .preview-parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.preview-overlay .preview-parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@-moz-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@-webkit-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@-o-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}

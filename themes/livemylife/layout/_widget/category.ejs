@@ -1,0 +1,14 @@
+<!-- Categories -->
+<% if (site.categories.length){ %>
+<!-- <h5><%= __('categories') %></h5> -->
+<h5><a href="<%= config.root %>categories/">CATEGORIES</a></h5>
+<div class="widget">
+  <ul>
+    <% site.categories.map(function(category){ %>
+    <a href="<%= config.root %>categories/#<%= category.name %>">
+      <li><%= category.name %></li>
+    </a>
+    <% }) %>
+  </ul>
+</div>
+<% } %>

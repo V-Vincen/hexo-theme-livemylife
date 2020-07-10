@@ -1,0 +1,100 @@
+---
+layout: layout
+---
+<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <%- page.content %>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          <% if (page.prev){ %>
+          <li class="previous">
+            <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
+          </li>
+          <% } %>
+          <% if (page.next){ %>
+          <li class="next">
+            <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
+          </li>
+          <% } %>
+        </ul>
+
+        <% if(config['tip']['enable'] && (config['tip']['copyright'] != '')){ %>
+        <!-- tip start -->
+        <div class="tip">
+          <p>
+            <%- config.tip.copyright %>
+          </p>
+        </div>
+        <!-- tip end -->
+        <% } %>
+
+        <% if(config['socialshare']) { %>
+        <!-- Sharing Srtart -->
+        <%- partial('_partial/socialshare') %>
+        <!-- Sharing End -->
+        <% } %>
+        <hr>
+
+        <!-- comments start -->
+        <%- partial('_partial/comment',{cache: true}) %>
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <%- partial('_partial/catalog') %>
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        <% if(config['featured-tags']) { %>
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="<%= config.root %>tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            <% page.tags.forEach(function(tag){ %>
+            <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+            <% }) %>
+          </div>
+        </section>
+        <% }%>
+
+        <!-- Friends Blog -->
+        <% if(config.friends) { %>
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          <% config.friends.forEach(function(friend){ %>
+          <li>
+            <a href="<%= friend.href %>" target="_blank"><%= friend.title %></a>
+          </li>
+          <% }); %>
+        </ul>
+        <% }%>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<% if(config['anchorjs']) { %>
+<!-- anchorjs start -->
+<%- partial('_partial/anchorjs') %>
+<!-- anchorjs end -->
+<% } %>

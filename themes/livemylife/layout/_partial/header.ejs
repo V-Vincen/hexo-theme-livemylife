@@ -1,0 +1,95 @@
+<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+  header.intro-header {
+    <% if (is_home()) { %> /*config*/
+      background-image: url('<%= config.root + config["header-img"] %>');
+    <% } else if (is_post()) { %> /*post*/
+      background-image: url('<%= page["header-img"] %>');
+    <% } else { %> /*page*/
+      background-image: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
+    <% } %>
+  }
+
+  <% if (config.signature) { %>
+    #signature {/*signature*/
+      background-image: url('<%= config.root + config["signature-img"] %>');
+    }
+  <% } %>
+</style>
+
+<% if (page.layout != 404) { %>
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <% if (is_post()) { %>
+          <div class="post-heading">
+            <div class="tags">
+              <% page.tags.forEach(function(tag){ %>
+              <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+              <% }) %>
+            </div>
+            <h1><%= page.title %></h1>
+            <h2 class="subheading"><%= page.subtitle || "" %></h2>
+            <span class="meta">
+              Posted by <%- page.author || config.author %> on
+              <%= page.date.format(config.date_format) %>
+            </span>
+
+
+            <% if(config.wordcount) { %>
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count"><%= min2read(page.content) %></span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count"><%= wordcount(page.content) %></span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            <% } %>
+
+
+          </div>
+          <% } else { %>
+          <div class="site-heading">
+            <h1><%= page.title || config.title %></h1>
+            <!--<hr class="small">-->
+            <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if (config.wave) { %>
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  <% } %>
+
+</header>
+<% } %>
