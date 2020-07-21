@@ -1,22 +1,49 @@
 <!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
-<style type="text/css">
-  header.intro-header {
-    <% if (is_home()) { %> /*config*/
-      background-image: url('<%= config.root + config["header-img"] %>');
-    <% } else if (is_post()) { %> /*post*/
-      background-image: url('<%= page["header-img"] %>');
-    <% } else { %> /*page*/
-      background-image: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
-    <% } %>
-  }
+<% if(config['jsdelivr']) { %>
+  <script>
 
-  <% if (config.signature) { %>
-    #signature {/*signature*/
-      background-image: url('<%= config.root + config["signature-img"] %>');
+  </script>
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    header.intro-header {
+      <% if (is_home()) { %> /*config*/
+        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + config["header-img"] %>');
+      <% } else if (is_post()) { %> /*post*/
+        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + page["header-img"] %>');
+      <% } else { %> /*page*/
+        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + page["header-img"] || config["archives-img"]%>');
+      <% } %>
     }
-  <% } %>
-</style>
+
+    <% if (config.signature) { %>
+      #signature {/*signature*/
+        background-image: url('<%= config.root + config["signature-img"] %>');
+      }
+    <% } %>
+  </style>
+  <!-- CDN: jsdelivr end -->
+<% } else  { %>
+  <style type="text/css">
+    header.intro-header {
+      <% if (is_home()) { %> /*config*/
+        background-image: url('<%= config.root + config["header-img"] %>');
+      <% } else if (is_post()) { %> /*post*/
+        background-image: url('<%= page["header-img"] %>');
+      <% } else { %> /*page*/
+        background-image: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
+      <% } %>
+    }
+
+    <% if (config.signature) { %>
+      #signature {/*signature*/
+        background-image: url('<%= config.root + config["signature-img"] %>');
+      }
+    <% } %>
+  </style>
+<% } %>
+
+
 
 <% if (page.layout != 404) { %>
 <header class="intro-header">

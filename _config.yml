@@ -17,7 +17,14 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
-
+# CDN Setting
+## Docs: https://www.jsdelivr.com/?docs=gh
+## If Github Pages deploy，you can ues jsdelivr settings
+#
+jsdelivr:
+  jsdelivr_url: https://cdn.jsdelivr.net/gh/
+  github_username: V-Vincen
+  
 
 # Custom Setting Start
 

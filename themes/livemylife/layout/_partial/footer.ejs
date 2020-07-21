@@ -5,104 +5,108 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center">
           <% if (config.RSS) { %>
-          <li>
-            <a href="<%= config.root + 'feed.xml' %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a href="<%= config.root + 'feed.xml' %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.github_username) { %>
-          <li>
-            <a target="_blank" href="https://github.com/<%= config.github_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://github.com/<%= config.github_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.twitter_username) { %>
-          <li>
-            <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.instagram_username) { %>
-          <li>
-            <a target="_blank" href="https://www.instagram.com/<%= config.instagram_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/<%= config.instagram_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.facebook_username) { %>
-          <li>
-            <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.linkedin_username) { %>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.zhihu_username) { %>
-          <li>
-            <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa  fa-stack-1x fa-inverse">知</i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
           <% if (config.weibo_username) { %>
-          <li>
-            <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li>
+              <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           <% } %>
 
         </ul>
         <p class="copyright text-muted">
-          Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %>
+          Copyright &copy;
+          <%= config.author %>
+          <%= new Date().getFullYear() %>
           <br>
-          Theme by <a href="http://beantech.org">BeanTech</a>
+          Theme by
+          <a href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>
-          re-Ported by <a href="https://v-vincen.life/">Live My Life</a> |
-          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true">
-          </iframe>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
         </p>
       </div>
     </div>
@@ -122,39 +126,59 @@
 <!-- Custom Theme JavaScript -->
 <script type="text/javascript" src="<%- config.root %>js/hux-blog.min.js"></script>
 
-<!-- catalog  -->
+<!-- catalog -->
 <script type="text/javascript" async="true" src="/js/catalog.js?v=1.0.0"></script>
 
-<!-- totop(rocket)  -->
+<!-- totop(rocket) -->
 <script type="text/javascript" async="true" src="/js/totop.js?v=1.0.0"></script>
-
 
 <!-- Busuanzi JavaScript -->
 <script type="text/javascript" async="true" src="<%- config.root %>js/busuanzi.pure.mini.js"></script>
 
-
 <% if (config.scroll) { %>
-<!-- Scroll start -->
-<script type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
-<!-- Scroll end -->
+  <!-- Scroll start -->
+  <script type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
+  <!-- Scroll end -->
 <% } %>
-
 
 <% if (config.themecolor) { %>
-<!-- ThemeColor start -->
-<script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
-<!-- ThemeColor end -->
+  <!-- ThemeColor start -->
+  <script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
+  <!-- ThemeColor end -->
 <% } %>
 
+<% if(config['jsdelivr']) { %>
+  <!-- CDN: jsdelivr start -->
+  <script type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "<%- config.jsdelivr.jsdelivr_url %>";
+    let gh = "<%- config.jsdelivr.github_username %>";
+    let ghPages = gh + ".github.io";
+    let pagePath = "<%- page.path %>";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }else{
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..","");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+<% } %>
 
 <% if(config['viewer']) { %>
-<!-- viewer start -->
-<!-- viewer start (Picture preview) -->
-<script type="text/javascript" src="<%- config.root %>js/viewer/viewer.min.js"></script>
-<script type="text/javascript" src="<%- config.root %>js/viewer/pic-viewer.js"></script>
-<!-- viewer end -->
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  <script type="text/javascript" src="<%- config.root %>js/viewer/viewer.min.js"></script>
+  <script type="text/javascript" src="<%- config.root %>js/viewer/pic-viewer.js"></script>
+  <!-- viewer end -->
 <% } %>
-
 
 <script>
   // async load function
@@ -165,7 +189,7 @@
       s = d.getElementsByTagName(t)[0];
     o.src = u;
     if (c) {
-      o.addEventListener('load', function(e) {
+      o.addEventListener('load', function (e) {
         c(null, e);
       }, false);
     }
@@ -173,42 +197,18 @@
   }
 
   // fastClick.js
-  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function() {
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
     var $nav = document.querySelector("nav");
-    if ($nav) FastClick.attach($nav);
-  })
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
 </script>
 
-
-<!--
-     Because of the native support for backtick-style fenced code blocks
-     right within the Markdown is landed in Github Pages,
-     From V1.6, There is no need for Highlight.js,
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){ hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("<%= config.url%><%= config.root%>js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script> -->
+<!-- <script> // only load tagcloud.js in tag.html if($('#tag_cloud').length !== 0){ async("<%= config.url%><%= config.root%>js/jquery.tagcloud.js",function(){ $.fn.tagcloud.defaults = { //size: {start: 1, end: 1, unit: 'em'}, color: {start:
+'#bbbbee', end: '#0085a1'}, }; $('#tag_cloud a').tagcloud(); }) } </script> -->

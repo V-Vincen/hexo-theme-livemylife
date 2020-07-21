@@ -95,6 +95,17 @@ language: zh-CN
 timezone:
 ```
 
+### CDN Setting
+```yml
+# CDN Setting
+# Docs: https://www.jsdelivr.com/?docs=gh
+# If Github Pages deploy，you can ues jsdelivr settings
+#
+jsdelivr:
+  jsdelivr_url: https://cdn.jsdelivr.net/gh/
+  github_username: V-Vincen
+```
+
 ### Site Settings
 Put customized pictures in img directory.
 ```yml
@@ -181,7 +192,7 @@ friends: [
 ```
 
 ### Comment Settings
-Hexo-Theme-LiveMyLife temporarily supports five Comments. I use gitalk comment system.
+Hexo-Theme-LiveMyLife temporarily supports three Comments. I use gitalk comment system.
 
 #### Gitalk
 Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gitalk](https://github.com/gitalk/gitalk) for detailed configuration method.
@@ -225,6 +236,7 @@ disqus_username: your-disqus-ID
 
 
 ### Analytics Settings
+How to config analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.life/2020/04/17/Hexo-Theme-LiveMyLife/#Analytics-Settings)
 ```yml
 # Analytics settings
 # Google Analytics
@@ -235,6 +247,7 @@ ba_track_id: ba_track_id
 ```
 
 ### Sitemap Settings
+How to config sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.life/2020/04/17/Hexo-Theme-LiveMyLife/#Analytics-Settings)
 ```yml
 # Google sitemap
 sitemap:
