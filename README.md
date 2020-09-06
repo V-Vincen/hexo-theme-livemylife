@@ -282,7 +282,7 @@ markdown:
 And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
 ```yml
 # Anchorjs Settings
-anchorjs: true    # if you want to customize anchor. check out line:186 of `post.ejs`
+anchorjs: true    # if you want to customize anchor. check out line:26 of `layout/_partial/anchorjs.ejs`
 ```
 
 ```javascript
