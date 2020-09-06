@@ -83,7 +83,8 @@ language: zh-CN
 timezone:
 ```
 
-### CDN Setting
+### CDN Settings
+JsDelivr is A free CDN for Open Source fast、reliable and automated. If Github Pages deploy，you can config CDN settings. The images of the Hexo-theme-livemylife has added JsDelivr CDN Setting. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.life/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
 ```yml
 # CDN Setting
 # Docs: https://www.jsdelivr.com/?docs=gh
@@ -93,6 +94,7 @@ jsdelivr:
   jsdelivr_url: https://cdn.jsdelivr.net/gh/
   github_username: V-Vincen
 ```
+
 
 ### Site Settings
 Put customized pictures in img directory.
@@ -277,7 +279,7 @@ markdown:
 ```
 
 ### Anchorjs Settings
-And if you want to change the header anchor '❡', you can go to `layout/post.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
+And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
 ```yml
 # Anchorjs Settings
 anchorjs: true    # if you want to customize anchor. check out line:186 of `post.ejs`
@@ -368,6 +370,14 @@ search:
   top_n_per_article: 1
 ```
 
+### Gitter
+Gitter is a chat and network platform that helps manage, develop and connect communities through messages, content and discovery.See [Gitter](https://gitter.im/) for detailed configuration method.
+```yml
+## Docs:https://gitter.im/?utm_source=left-menu-logo
+##
+gitter:
+  room: your-community/your-room
+```
 
 ### Deployment
 Replace to your own repo!

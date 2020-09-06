@@ -24,7 +24,7 @@ permalink_defaults:
 jsdelivr:
   jsdelivr_url: https://cdn.jsdelivr.net/gh/
   github_username: V-Vincen
-  
+
 
 # Custom Setting Start
 
@@ -229,7 +229,7 @@ markdown:
 
 
 # Build Settings
-anchorjs: true    # if you want to customize anchor. check out line:186 of `post.ejs`
+anchorjs: true    # if you want to customize anchor. check out line:26 of `anchorjs.ejs`
 
 
 # article top
