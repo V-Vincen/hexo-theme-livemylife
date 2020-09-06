@@ -1,9 +1,6 @@
 <!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <% if(config['jsdelivr']) { %>
-  <script>
-
-  </script>
   <!-- CDN: jsdelivr start -->
   <style type="text/css">
     header.intro-header {
@@ -12,7 +9,7 @@
       <% } else if (is_post()) { %> /*post*/
         background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + page["header-img"] %>');
       <% } else { %> /*page*/
-        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + page["header-img"] || config["archives-img"]%>');
+        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["archives-img"] %>');
       <% } %>
     }
 
