@@ -95,7 +95,6 @@ jsdelivr:
   github_username: V-Vincen
 ```
 
-
 ### Site Settings
 Put customized pictures in img directory.
 ```yml
