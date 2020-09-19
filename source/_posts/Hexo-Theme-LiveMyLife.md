@@ -257,7 +257,8 @@ sitemap:
 # Baidu sitemap
 baidusitemap:
   path: baidusitemap.xml
-  baidu_push: true
+
+baidu_push: true
 ```
 
 
