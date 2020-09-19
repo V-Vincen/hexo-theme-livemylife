@@ -151,7 +151,8 @@ sitemap:
 ## Baidusitemap
 baidusitemap:
     path: baidusitemap.xml
-    baidu_push: true
+
+baidu_push: true
 
 # Custom Setting End
 
