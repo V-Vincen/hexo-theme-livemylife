@@ -44,7 +44,7 @@ $ hexo init blog
 ## Theme Usage
 ### Init
 ```shell
-cd bolg
+cd blog
 rm -rf _config.yml package.json scaffolds source themes yarn.lock #just keep node_modules
 git clone https://github.com/V-Vincen/hexo-theme-livemylife.git
 mv hexo-theme-livemylife/* ./
