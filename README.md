@@ -8,7 +8,7 @@
 ## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
 
 
-![LiveMyLife Desktop](https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/2020/04/17/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
+![LiveMyLife Desktop](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
 ## Quick Start
 
