@@ -2,10 +2,10 @@
 
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
-> This LiveMyLife theme created by [Vincent](https://wvincen.gitee.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
+> This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
 >   
 
-## [View Live LiveMyLife Blog →](https://v-vincen.life/)
+## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
 
 
 ![LiveMyLife Desktop](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
@@ -84,7 +84,7 @@ timezone:
 ```
 
 ### CDN Settings
-JsDelivr is A free CDN for Open Source fast、reliable and automated. If Github Pages deploy，you can config CDN settings. The images of the Hexo-theme-livemylife has added JsDelivr CDN Setting. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.life/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
+JsDelivr is A free CDN for Open Source fast、reliable and automated. If Github Pages deploy，you can config CDN settings. The images of the Hexo-theme-livemylife has added JsDelivr CDN Setting. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
 ```yml
 # CDN Setting
 # Docs: https://www.jsdelivr.com/?docs=gh
@@ -225,7 +225,7 @@ disqus_username: your-disqus-ID
 
 
 ### Analytics Settings
-How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.life/2020/04/17/Hexo-Theme-LiveMyLife/#Analytics-Settings)
+How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/2020/07/21/Analytics-and-Sitemap-Settings/)
 ```yml
 # Analytics settings
 # Google Analytics
@@ -236,7 +236,7 @@ ba_track_id: ba_track_id
 ```
 
 ### Sitemap Settings
-How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.life/2020/04/17/Hexo-Theme-LiveMyLife/#Analytics-Settings)
+How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/2020/07/21/Analytics-and-Sitemap-Settings/)
 ```yml
 # Google sitemap
 sitemap:
