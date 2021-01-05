@@ -18,6 +18,12 @@ categories:
 > This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
 >   
 
+## Repo
+
+Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
+
+Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
+
 ## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
 
 ![LiveMyLife Desktop](livemylife-desktop.png)
