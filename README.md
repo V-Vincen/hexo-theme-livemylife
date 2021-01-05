@@ -3,12 +3,19 @@
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
 > This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
->   
+
+
+## Repo
+
+Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
+
+Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
+
 
 ## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
 
 
-![LiveMyLife Desktop](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
+![LiveMyLife Desktop](/source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
 ## Quick Start
 
@@ -127,7 +134,7 @@ wave: true
 ```
 Example:
 
-![wave](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/wave.png)
+![wave](/source/_posts/Hexo-Theme-LiveMyLife/wave.png)
 
 
 ### SNS Settings
@@ -260,7 +267,7 @@ home_posts_tag: true
 ```
 Example:
 
-![home_posts_tag-true](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
+![home_posts_tag-true](/source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
 
 
 ### Markdown render
@@ -306,7 +313,7 @@ Hexo-theme-livemylife has added the article top function, just add `top: number`
 
 Example:
 
-![top](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/top.png)
+![top](/source/_posts/Hexo-Theme-LiveMyLife/top.png)
 
 ### WordCount Settings
 A Word Count Plugin for Hexo. See [WordCount](https://github.com/willin/hexo-wordcount) for detailed configuration method.
@@ -348,10 +355,10 @@ Hexo-Theme-LiveMyLife temporarily supports two themes color.
 themecolor: true
 ```
 Light theme preview：
-![light theme](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/light.png)
+![light theme](/source/_posts/Hexo-Theme-LiveMyLife/light.png)
 
 Dark theme preview：
-![dark theme](https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/source/_posts/Hexo-Theme-LiveMyLife/dark.png)
+![dark theme](/source/_posts/Hexo-Theme-LiveMyLife/dark.png)
 
 
 ### Search Settings
