@@ -75,12 +75,14 @@
               Words <span class="post-count"><%= wordcount(page.content) %></span> In Total
             </span>
             <div class="blank_box"></div>
+            <!-- WordCount end -->
+            <% } %>
+            <% if(config.busuanzi) { %>
             <!-- 不蒜子统计 start -->
-            <span class="meta">
+            <span class="meta" id="busuanzi_container_page_pv">
               Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
             </span>
             <!-- 不蒜子统计 end -->
-            <!-- WordCount end -->
             <% } %>
 
 

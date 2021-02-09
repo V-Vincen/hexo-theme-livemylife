@@ -133,7 +133,10 @@
 <script type="text/javascript" async="true" src="/js/totop.js?v=1.0.0"></script>
 
 <!-- Busuanzi JavaScript -->
-<script type="text/javascript" async="true" src="<%- config.root %>js/busuanzi.pure.mini.js"></script>
+<% if (config.busuanzi) { %>
+  <!-- <script type="text/javascript" async="true" src="<%- config.root %>js/busuanzi.pure.mini.js"></script> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% } %>
 
 <% if (config.scroll) { %>
   <!-- Scroll start -->

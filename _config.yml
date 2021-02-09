@@ -243,6 +243,10 @@ top: true
 ##
 wordcount: true
 
+# Busuanzi Settings
+## Dependencies: https://busuanzi.ibruce.info/
+## Docs: https://ibruce.info/
+busuanzi: true
 
 # top scroll progress
 scroll: true

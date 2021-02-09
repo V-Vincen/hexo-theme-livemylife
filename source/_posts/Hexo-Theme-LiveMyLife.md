@@ -334,6 +334,14 @@ A Word Count Plugin for Hexo. See [WordCount](https://github.com/willin/hexo-wor
 wordcount: true
 ```
 
+### Busuanzi Settings
+Busuanzi is a website traffic statistics plugin. How to use Busuanzi, see [Busuanzi](https://ibruce.info/2015/04/04/busuanzi/) for detailed examples.
+```yml
+## Dependencies: https://busuanzi.ibruce.info/
+## Docs: https://ibruce.info/
+busuanzi: true
+```
+
 ### Top scroll progress
 ```yml
 # top scroll progress
