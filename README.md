@@ -197,8 +197,8 @@ Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gita
 # Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 gitalk:
   owner:                          # 'GitHub repo owner'
-  admin:                          # 'GitHub repo'
-  repo:                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  admin:                          # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  repo:                           # 'GitHub repo'
   clientID:                       # 'GitHub Application Client ID'
   clientSecret:                   # 'GitHub Application Client Secret'
   perPage: 10                     # Pagination size, with maximum 100.
@@ -206,6 +206,7 @@ gitalk:
   createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+  proxy:                          # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
 ```
 
 #### Gitment
