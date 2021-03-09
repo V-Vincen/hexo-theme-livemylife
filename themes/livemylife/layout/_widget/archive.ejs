@@ -1,7 +1,19 @@
+<!-- Archives -->
 <% if (site.posts.length){ %>
-    <!-- <h5><%= __('ARCHIVES') %></h5> -->
-    <h5><a href="<%= config.root %>archives/">ARCHIVES</a></h5>
-    <div class="widget">
-      <%- list_archives({show_count: config.show_count, type: config.archive_type}) %>
-    </div>
+  <h5><a href="<%= config.root %><%= page.lang %>/archive/"><%= __('archives') %></a></h5>
+  <div class="widget">
+    <%- list_archives({show_count: config.show_count, type: config.archive_type}) %>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- <h5><a href="<%= config.root %>archives/"><%= __('archives') %></a></h5> -->
+  <!-- <div class="widget"> -->
+    <!-- <%- list_archives({show_count: config.show_count, type: config.archive_type}) %> -->
+    <!-- </div> -->
 <% } %>

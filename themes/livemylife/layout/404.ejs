@@ -2,8 +2,18 @@
 layout: layout
 ---
 
+<style type="text/css">
+  header.intro-header {
+    <% if(config['jsdelivr']) { %>
+      background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io/<%= page["header-img"] %>');
+    <% } else { %>
+      background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>');
+    <% } %>
+  }
+</style>
+
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">

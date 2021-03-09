@@ -23,7 +23,11 @@
 </div>
 
 <% if (config['search']) { %>
-  <script src="<%- config.root %>js/ziploader.js"></script>
+  <% if(config['jsdelivr']) { %>
+    <script src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/ziploader.js"></script>
+  <% } else { %>
+    <script src="<%- config.root %>js/ziploader.js"></script>
+  <% } %>
   <script>
     // Popup Window;
     var isfetched = false;

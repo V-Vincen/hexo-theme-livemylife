@@ -734,9 +734,6 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
-body {
-  -webkit-tap-highlight-color: #0085a1;
-}
 .tags {
   margin-bottom: -5px;
 }

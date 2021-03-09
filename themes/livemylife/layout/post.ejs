@@ -26,13 +26,9 @@ layout: layout
           <% } %>
         </ul>
 
-        <% if(config['tip']['enable'] && (config['tip']['copyright'] != '')){ %>
+        <% if(config['tip']['enable']){ %>
         <!-- tip start -->
-        <div class="tip">
-          <p>
-            <%- config.tip.copyright %>
-          </p>
-        </div>
+        <%- partial('_partial/tip') %>
         <!-- tip end -->
         <% } %>
 
@@ -64,7 +60,7 @@ layout: layout
         <section>
           <!-- no hr -->
           <h5>
-            <a href="<%= config.root %>tags/">FEATURED TAGS</a>
+            <a href="<%= config.root %>tags/"><%= __('featured_tags') %></a>
           </h5>
           <div class="tags">
             <% page.tags.forEach(function(tag){ %>
@@ -77,7 +73,7 @@ layout: layout
         <!-- Friends Blog -->
         <% if(config.friends) { %>
         <hr>
-        <h5>FRIENDS</h5>
+        <h5><%= __('friends') %></h5>
         <ul class="list-inline">
 
           <% config.friends.forEach(function(friend){ %>

@@ -1,6 +1,6 @@
 ---
-layout: "about"
-title: "About"
+layout: "about_cn"
+title: "关于"
 date: 2016-04-21 04:48:33
 description: "那些年吹过的牛逼，还有很多没有实现 ......"
 header-img: "img/scenery/about_bg.jpg"
@@ -18,7 +18,7 @@ header-img: "img/scenery/about_bg.jpg"
 
 ## Just Me
 
-<img src="../img/scenery/about_bg2.jpg" width="350" alt="about_bg2"></img>
+<img src="../../img/scenery/about_bg2.jpg" width="350" alt="about_bg2"></img>
 
 > 有一种状态 叫一个人 它总是挑战语言的贫乏 只能在某首歌中找寻灵感；
 >
@@ -38,7 +38,7 @@ header-img: "img/scenery/about_bg.jpg"
 
 ## The Longest Way ...
 
-<img src="../img/scenery/about_bg4.jpg" width="350" alt="about_bg4"></img>
+<img src="../../img/scenery/about_bg4.jpg" width="350" alt="about_bg4"></img>
 
 >  活在当下 然后忘记 继续往前走 ...
 >
@@ -72,4 +72,4 @@ header-img: "img/scenery/about_bg.jpg"
 ## Treat me to coffee
 >  If you feel that what I have written is of some value to you, I am glad that you are willing to invite me to drink coffee...
 
-<img src="../img/scenery/treat_me_to_coffee.png" width="350" alt="treat_me_to_coffee.png"></img>
+<img src="../../img/scenery/treat_me_to_coffee.png" width="350" alt="treat_me_to_coffee.png"></img>
