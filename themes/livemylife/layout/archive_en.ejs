@@ -37,10 +37,6 @@ layout: page
         </span>
         <ul>
           <% years[year].map(function(post){  %>
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
           <li>
             <%= post.date.format('MM-DD') %>
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
@@ -49,7 +45,6 @@ layout: page
                 <%- post.title || "Untitled" %>
               </span>
             </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           <% }) %>
         </ul>

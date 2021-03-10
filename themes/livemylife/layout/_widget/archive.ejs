@@ -1,19 +1,42 @@
 <!-- Archives -->
 <% if (site.posts.length){ %>
-  <h5><a href="<%= config.root %><%= page.lang %>/archive/"><%= __('archives') %></a></h5>
-  <div class="widget">
-    <%- list_archives({show_count: config.show_count, type: config.archive_type}) %>
-  </div>
+<h5><a href="<%= config.root %><%= page.lang %>/archive/"><%= __('archives') %></a></h5>
+<div class="widget">
+
+  <%
+    var lang;
+    var currentURL = page.path.split('/') ;
+    if (currentURL.length === 1) {
+      lang = page.lang ;
+    } else {
+      lang = currentURL.shift();
+    }
+
+    var years = {};
+    site.posts.filter(function(post){
+      return post.lang == lang;
+    }).sort('date').reverse().forEach(function(post){
+      var ym = post.date.format('MMMM YYYY');
+      if(years[ym] === undefined){
+        years[ym] = [];
+      }
+      years[ym].push(post);
+    });
+  %>
+
+  <ul class="archive-list">
+    <% Object.keys(years).reverse().forEach(function(ym){  %>
+    <li class="archive-list-item">
+      <a class="archive-list-link" href="<%- config.root %><%= page.lang %>/archive/"><%= ym %></a>
+      <span class="archive-list-count"><%= years[ym].length %></span>
+    </li>
+    <% }) %>
+  </ul>
+</div>
 
 
-
-
-
-
-
-
-  <!-- <h5><a href="<%= config.root %>archives/"><%= __('archives') %></a></h5> -->
-  <!-- <div class="widget"> -->
-    <!-- <%- list_archives({show_count: config.show_count, type: config.archive_type}) %> -->
-    <!-- </div> -->
+<!-- <h5><a href="<%= config.root %>archives/"><%= __('archives') %></a></h5> -->
+<!-- <div class="widget"> -->
+<!-- <%- list_archives({show_count: config.show_count, type: config.archive_type}) %> -->
+<!-- </div> -->
 <% } %>
