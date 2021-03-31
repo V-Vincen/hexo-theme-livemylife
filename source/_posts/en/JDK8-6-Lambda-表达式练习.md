@@ -3,7 +3,7 @@ title: '[JDK8] 6 Lambda 表达式练习'
 catalog: true
 date: 2020-04-07 18:30:29
 subtitle: Practice something...
-top: 998
+sticky: 998
 header-img: /img/java8/java8_bg.png
 tags:
 - JDK8

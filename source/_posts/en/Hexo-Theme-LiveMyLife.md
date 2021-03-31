@@ -3,7 +3,7 @@ title: Hexo-Theme-LiveMyLife
 catalog: true
 date: 2020-04-17 02:34:17
 subtitle: A succinct hexo theme...
-top: 999
+sticky: 999
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - Hexo
