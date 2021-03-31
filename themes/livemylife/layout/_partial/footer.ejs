@@ -131,8 +131,8 @@
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/totop.js"></script>
 
-  <!-- Busuanzi JavaScript -->
   <% if (config.busuanzi) { %>
+    <!-- Busuanzi JavaScript -->
     <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <% } %>
 
@@ -142,10 +142,27 @@
     <!-- Scroll end -->
   <% } %>
 
-  <% if (config.themecolor) { %>
-    <!-- ThemeColor start -->
-    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/themecolor.js"></script>
-    <!-- ThemeColor end -->
+  <% if (config.langselect) { %>
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  <% } %>
+
+  <% if (config.mouseclick) { %>
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/mouseclick.js"  content='[<%= config.mouseclick.content %>]' color='[<%= config.mouseclick.color %>]' ></script>
+    <!-- Mouseclick -->
+  <% } %>
+
+  <% if (config.ribbonDynamic) { %>
+    <!-- ribbon -->
+    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/ribbonDynamic.js"></script>
+  <% } %>
+
+  <% if (config.bglinecanvas) { %>
+    <!-- Line start -->
+    <script async="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/line.js"></script>
+    <!-- Line end -->
   <% } %>
 
 <% } else { %>
@@ -159,12 +176,40 @@
   <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
-  <!-- Busuanzi JavaScript -->
-  <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <!-- Scroll start -->
-  <script async="async" type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
-  <!-- ThemeColor start -->
-  <script type="text/javascript" src="<%- config.root %>js/themecolor.js"></script>
+
+  <% if (config.busuanzi) { %>
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <% } %>
+
+  <% if (config.scroll) { %>
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="<%- config.root %>js/scroll.js"></script>
+    <!-- Scroll end -->
+  <% } %>
+
+  <% if (config.langselect) { %>
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="<%- config.root %>js/langselect.js"></script>
+    <!-- LangSelect end -->
+  <% } %>
+
+  <% if (config.mouseclick) { %>
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="<%- config.root %>js/mouseclick.js" content='<%= config.mouseclick.content %>' color='<%= config.mouseclick.color %>'></script>
+  <% } %>
+
+  <% if (config.ribbonDynamic) { %>
+    <!-- ribbon -->
+    <script type="text/javascript" src="<%- config.root %>js/ribbonDynamic.js"></script>
+  <% } %>
+
+  <% if (config.bglinecanvas) { %>
+    <!-- Line start -->
+    <script async="text/javascript" src="<%- config.root %>js/line.js"></script>
+    <!-- Line end -->
+  <% } %>
+
 <% } %>
 
 <% if(config['jsdelivr']) { %>

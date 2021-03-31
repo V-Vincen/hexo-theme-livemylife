@@ -105,7 +105,7 @@
       <!-- Search end -->
     <% } %>
 
-    <% if (config.themecolor) { %>
+    <% if (config.themecolor && config['themecolor']['enable']) { %>
       <!-- ThemeColor start -->
       <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/themecolor.css"/>
       <!-- ThemeColor end -->
@@ -169,7 +169,7 @@
       <!-- Search end -->
     <% } %>
 
-    <% if (config.themecolor) { %>
+    <% if (config.themecolor && config['themecolor']['enable']) { %>
       <!-- ThemeColor start -->
       <link rel="stylesheet" href="<%= config.root %>css/themecolor.css"/>
       <!-- ThemeColor end -->

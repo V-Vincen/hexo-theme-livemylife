@@ -1,6 +1,6 @@
 <!-- Friends Blog -->
 <% if(config.friends) { %>
-<h5><a href="<%= config.root %><%= page.lang %>"><%= __('friends') %></a></h5>
+<h5><a href="<%= config.root %>"><%= __('friends') %></a></h5>
 <ul class="list-inline">
   <% config.friends.forEach(function(friend){ %>
   <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>

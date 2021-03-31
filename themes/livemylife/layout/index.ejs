@@ -5,15 +5,15 @@ layout: page
 <%
   var newPage = Object.assign({}, page);
   newPage['posts']['data'] = page.posts.data.sort(function(a, b){
-    if(a.top && b.top) { // 两篇文章top都有定义
-        if(a.top == b.top) {
+    if(a.sticky && b.sticky) { // 两篇文章top都有定义
+        if(a.sticky == b.sticky) {
           return b.date - a.date;// 若top值一样则按照文章日期降序排
         } else {// 否则按照top值降序排
-          return b.top - a.top;
+          return b.sticky - a.sticky;
         }
-    } else if(a.top && !b.top) { // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
+    } else if(a.sticky && !b.sticky) { // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
         return -1;
-    } else if(!a.top && b.top) {
+    } else if(!a.sticky && b.sticky) {
         return 1;
     } else {// 都没定义按照文章日期降序排
       return b.date - a.date;
@@ -21,18 +21,17 @@ layout: page
   });
 %>
 
-<% page.posts.each(function(post){ %>
+<% newPage.posts.each(function(post){ %>
 <div class="post-preview">
   <% if (config.top) { %>
   <!-- top start (article top hot config) -->
-  <% if(post.top) { %>
+  <% if(post.sticky) { %>
   <div class="top">
     <div class="iconfont icon-hot animated infinite tada"></div>
   </div>
   <% } %>
   <!-- top end -->
   <% } %>
-
 
   <a href="<%- config.root %><%- post.path %>">
     <h2 class="post-title">
@@ -45,7 +44,7 @@ layout: page
       <%- truncate(strip_html(post.content), {length: 200, omission: '...'}) %>...
     </div>
   </a>
-  <% if (config.home_posts_tag){%>
+  <% if (config.home_posts_tag) { %>
   <p class="post-meta" style="margin: 10px 0;">
     Posted by <%- post.author || config.author %> on
     <%= post.date.format(config.date_format) %>
@@ -55,17 +54,16 @@ layout: page
     <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
     <% }) %>
   </div>
-  <%} else {%>
+  <% } else { %>
   <p class="post-meta">
     Posted by <%- post.author || config.author %> on
     <%= post.date.format(config.date_format) %>
   </p>
-  <%}%>
+  <% } %>
 
 </div>
 <hr>
 <% }); %>
-
 
   <!-- Pager -->
   <ul class="pager">

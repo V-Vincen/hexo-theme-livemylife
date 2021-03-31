@@ -3,13 +3,27 @@
 <% if(config['jsdelivr']) { %>
   <!-- CDN: jsdelivr start -->
   <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + config["header-img"] %>');
+      --intro-header-background-image-url-post: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+      --intro-header-background-image-url-page: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["archives-img"] %>');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + config["header-img"] %>');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["archives-img"] %>');
+    }
     header.intro-header {
       <% if (is_home()) { %> /*config*/
-        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + config["header-img"] %>');
+        background-image: var(--intro-header-background-image-url-home);
+        /* background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root + config["header-img"] %>'); */
       <% } else if (is_post()) { %> /*post*/
-        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>'); */
       <% } else { %> /*page*/
-        background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["archives-img"] %>');
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["archives-img"] %>'); */
       <% } %>
     }
 
@@ -22,13 +36,28 @@
   <!-- CDN: jsdelivr end -->
 <% } else  { %>
   <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('<%= config.root + config["header-img"] %>');
+      --intro-header-background-image-url-post: url('<%= page["header-img"] %>');
+      --intro-header-background-image-url-page: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.root + config["header-img"] %>');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= page["header-img"] %>');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
+    }
+
     header.intro-header {
       <% if (is_home()) { %> /*config*/
-        background-image: url('<%= config.root + config["header-img"] %>');
+        background-image: var(--intro-header-background-image-url-home);
+        /* background-image: url('<%= config.root + config["header-img"] %>'); */
       <% } else if (is_post()) { %> /*post*/
-        background-image: url('<%= page["header-img"] %>');
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('<%= page["header-img"] %>'); */
       <% } else { %> /*page*/
-        background-image: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>');
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('<%= config.root %><%= page["header-img"] || config["archives-img"]%>'); */
       <% } %>
     }
 

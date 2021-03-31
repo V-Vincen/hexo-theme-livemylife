@@ -5,25 +5,29 @@
 <%- partial('_partial/head') %>
 
 <!-- hack iOS CSS :active style -->
+<% if (config.themecolor && config['themecolor']['enable'] && config['themecolor']['mode']) { %>
+	<body ontouchstart="" class="body--light body--<%- config['themecolor']['mode'] %>">
+<% } else { %>
+	<body ontouchstart="" class="body--light">
+<% } %>
 
-<body ontouchstart="" class="body--home">
-	<!-- ThemeColor -->
-	<% if (config.themecolor) { %>
-	<%- partial('_partial/themecolor') %>
-	<% } %>
+		<!-- ThemeColor -->
+		<% if (config.themecolor && config['themecolor']['enable']) { %>
+		<%- partial('_partial/themecolor') %>
+		<% } %>
 
-	<!-- Gitter -->
-	<% if(config.gitter){ %>
-	<%- partial('_partial/gitter',{cache: true}) %>
-	<% } %>
+		<!-- Gitter -->
+		<% if(config.gitter){ %>
+		<%- partial('_partial/gitter',{cache: true}) %>
+		<% } %>
 
-	<!-- Navigation (contains search)-->
-	<%- partial('_partial/nav',{cache: true}) %>
+		<!-- Navigation (contains search)-->
+		<%- partial('_partial/nav',{cache: true}) %>
 
-	<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
-	<%- partial('_partial/header',{cache: true}) %>
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<%- partial('_partial/header',{cache: true}) %>
 
-	<!-- Main Content (Post contains
+		<!-- Main Content (Post contains
 	Pager、
 	tip、
 	socialshare、
@@ -34,20 +38,25 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<%- body %>
+		<%- body %>
 
-	<!-- Footer (contains ThemeColor、viewer) -->
-	<%- partial('_partial/footer',{cache: true}) %>
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<%- partial('_partial/footer',{cache: true}) %>
 
-	<!-- Search -->
-	<% if (config.search) { %>
-	<%- partial('_partial/search') %>
-	<% } %>
+		<!-- Search -->
+		<% if (config.search) { %>
+		<%- partial('_partial/search') %>
+		<% } %>
 
-	<!-- Image to hack wechat -->
-	<!-- <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" /> -->
-	<!-- Migrate from head to bottom, no longer block render and still work -->
+		<% if(config['jsdelivr']) { %>
 
-</body>
 
+
+		<% } else { %>
+
+			
+
+		<% } %>
+
+	</body>
 </html>
