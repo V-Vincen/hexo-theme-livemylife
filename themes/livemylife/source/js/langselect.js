@@ -1,6 +1,4 @@
 (function() {
-  'use strict';
-
   function changeLang() {
     var selectLang = this.value;
     var canonical = this.dataset.canonical;
@@ -12,5 +10,7 @@
     location.href = (location.origin + '/' + path).replace('index.html', '');
   }
 
-  document.getElementById('lang-select').addEventListener('change', changeLang);
+  if (document.getElementById('lang-select')) {
+    document.getElementById('lang-select').addEventListener('change', changeLang);
+  }
 }());

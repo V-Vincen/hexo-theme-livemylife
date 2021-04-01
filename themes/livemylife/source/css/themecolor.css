@@ -58,6 +58,8 @@
   --toggle-border-color: #0085a1;
   --toggle-color: #1f1f1f;
   --toggle-hover: rgba(0, 0, 0, .1);
+  --webkit-scrollbar-track-color: rgb(34, 38, 49);
+  --webkit-scrollbar-thumb-color: rgba(122, 125, 131, 0.5);
 }
 
 .body--dark {
@@ -126,6 +128,8 @@
   --toggle-border-color: #e01258;
   --toggle-color: #fff;
   --toggle-hover: rgba(255, 255, 255, .1);
+  --webkit-scrollbar-track-color: white;
+  --webkit-scrollbar-thumb-color: rgba(157, 165, 183, 0.4);
 }
 
 /* ================================================ Common Menu Start ======================================================= */
@@ -384,6 +388,14 @@ hr {
   background-color: var(--viewer-background-color);
 }
 
+::-webkit-scrollbar-track {
+  background: var(--webkit-scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--webkit-scrollbar-thumb-color);
+}
+
 /* ================================================ Common Menu End ======================================================= */
 /* ================================================ Tags Menu Start ======================================================= */
 .listing-seperator {
@@ -400,8 +412,8 @@ hr {
   color: var(--tag_cloud-color-hovor);
 }
 
-/* ================================================ Tags Menu End ======================================================= */
-/* ================================================ Archive Menu Start ======================================================= */
+/* ================================================ Tags Menu End ========================================================== */
+/* ================================================ Archive Menu Start ===================================================== */
 .one-tag-list>ul>li {
   color: var(--post-title-subtitle-color);
 }
@@ -411,7 +423,7 @@ hr {
 }
 
 /* ================================================ Archive Menu End ======================================================= */
-/* ==================================================== Post Start =================================================== */
+/* ==================================================== Post Start ========================================================= */
 .body--light {
   --color-default: #404040;
   --blockquote-color: gray;

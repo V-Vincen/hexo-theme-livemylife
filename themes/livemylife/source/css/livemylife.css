@@ -351,3 +351,50 @@ li.archive-list-item:hover a {
   font-size: inherit;
   cursor: pointer;
 }
+
+/* 滚动条背景与宽度 */
+::-webkit-scrollbar {
+  width: 6px;
+  background: none;
+  height: 6px;
+}
+
+/* 滚动条轨道样式 */
+::-webkit-scrollbar-track {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 0px;
+  background: white;
+  border: 0px solid transparent;
+}
+
+/* 滚动条滑块样式 */
+::-webkit-scrollbar-thumb {
+  width: 20px;
+  min-height: 1px;
+  box-shadow: 0 0 0 0px #464f70 inset;
+  border-radius: 3px;
+  background-color: rgba(157, 165, 183, 0.4);
+  background-clip: padding-box;
+  border: 0px solid transparent;
+}
+
+/* 当前窗口未激活的情况下 */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(157, 165, 183, 0.4);
+}
+
+/* hover到滚动条上 */
+::-webkit-scrollbar-thumb:vertical:hover {
+  background: rgba(157, 165, 183, 0.7);
+}
+
+/* 滚动条按下 */
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(157, 165, 183, 0.7);
+}
+
+/* 滚动条边角样式 */
+::-webkit-scrollbar-corner {
+  background: white;
+}
