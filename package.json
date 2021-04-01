@@ -13,20 +13,20 @@
   },
   "dependencies": {
     "hexo": "^4.2.1",
-    "hexo-deployer-git": "^2.1.0",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
-    "hexo-generator-baidu-sitemap": "^0.1.6",
+    "hexo-generator-baidu-sitemap": "^0.1.9",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-index-i18n": "^0.2.1",
-    "hexo-generator-sitemap": "^2.0.0",
+    "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-generator-zip-search": "0.0.1",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^2.0.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-renderer-marked": "^4.0.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
     "hexo-wordcount": "^6.0.1",
-    "leancloud-storage": "^4.5.3"
+    "leancloud-storage": "^4.10.1"
   }
 }
