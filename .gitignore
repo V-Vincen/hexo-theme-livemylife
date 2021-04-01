@@ -1,0 +1,12 @@
+q.DS_Store
+Thumbs.db
+*.log
+node_modules/
+public/
+.deploy*/
+node_modules/*
+public/*
+_config_.yml
+.DS_Store
+
+_config.yml
