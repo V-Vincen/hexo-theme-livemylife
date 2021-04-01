@@ -1,9 +1,35 @@
 ---
 layout: layout
 ---
+<style type="text/css">
+  <% if(config['jsdelivr']) { %>
+  .body--light {
+    /* intro-header */
+    --intro-header-background-image-url-jsdelivr-404: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+  }
+  .body--dark {
+    --intro-header-background-image-url-jsdelivr-404: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+  }
+  header.intro-header {
+    background-image: var(--intro-header-background-image-url-jsdelivr-404);
+  }
+  <% } else { %>
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-404: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>');
+    }
+    .body--dark {
+      --intro-header-background-image-url-404: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.root %><%= page["header-img"] || config["header-img"] %>');
+    }
+    header.intro-header {
+      background-image: var(--intro-header-background-image-url-404);
+    }
+  <% } %>
+
+</style>
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
@@ -16,7 +42,6 @@ layout: layout
         </div>
     </div>
 </header>
-
 <script>
     document.body.classList.add('page-fullscreen');
 </script>

@@ -8,5 +8,7 @@ node_modules/*
 public/*
 _config_.yml
 .DS_Store
+.idea/*
 
 _config.yml
+!themes/livemylife/_config.yml

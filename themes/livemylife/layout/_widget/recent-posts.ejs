@@ -1,6 +1,6 @@
+<!-- RECENT POSTS -->
 <% if (site.posts.length){ %>
-<!-- <h5><%= __('RECENT POSTS') %></h5> -->
-<h5><a href="<%= config.root %>">RECENT POSTS</a></h5>
+<h5><a href="<%= config.root %>"><%= __('recent_posts') %></a></h5>
 <div class="widget">
   <ul>
     <% site.posts.sort('date', -1).limit(5).each(function(post){ %>

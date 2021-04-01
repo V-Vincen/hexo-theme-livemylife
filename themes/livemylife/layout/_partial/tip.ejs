@@ -1,0 +1,12 @@
+<!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    <% if(config['tip']['copyright'] && config['tip']['copyright'] != ''){ %>
+      <%- config.tip.copyright %>
+    <% } else { %>
+      <%= __('tip') %>
+    <%  } %>
+  </p>
+</div>
+<!-- tip end -->

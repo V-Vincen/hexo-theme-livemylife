@@ -1,120 +1,192 @@
 <head>
   <!-- Google Analytics -->
   <% if (config.ga_track_id) { %>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=<%= config.ga_track_id %>"></script>
-  <script type="text/javascript">
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=<%= config.ga_track_id %>"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', '<%= config.ga_track_id %>');
-  </script>
+      gtag('config', '<%= config.ga_track_id %>');
+    </script>
   <% } %>
 
   <!-- Baidu Tongji -->
   <% if (config.ba_track_id) { %>
-  <script type="text/javascript">
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?<%= config.ba_track_id %>";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?<%= config.ba_track_id %>";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   <% } %>
 
   <!-- Baidu Push -->
   <% if (config.baidu_push) { %>
-  <script>
-    (function() {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
   <% } %>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc" />
-  <meta name="baidu-site-verification" content="PpzM9WxOJU" />
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="<%= config.description %>" />
-  <meta name="keyword" content="<%= config.keyword %>" />
-  <link rel="shortcut icon" href="<%= config.root %><%= config.favicon %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="<%= config.description %>"/>
+  <meta name="keyword" content="<%= config.keyword %>"/>
+  <link rel="shortcut icon" href="<%= config.root %><%= config.favicon %>"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="<%= config.root %>css/bootstrap.min.css" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="<%= config.root %>css/beantech.min.css" />
+  <% if(config['jsdelivr']) { %>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/bootstrap.min.css"/>
 
-  <!-- Pygments Highlight CSS -->
-  <%- css(['css/highlight', 'css/widget','css/rocket','css/signature','css/catalog','css/livemylife.css']) %>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/beantech.min.css"/>
 
-  <% if (config.wave) { %>
-  <!-- wave start -->
-  <link rel="stylesheet" href="<%= config.root %>css/wave.css" />
-  <!-- wave end -->
-  <% } %>
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/livemylife.css"/>
 
-  <% if (config.top) { %>
-  <!-- top start (article top hot config) -->
-  <link rel="stylesheet" href="<%= config.root %>css/top.css" />
-  <!-- top end -->
-  <% } %>
+    <% if (config.wave) { %>
+      <!-- wave start -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/wave.css"/>
+      <!-- wave end -->
+    <% } %>
 
-  <% if (config.scroll) { %>
-  <!-- ThemeColor start -->
-  <link rel="stylesheet" href="<%= config.root %>css/scroll.css" />
-  <!-- ThemeColor end -->
-  <% } %>
+    <% if (config.top) { %>
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/top.css"/>
+      <!-- top end -->
+    <% } %>
 
-  <% if (config.viewer) { %>
-  <!-- viewer start (Picture preview) -->
-  <link rel="stylesheet" href="<%= config.root %>css/viewer.min.css" />
-  <!-- viewer end -->
-  <% } %>
+    <% if (config.scroll) { %>
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    <% } %>
 
-  <% if (config.search) { %>
-  <!-- Search start -->
-  <link rel="stylesheet" href="<%= config.root %>css/search.css" />
-  <!-- Search end -->
-  <% } %>
+    <% if (config.viewer) { %>
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    <% } %>
 
-  <% if (config.themecolor) { %>
-  <!-- ThemeColor start -->
-  <link rel="stylesheet" href="<%= config.root %>css/themecolor.css" />
-  <!-- ThemeColor end -->
-  <% } %>
+    <% if (config.search) { %>
+      <!-- Search start -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/search.css"/>
+      <!-- Search end -->
+    <% } %>
 
-  <% if(config['gitment']){ %>
-  <!-- gitment start -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css" />
-  <!-- gitment end -->
-  <% } %>
+    <% if (config.themecolor && config['themecolor']['enable']) { %>
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    <% } %>
 
-  <% if(config['gitalk']){ %>
-  <!-- gitalk start -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
-  <link rel="stylesheet" href="<%= config.root %>css/gitalk.css" />
-  <!-- gitalk end -->
+    <% if(config['gitment']){ %>
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    <% } %>
+
+    <% if(config['gitalk']){ %>
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    <% } %>
+
+  <% } else { %>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="<%= config.root %>css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<%= config.root %>css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="<%= config.root %>css/highlight.css"/>
+    <link rel="stylesheet" href="<%= config.root %>css/widget.css"/>
+    <link rel="stylesheet" href="<%= config.root %>css/rocket.css"/>
+    <link rel="stylesheet" href="<%= config.root %>css/signature.css"/>
+    <link rel="stylesheet" href="<%= config.root %>css/catalog.css"/>
+    <link rel="stylesheet" href="<%= config.root %>css/livemylife.css"/>
+
+    <% if (config.wave) { %>
+      <!-- wave start -->
+      <link rel="stylesheet" href="<%= config.root %>css/wave.css"/>
+      <!-- wave end -->
+    <% } %>
+
+    <% if (config.top) { %>
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="<%= config.root %>css/top.css"/>
+      <!-- top end -->
+    <% } %>
+
+    <% if (config.scroll) { %>
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="<%= config.root %>css/scroll.css"/>
+      <!-- ThemeColor end -->
+    <% } %>
+
+    <% if (config.viewer) { %>
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="<%= config.root %>css/viewer.min.css"/>
+      <!-- viewer end -->
+    <% } %>
+
+    <% if (config.search) { %>
+      <!-- Search start -->
+      <link rel="stylesheet" href="<%= config.root %>css/search.css"/>
+      <!-- Search end -->
+    <% } %>
+
+    <% if (config.themecolor && config['themecolor']['enable']) { %>
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="<%= config.root %>css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    <% } %>
+
+    <% if(config['gitment']){ %>
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    <% } %>
+
+    <% if(config['gitalk']){ %>
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="<%= config.root %>css/gitalk.css"/>
+      <!-- gitalk end -->
+    <% } %>
   <% } %>
 
   <!-- Custom Fonts -->
@@ -124,7 +196,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
-    href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -134,9 +206,9 @@
   <link rel="canonical" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
   <title>
     <% if (page.title) { %>
-    <%= page.title + ' - ' + config.SEOTitle %>
+      <%= page.title + ' - ' + config.SEOTitle %>
     <% } else{%>
-    <%= config.SEOTitle %>
+      <%= config.SEOTitle %>
     <% } %>
   </title>
 </head>

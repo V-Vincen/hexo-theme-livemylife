@@ -1,3 +1,10 @@
+.body--light {
+  --rocket-background-url: url(images/beside_up.png) no-repeat 50% 0;
+}
+.body--dark {
+  --rocket-background-url: url(images/beside_up_white.png) no-repeat 50% 0;
+}
+
 #rocket
   position: fixed;
   right: 50px;
@@ -6,7 +13,7 @@
   visibility: hidden;
   width: 44px;
   height: 45px;
-  background: url(images/beside_up.png) no-repeat 50% 0;
+  background: var(--rocket-background-url);
   opacity: 0;
   -webkit-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -moz-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);

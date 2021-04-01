@@ -1,7 +1,6 @@
 ---
 layout: page
 ---
-
 <!-- Main Content -->
 <div class="container">
   <div class="row">
@@ -11,16 +10,15 @@ layout: page
       <%
         var years = {};
         site.posts.sort('date').reverse().forEach(function(post){
-        var year = post.date.year()
-        if(years[year]===undefined){
-          years[year] = [];
-        }
+          var year = post.date.year()
+          if(years[year]===undefined){
+            years[year] = [];
+          }
           years[year].push(post);
         });
       %>
 
       <!-- 归档列表 -->
-
       <% Object.keys(years).reverse().forEach(function(year){  %>
       <div class="one-tag-list">
         <span class="fa fa-calendar-times-o listing-seperator" id="<%= year %>">
@@ -28,26 +26,22 @@ layout: page
         </span>
         <ul>
           <% years[year].map(function(post){  %>
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
           <li>
             <%= post.date.format('MM-DD') %>
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="<%- config.root %><%- post.path %>" style="color: #0085a1">
               <span>
                 <%- post.title || "Untitled" %>
+                <% if(post.lang !== 'en'){ %>
+                -- <%- post.lang %>
+                <% } %>
               </span>
             </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           <% }) %>
         </ul>
       </div>
       <% }) %>
-
-
     </div>
   </div>
 </div>

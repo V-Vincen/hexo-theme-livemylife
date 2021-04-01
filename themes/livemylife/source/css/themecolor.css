@@ -1,6 +1,6 @@
 :root {}
 
-.body--home {
+.body--light {
   /* Common color */
   --common-color: #0085a1;
   /* body */
@@ -58,6 +58,8 @@
   --toggle-border-color: #0085a1;
   --toggle-color: #1f1f1f;
   --toggle-hover: rgba(0, 0, 0, .1);
+  --webkit-scrollbar-track-color: rgb(34, 38, 49);
+  --webkit-scrollbar-thumb-color: rgba(122, 125, 131, 0.5);
 }
 
 .body--dark {
@@ -126,6 +128,8 @@
   --toggle-border-color: #e01258;
   --toggle-color: #fff;
   --toggle-hover: rgba(255, 255, 255, .1);
+  --webkit-scrollbar-track-color: white;
+  --webkit-scrollbar-thumb-color: rgba(157, 165, 183, 0.4);
 }
 
 /* ================================================ Common Menu Start ======================================================= */
@@ -384,8 +388,16 @@ hr {
   background-color: var(--viewer-background-color);
 }
 
+::-webkit-scrollbar-track {
+  background: var(--webkit-scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--webkit-scrollbar-thumb-color);
+}
+
 /* ================================================ Common Menu End ======================================================= */
-/* ================================================ Tags Menu End ======================================================= */
+/* ================================================ Tags Menu Start ======================================================= */
 .listing-seperator {
   color: var(--common-color);
 }
@@ -400,8 +412,8 @@ hr {
   color: var(--tag_cloud-color-hovor);
 }
 
-/* ================================================ Tags Menu End ======================================================= */
-/* ================================================ Archive Menu Start ======================================================= */
+/* ================================================ Tags Menu End ========================================================== */
+/* ================================================ Archive Menu Start ===================================================== */
 .one-tag-list>ul>li {
   color: var(--post-title-subtitle-color);
 }
@@ -411,8 +423,8 @@ hr {
 }
 
 /* ================================================ Archive Menu End ======================================================= */
-/* ==================================================== Post Start =================================================== */
-.body--home {
+/* ==================================================== Post Start ========================================================= */
+.body--light {
   --color-default: #404040;
   --blockquote-color: gray;
   --post-container-a-color: #337ab7;
@@ -456,6 +468,15 @@ hr {
   --search-result-p-color: #5d686f;
   --search-keyword-color: #c00;
   --search-btn-close-color: #5d738d;
+  --post-container-highlight-color: #c5c8c6;
+  --post-container-highlight-background: #1d1f21;
+  --post-container-highlight-pre-comment: #969896;
+  --post-container-highlight-pre: #c66;
+  --post-container-highlight-pre-number: #de935f;
+  --post-container-highlight-pre-ruby: #b5bd68;
+  --post-container-highlight-pre-title: #8abeb7;
+  --post-container-highlight-pre-function: #81a2be;
+  --post-container-highlight-pre-keyword: #b294bb;
 }
 
 .body--dark {
@@ -502,6 +523,15 @@ hr {
   --search-result-p-color: #bfbfbf;
   --search-keyword-color: #e91e63;
   --search-btn-close-color: rgba(255, 255, 255, 0.8);
+  --post-container-highlight-color: #4d4d4c;
+  --post-container-highlight-background: #f6f9fc;
+  --post-container-highlight-pre-comment: #8e908c;
+  --post-container-highlight-pre: #c82829;
+  --post-container-highlight-pre-number: #f5871f;
+  --post-container-highlight-pre-ruby: #718c00;
+  --post-container-highlight-pre-title: #3e999f;
+  --post-container-highlight-pre-function: #4271ae;
+  --post-container-highlight-pre-keyword: #8959a8;
 }
 
 blockquote {
@@ -766,6 +796,90 @@ textarea.gt-header-textarea::placeholder {
 }
 
 /* ==================================================== Post End =================================================== */
+/* ==================================================== highlight Start =================================================== */
+.post-container pre,
+.post-container .highlight {
+  color: var(--post-container-highlight-color);
+  background: var(--post-container-highlight-background);
+}
+
+.post-container pre code {
+  color: var(--post-container-highlight-color);
+}
+
+.post-container .highlight figcaption {
+  color: var(--post-container-highlight-color);
+}
+
+.post-container .highlight figcaption a {
+  color: var(--post-container-highlight-color);
+}
+
+.post-container pre .comment {
+  color: var(--post-container-highlight-pre-comment);
+}
+
+.post-container pre .variable,
+.post-container pre .attribute,
+.post-container pre .tag,
+.post-container pre .regexp,
+.post-container pre .ruby .constant,
+.post-container pre .xml .tag .title,
+.post-container pre .xml .pi,
+.post-container pre .xml .doctype,
+.post-container pre .html .doctype,
+.post-container pre .css .id,
+.post-container pre .css .class,
+.post-container pre .css .pseudo {
+  color: var(--post-container-highlight-pre);
+}
+
+.post-container pre .number,
+.post-container pre .preprocessor,
+.post-container pre .built_in,
+.post-container pre .literal,
+.post-container pre .params,
+.post-container pre .constant,
+.post-container pre .command {
+  color: var(--post-container-highlight-pre-number);
+}
+
+.post-container pre .ruby .class .title,
+.post-container pre .css .rules .attribute,
+.post-container pre .string,
+.post-container pre .value,
+.post-container pre .inheritance,
+.post-container pre .header,
+.post-container pre .ruby .symbol,
+.post-container pre .xml .cdata,
+.post-container pre .special,
+.post-container pre .number,
+.post-container pre .formula {
+  color: var(--post-container-highlight-pre-ruby);
+}
+
+.post-container pre .title,
+.post-container pre .css .hexcolor {
+  color: var(--post-container-highlight-pre-title);
+}
+
+.post-container pre .function,
+.post-container pre .python .decorator,
+.post-container pre .python .title,
+.post-container pre .ruby .function .title,
+.post-container pre .ruby .title .keyword,
+.post-container pre .perl .sub,
+.post-container pre .javascript .title,
+.post-container pre .coffeescript .title {
+  color: var(--post-container-highlight-pre-function);
+}
+
+.post-container pre .keyword,
+.post-container pre .javascript .function {
+  color: var(--post-container-highlight-pre-keyword);
+}
+
+/* ==================================================== highlight End =================================================== */
 /* ==================================================== Search Start =================================================== */
 .local-search-popup {
   background-color: var(--search-background-color);
