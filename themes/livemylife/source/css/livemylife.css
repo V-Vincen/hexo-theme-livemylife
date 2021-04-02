@@ -339,7 +339,7 @@ li.archive-list-item:hover a {
 .gitter-open-chat-button:focus, .gitter-open-chat-button:hover {
   text-decoration: none;
 }
-
+/* language CSS */
 #lang-select {
   opacity: 0;
   position: absolute;
