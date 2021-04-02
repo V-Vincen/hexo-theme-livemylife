@@ -150,7 +150,7 @@
 
   <% if (config.mouseclick) { %>
     <!-- Mouseclick -->
-    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/mouseclick.js"  content='[<%= config.mouseclick.content %>]' color='[<%= config.mouseclick.color %>]' ></script>
+    <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/mouseclick.js"  content='<%= config.mouseclick.content %>' color='<%= config.mouseclick.color %>' ></script>
     <!-- Mouseclick -->
   <% } %>
 
