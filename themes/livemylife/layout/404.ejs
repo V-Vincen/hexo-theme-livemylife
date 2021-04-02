@@ -5,10 +5,10 @@ layout: layout
   <% if(config['jsdelivr']) { %>
   .body--light {
     /* intro-header */
-    --intro-header-background-image-url-jsdelivr-404: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+    --intro-header-background-image-url-jsdelivr-404: url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["header-img"] %>');
   }
   .body--dark {
-    --intro-header-background-image-url-jsdelivr-404: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= page["header-img"] %>');
+    --intro-header-background-image-url-jsdelivr-404: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('<%= config.jsdelivr.jsdelivr_url + config.jsdelivr.github_username + config.root + config.jsdelivr.github_username %>.github.io<%= config.root %><%= page["header-img"] || config["header-img"] %>');
   }
   header.intro-header {
     background-image: var(--intro-header-background-image-url-jsdelivr-404);
