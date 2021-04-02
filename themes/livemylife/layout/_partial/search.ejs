@@ -115,6 +115,10 @@
             var date = data.date;
             var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
             var imgUrl = data.header_img;
+            <% if(config['jsdelivr']) { %>
+              imgUrl = '<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io' + imgUrl;
+            <% } %>
+
 
             var indexOfTitle = [];
             var indexOfContent = [];
