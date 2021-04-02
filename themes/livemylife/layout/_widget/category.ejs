@@ -4,7 +4,7 @@
 <div class="widget">
   <ul>
     <% site.categories.map(function(category){ %>
-    <a href="<%= config.root %><%= page.lang %>/categories/#<%= category.name %>">
+    <a href="<%= config.root %>categories/#<%= category.name %>">
       <li><%= category.name %></li>
     </a>
     <% }) %>
