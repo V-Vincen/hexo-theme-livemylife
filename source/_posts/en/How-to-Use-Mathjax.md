@@ -44,23 +44,23 @@ npm install hexo-renderer-mathjax --save
 
 如果小伙伴你用的是博主本人写的 `hexo-theme-livemylife` 主题的话，那么上述步骤，博主本人已经帮你完成了。那接下来让我们一起看几个渲染后的 mathjax 案例：
 
-*Example1: *
+*Example1:*
 ```
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 ```
-*Preview: *
+*Preview:*
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-*Example2: *
+*Example2:*
 ```
 $$f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2$$
 ```
-*Preview: *
+*Preview:*
 $$f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2$$
 
-*Example4: *
+*Example4:*
 ```
 $$
 \begin{bmatrix} 1&x&x^2\\ 1&y&y^2\\ 1&z&z^2 \end{bmatrix}
@@ -70,7 +70,7 @@ $$
 vmatrix ||、Bmatrix{}、pmatrix()
 $$
 ```
-*Preview: *
+*Preview:*
 $$
 \begin{bmatrix} 1&x&x^2\\ 1&y&y^2\\ 1&z&z^2 \end{bmatrix}
 \\
@@ -79,7 +79,7 @@ $$
 vmatrix ||、Bmatrix{}、pmatrix()
 $$
 
-*Example5: *
+*Example5:*
 ```
 $$
 f(x)=
@@ -89,7 +89,7 @@ f(x)=
 \end{cases}
 $$
 ```
-*Preview: *
+*Preview:*
 $$
 f(x)=
 \begin{cases}
@@ -98,11 +98,11 @@ f(x)=
 \end{cases}
 $$
 
-*Example6: *
+*Example6:*
 ```
 $$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
 ```
-*Preview: *
+*Preview:*
 $$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
 
 更多用法可参考 mathjax 官网：https://www.mathjax.org/
