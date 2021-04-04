@@ -31,9 +31,9 @@ permalink_defaults:
 ## Docs: https://www.jsdelivr.com/?docs=gh
 ## If Github Pages deploy，you can ues jsdelivr settings
 #
-# jsdelivr:
-#   jsdelivr_url: https://cdn.jsdelivr.net/gh/
-#   github_username: V-Vincen
+jsdelivr:
+  jsdelivr_url: https://cdn.jsdelivr.net/gh/
+  github_username: V-Vincen
 
 
 # Custom Setting Start
@@ -264,13 +264,6 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-
-
-# Mathjax config
-# https://github.com/phoenixcw/hexo-renderer-mathjax
-math:
-  enable: true
-  engine: mathjax
 
 
 # Build Settings

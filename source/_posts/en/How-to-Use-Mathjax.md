@@ -5,7 +5,6 @@ lang: en
 date: 2021-04-03 17:34:41
 subtitle: Beautiful and accessible math in all browsers...
 header-img: /img/header_img/lml_bg.jpg
-mathjax: true
 tags:
 - Hexo-Theme-LiveMyLife
 categories:
@@ -43,33 +42,7 @@ npm install hexo-renderer-mathjax --save
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 ```
 
-## 主题配置 mathjax
-打开主题的 `_config.yml` 文件，找到 math 字段。
-```yml
-math:
-  enable: true
-  engine: mathjax
-```
-
-## 在文章中开启 mathjax 标签
-渲染器只会渲染文章中有标签 `mathjax: true` 的文章。例：
-```
----
-title: How to Use Mathjax
-catalog: true
-lang: en
-date: 2021-04-03 17:34:41
-subtitle: Beautiful and accessible math in all browsers...
-header-img: /img/header_img/lml_bg.jpg
-mathjax: true // 开启后才会渲染数学公式
-tags:
-- Hexo-Theme-LiveMyLife
-categories:
-- Hexo-Theme-LiveMyLife
----
-```
-
-如果小伙伴你用的是博主本人写的 `hexo-theme-livemylife` 主题的话，那么第一步和第二步，博主本人已经帮你完成了。你只需要做第三步的操作，也就是在你想要使用 mathjax 的文章中，加上 `mathjax: true` 标签就可以了。那接下来让我们一起看几个渲染后的 mathjax 案例：
+如果小伙伴你用的是博主本人写的 `hexo-theme-livemylife` 主题的话，那么上述步骤，博主本人已经帮你完成了。那接下来让我们一起看几个渲染后的 mathjax 案例：
 
 *Example1: *
 ```

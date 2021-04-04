@@ -331,6 +331,8 @@ markdown:
     typographer: true
     quotes: '“”‘’'
 ```
+### Install Mathjax
+To install Mathjax, please click [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/) for a detailed tutorial.
 
 ### Anchorjs Settings
 And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
