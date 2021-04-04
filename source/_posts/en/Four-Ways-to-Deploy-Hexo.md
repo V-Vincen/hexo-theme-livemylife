@@ -5,7 +5,6 @@ date: 2020-07-14 19:35:11
 subtitle: How to deploy hexo...
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- Hexo
 - Hexo-Theme-LiveMyLife
 categories:
 - Hexo-Theme-LiveMyLife

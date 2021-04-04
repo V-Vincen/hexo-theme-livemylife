@@ -5,7 +5,6 @@ date: 2020-07-21 17:31:49
 subtitle: How to use analytics and sitemap...
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- Hexo
 - Hexo-Theme-LiveMyLife
 categories:
 - Hexo-Theme-LiveMyLife

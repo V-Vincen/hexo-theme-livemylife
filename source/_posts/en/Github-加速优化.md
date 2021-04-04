@@ -5,7 +5,6 @@ date: 2020-07-15 19:41:43
 subtitle: What is the DNS and CDN...
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- Hexo
 - Hexo-Theme-LiveMyLife
 categories:
 - Hexo-Theme-LiveMyLife

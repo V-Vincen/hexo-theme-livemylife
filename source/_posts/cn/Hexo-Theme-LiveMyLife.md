@@ -6,7 +6,6 @@ subtitle: A succinct hexo theme...
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- Hexo
 - Hexo-Theme-LiveMyLife
 categories:
 - Hexo-Theme-LiveMyLife

@@ -2,26 +2,15 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      <% if( page.lang === 'en' ){ %>
-      English
-      <% } else if( page.lang === 'cn' ){ %>
-      简体中文
-      <% } else if( page.lang === 'tw' ){ %>
-      正體中文
-      <% } %>
+      <%= __('Lang') %>
     </span>
     <select id="lang-select" data-canonical="<%=  page.path %>">
-      <% config.language.filter(l => l !== 'default').forEach(function(l){ %>
-      <option value="<%= l %>" <% if(l === page.lang ){ %> selected <% } %>>
-        <% if(l === 'en' ){ %>
-        English
-        <% } else if(l === 'cn' ){ %>
-        简体中文
-        <% } else if(l === 'tw' ){ %>
-        正體中文
-        <% } %>
+      <% var options = config.langselect.options; %>
+      <% Object.keys(options).forEach(key => { %>
+      <option value="<%= key %>" <% if(key === page.lang ){ %> selected <% } %>>
+        <%= options[key] %>
       </option>
-      <%  }) %>
+      <% }) %>
     </select>
   </a>
 </li>

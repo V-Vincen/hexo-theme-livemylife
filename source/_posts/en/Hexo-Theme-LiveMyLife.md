@@ -6,7 +6,6 @@ subtitle: A succinct hexo theme...
 sticky: 999
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- Hexo
 - Hexo-Theme-LiveMyLife
 categories:
 - Hexo-Theme-LiveMyLife
@@ -97,8 +96,43 @@ Replace the following information with your own.
 title: Live My Life
 subtitle: 淡而无味也是一种味道
 author: Mr.Vincent
-language: zh-CN
 timezone:
+```
+
+### Internationalization (i18n)
+You can use internationalization to present your site in different languages. -> Docs：[How to Use Internationalization（i18n）]()
+```yml
+# Internationalization (i18n) Setting
+language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
+  - en
+  - cn
+
+langselect:
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  options: # langselect button display options
+    en: English
+    cn: 简体中文
+    # tw: 正體中文
+
+i18n_dir: :lang  
+permalink: :lang/:title/ 
+new_post_name: :lang/:title.md
+
+# hexo-generator-i18n config
+## Docs: https://github.com/xcatliu/hexo-generator-index-i18n
+index_generator:
+  per_page: 10
+  pagination_dir: page
+  path: ''
+  order_by: -date
+
+archive_generator:
+  enabled: false
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
 ```
 
 ### CDN Settings

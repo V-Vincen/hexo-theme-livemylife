@@ -142,7 +142,7 @@
     <!-- Scroll end -->
   <% } %>
 
-  <% if (config.langselect) { %>
+  <% if (config.langselect && config.langselect.enable) { %>
     <!-- LangSelect start -->
     <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/langselect.js"></script>
     <!-- LangSelect end -->
@@ -188,7 +188,7 @@
     <!-- Scroll end -->
   <% } %>
 
-  <% if (config.langselect) { %>
+  <% if (config.langselect && config.langselect.enable) { %>
     <!-- LangSelect start -->
     <script type="text/javascript" src="<%- config.root %>js/langselect.js"></script>
     <!-- LangSelect end -->
