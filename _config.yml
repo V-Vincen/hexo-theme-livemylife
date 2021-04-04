@@ -6,15 +6,25 @@
 title: Your Title
 subtitle: This is hexo theme
 author: Your Name
-language: en
 timezone:
+
+# Internationalization (i18n) Setting
+language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
+  - en
+  - cn
+langselect:
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  options: # langselect button display options
+    en: English
+    cn: 简体中文
+    # tw: 正體中文
 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :lang/:title/
 permalink_defaults:
 
 # CDN Setting
@@ -118,6 +128,8 @@ gitalk:
   createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token  # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'.You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
+
 
 ## Gitment Settings
 ## Doc:https://github.com/imsun/gitment
@@ -170,11 +182,16 @@ skip_render:
 
 
 # Writing
-new_post_name: :title.md    # File name of new posts
+new_post_name: :lang/:title.md    # File name of new posts
 default_layout: post
 auto_spacing: true
 titlecase: false    # Transform title into titlecase
-external_link: true   # Open external links in new tab
+# New option
+# https://hexo.io/docs/configuration.html#Writing
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -185,6 +202,13 @@ highlight:
   line_number: true
   auto_detect: true
   tab_replace:
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 
 # Category & Tag
@@ -201,6 +225,9 @@ home_posts_tag: true    # show posts tags
 ##
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+# New option
+# https://hexo.io/docs/configuration#Date-Time-format
+updated_option: date
 
 
 # Pagination
@@ -209,11 +236,21 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: archives
 
+# hexo-generator-i18n config
+## Docs: https://github.com/xcatliu/hexo-generator-index-i18n
+index_generator:
+  per_page: 10
+  pagination_dir: page
+  path: ''
+  order_by: -date
+
 archive_generator:
+  enabled: false
   per_page: 10
   yearly: true
   monthly: true
   daily: false
+  order_by: -date
 
 
 # Markdown-it config
@@ -227,6 +264,13 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
+
+
+# Mathjax config
+# https://github.com/phoenixcw/hexo-renderer-mathjax
+math:
+  enable: true
+  engine: mathjax
 
 
 # Build Settings
@@ -244,6 +288,12 @@ top: true
 wordcount: true
 
 
+# Busuanzi Settings
+## Dependencies: https://busuanzi.ibruce.info/
+## Docs: https://ibruce.info/
+busuanzi: true
+
+
 # top scroll progress
 scroll: true
 
@@ -251,7 +301,7 @@ scroll: true
 # Tip
 tip:
   enable: true
-  copyright: If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+  # copyright: If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
 
 
 # Social Share Post
@@ -268,7 +318,42 @@ viewer: true
 
 
 # ThemeColor config
-themecolor: true
+themecolor:
+  enable: true
+  mode: dark # themecolor mode light or dark, default light
+
+
+# Mouseclick config
+mouseclick:
+  enable: true
+  content:
+    - The first step is as good as half over...
+    - Laugh and grow fat...
+    - Man proposes God disposes...
+    - When all else is lost the future still remains...
+    - Wasting time is robbing oneself...
+    - Sharp tools make good work...
+    - Cease to struggle and you cease to live...
+    - A friend in need is a friend indeed...
+    - Faith can move mountains...
+  color:
+    - '#9933CC'
+    - '#339933'
+    - '#66CCCC'
+    - '#FF99CC'
+    - '#CCCCFF'
+    - '#6666CC'
+    - '#663399'
+    - '#66CC99'
+    - '#FF0033'
+
+
+# Ribbon config
+ribbonDynamic: true
+
+
+# Line config
+bglinecanvas: false  # The special effects will take up a lot of cpu resorces, please open it carefully.
 
 
 # Search Setting

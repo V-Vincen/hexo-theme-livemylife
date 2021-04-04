@@ -139,7 +139,7 @@ categories:
     ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
     url: https://v-vincen.life    # Note: don't forget to modify the CNAME file to your url
     root: /
-    permalink: :year/:month/:day/:title/
+    permalink: :lang/:title/
     permalink_defaults:
     ```
     
@@ -147,7 +147,6 @@ categories:
     ## Baidusitemap
     baidusitemap:
         path: baidusitemap.xml
-    
     baidu_push: true
     ```
 
@@ -186,7 +185,7 @@ categories:
     ## Baidusitemap
     baidusitemap:
         path: baidusitemap.xml
-        baidu_push: true
+    baidu_push: true
     ```
 
 
