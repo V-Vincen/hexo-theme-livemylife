@@ -15,7 +15,7 @@ Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
 ## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
 
 
-![LiveMyLife Desktop](/source/_posts/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
+![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
 ## Quick Start
 
@@ -173,7 +173,7 @@ wave: true
 ```
 *Example:*
 
-![wave](/source/_posts/Hexo-Theme-LiveMyLife/wave.png)
+![wave](/source/_posts/en/Hexo-Theme-LiveMyLife/wave.png)
 
 
 ### SNS Settings
@@ -307,7 +307,7 @@ home_posts_tag: true
 ```
 *Example:*
 
-![home_posts_tag-true](/source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
+![home_posts_tag-true](/source/_posts/en/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
 
 
 ### Markdown render
@@ -356,7 +356,7 @@ Hexo-theme-livemylife has added the article top function, just add `sticky: numb
 
 *Example:*
 
-![top](/source/_posts/Hexo-Theme-LiveMyLife/top.png)
+![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
 
 ### WordCount Settings
 A Word Count Plugin for Hexo. See [WordCount](https://github.com/willin/hexo-wordcount) for detailed configuration method.
@@ -407,10 +407,10 @@ Hexo-Theme-LiveMyLife temporarily supports two themes color.
 themecolor: true
 ```
 *Light theme preview:*
-![light theme](/source/_posts/Hexo-Theme-LiveMyLife/light.png)
+![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
 
 *Dark theme preview:*
-![dark theme](/source/_posts/Hexo-Theme-LiveMyLife/dark.png)
+![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
 
 
 ### Mouseclick Config
@@ -441,7 +441,7 @@ mouseclick:
 ```
 
 *Mouseclick preview：*
-![mouseclick](/source/_posts/Hexo-Theme-LiveMyLife/mouseclick.png)
+![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
 
 ### Ribbon Config
@@ -449,7 +449,7 @@ mouseclick:
 ribbonDynamic: true
 ```
 *Ribbon preview：*
-![ribbon](/source/_posts/Hexo-Theme-LiveMyLife/ribbon.png)
+![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
 
 ### BgLineCanvas Config
@@ -457,7 +457,7 @@ ribbonDynamic: true
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
 *BgLineCanvas preview：*
-![bglinecanvas](/source/_posts/Hexo-Theme-LiveMyLife/bglinecanvas.png)
+![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 
 ### Search Settings
