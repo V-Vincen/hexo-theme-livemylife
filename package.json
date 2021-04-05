@@ -29,6 +29,7 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "hexo-wordcount": "^6.0.1",
+    "highlight.js": "^10.7.0",
     "leancloud-storage": "^4.10.1"
   }
 }

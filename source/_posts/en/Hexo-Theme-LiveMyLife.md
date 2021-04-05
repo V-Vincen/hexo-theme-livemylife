@@ -331,6 +331,7 @@ markdown:
     typographer: true
     quotes: '“”‘’'
 ```
+
 ### Install Mathjax
 To install Mathjax, please click [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/) for a detailed tutorial.
 
@@ -414,10 +415,10 @@ themecolor:
   enable: true
   mode: dark # themecolor mode light or dark, default light
 ```
-*Light theme preview：*
+*Light theme preview:*
 ![light theme](light.png)
 
-*Dark theme preview：*
+*Dark theme preview:*
 ![dark theme](dark.png)
 
 

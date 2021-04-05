@@ -86,12 +86,49 @@ Replace the following information with your own.
 title: Live My Life
 subtitle: 淡而无味也是一种味道
 author: Mr.Vincent
-language: zh-CN
 timezone:
 ```
 
+### Internationalization (i18n)
+You can use internationalization to present your site in different languages. -> Docs：[How to Use Internationalization（i18n）](https://v-vincen.github.io/en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/)
+```yml
+# Internationalization (i18n) Setting
+language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
+  - en
+  - cn
+
+langselect:
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  options: # langselect button display options
+    en: English
+    cn: 简体中文
+    # tw: 正體中文
+
+i18n_dir: :lang  
+permalink: :lang/:title/
+new_post_name: :lang/:title.md
+
+# hexo-generator-i18n config
+## Docs: https://github.com/xcatliu/hexo-generator-index-i18n
+index_generator:
+  per_page: 10
+  pagination_dir: page
+  path: ''
+  order_by: -date
+
+archive_generator:
+  enabled: false
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
+```
+
+
+
 ### CDN Settings
-JsDelivr is A free CDN for Open Source fast、reliable and automated. If Github Pages deploy，you can config CDN settings. The images of the Hexo-theme-livemylife has added JsDelivr CDN Setting. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
+JsDelivr is A free CDN for Open Source fast、reliable and automated. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
 ```yml
 # CDN Setting
 # Docs: https://www.jsdelivr.com/?docs=gh
@@ -101,6 +138,8 @@ jsdelivr:
   jsdelivr_url: https://cdn.jsdelivr.net/gh/
   github_username: V-Vincen
 ```
+**Note:** The theme of Hexo-theme-livemylife has a large number of css、js and images, in order to improve access speed, the theme for all of the resource files are made JsDelivr CDN. But only for Github Pages deployment. -> Docs：[How to apply JsDelivr CDN in Hexo-theme-livemylife Theme](https://v-vincen.github.io/en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/)
+
 
 ### Site Settings
 Put customized pictures in img directory.
@@ -132,7 +171,7 @@ signature-img: img/signature/<your-signature>
 # Wave settings
 wave: true
 ```
-Example:
+*Example:*
 
 ![wave](/source/_posts/Hexo-Theme-LiveMyLife/wave.png)
 
@@ -206,7 +245,7 @@ gitalk:
   createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
-  proxy:                          # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token                    # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
 ```
 
 #### Gitment
@@ -233,7 +272,7 @@ disqus_username: your-disqus-ID
 
 
 ### Analytics Settings
-How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/2020/07/21/Analytics-and-Sitemap-Settings/)
+How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
 ```yml
 # Analytics settings
 # Google Analytics
@@ -244,7 +283,7 @@ ba_track_id: ba_track_id
 ```
 
 ### Sitemap Settings
-How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/2020/07/21/Analytics-and-Sitemap-Settings/)
+How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
 ```yml
 # Google sitemap
 sitemap:
@@ -266,7 +305,7 @@ You can decide to show post tags or not.
 ```yml
 home_posts_tag: true
 ```
-Example:
+*Example:*
 
 ![home_posts_tag-true](/source/_posts/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
 
@@ -285,6 +324,9 @@ markdown:
     typographer: true
     quotes: '“”‘’'
 ```
+
+### Install Mathjax
+To install Mathjax, please click [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/) for a detailed tutorial.
 
 ### Anchorjs Settings
 And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
@@ -312,7 +354,7 @@ top: true
 ```
 Hexo-theme-livemylife has added the article top function, just add `top: number` configuration to your markdown notes, articles are sorted by this number.
 
-Example:
+*Example:*
 
 ![top](/source/_posts/Hexo-Theme-LiveMyLife/top.png)
 
@@ -343,7 +385,7 @@ scroll: true
 ```yml
 tip:
   enable: true
-  copyright: Say what you think...
+  copyright: Say what you think... # If the copyright is blank, the default value will be used.
 ```
 
 ### Social Share Post
@@ -364,11 +406,58 @@ Hexo-Theme-LiveMyLife temporarily supports two themes color.
 ```yml
 themecolor: true
 ```
-Light theme preview：
+*Light theme preview:*
 ![light theme](/source/_posts/Hexo-Theme-LiveMyLife/light.png)
 
-Dark theme preview：
+*Dark theme preview:*
 ![dark theme](/source/_posts/Hexo-Theme-LiveMyLife/dark.png)
+
+
+### Mouseclick Config
+```yml
+# Mouseclick config
+mouseclick:
+  enable: true
+  content:
+    - The first step is as good as half over...
+    - Laugh and grow fat...
+    - Man proposes God disposes...
+    - When all else is lost the future still remains...
+    - Wasting time is robbing oneself...
+    - Sharp tools make good work...
+    - Cease to struggle and you cease to live...
+    - A friend in need is a friend indeed...
+    - Faith can move mountains...
+  color:
+    - '#9933CC'
+    - '#339933'
+    - '#66CCCC'
+    - '#FF99CC'
+    - '#CCCCFF'
+    - '#6666CC'
+    - '#663399'
+    - '#66CC99'
+    - '#FF0033'
+```
+
+*Mouseclick preview：*
+![mouseclick](/source/_posts/Hexo-Theme-LiveMyLife/mouseclick.png)
+
+
+### Ribbon Config
+```yml
+ribbonDynamic: true
+```
+*Ribbon preview：*
+![ribbon](/source/_posts/Hexo-Theme-LiveMyLife/ribbon.png)
+
+
+### BgLineCanvas Config
+```yml
+bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
+```
+*BgLineCanvas preview：*
+![bglinecanvas](/source/_posts/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 
 ### Search Settings
