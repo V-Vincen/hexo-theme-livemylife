@@ -352,7 +352,7 @@ async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 # article top
 top: true
 ```
-Hexo-theme-livemylife has added the article top function, just add `top: number` configuration to your markdown notes, articles are sorted by this number.
+Hexo-theme-livemylife has added the article top function, just add `sticky: number` configuration to your markdown notes, articles are sorted by this number.
 
 *Example:*
 
