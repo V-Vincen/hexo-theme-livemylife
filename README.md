@@ -125,6 +125,13 @@ archive_generator:
   order_by: -date
 ```
 
+*English preview:*
+
+![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
+
+*Chinese preview:*
+
+![cn](/source/_posts/en/Hexo-Theme-LiveMyLife/langcn.png)
 
 
 ### CDN Settings
@@ -407,9 +414,11 @@ Hexo-Theme-LiveMyLife temporarily supports two themes color.
 themecolor: true
 ```
 *Light theme preview:*
+
 ![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
 
 *Dark theme preview:*
+
 ![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
 
 
@@ -441,6 +450,7 @@ mouseclick:
 ```
 
 *Mouseclick preview：*
+
 ![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
 
@@ -449,6 +459,7 @@ mouseclick:
 ribbonDynamic: true
 ```
 *Ribbon preview：*
+
 ![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
 
@@ -457,6 +468,7 @@ ribbonDynamic: true
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
 *BgLineCanvas preview：*
+
 ![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 

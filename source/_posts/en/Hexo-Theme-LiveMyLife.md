@@ -135,6 +135,15 @@ archive_generator:
   order_by: -date
 ```
 
+*English preview:*
+
+![en](langen.png)
+
+*Chinese preview:*
+
+![cn](langcn.png)
+
+
 ### CDN Settings
 JsDelivr is A free CDN for Open Source fast、reliable and automated. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
 ```yml
