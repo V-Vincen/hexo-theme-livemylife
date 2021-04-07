@@ -57,7 +57,7 @@ $ hexo init blog
 ## 主题使用
 ### 初始化
 ```shell
-cd bolg
+cd blog
 rm -rf _config.yml package.json scaffolds source themes yarn.lock #just keep node_modules
 git clone https://github.com/V-Vincen/hexo-theme-livemylife.git
 mv hexo-theme-livemylife/* ./
@@ -277,7 +277,7 @@ gitment:
 ```
 
 #### Disqus
-如果你想要使用 [Disqus](https://disqus.com/) 评论系统，则必须具有翻墙的能力。
+如果你想要使用 [Disqus](https://disqus.com/) 评论系统，则必须具有代理。
 ```yml
 # Disqus settings
 disqus_username: your-disqus-ID
