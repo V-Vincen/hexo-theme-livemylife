@@ -9,6 +9,7 @@
 
 ## 仓库
 Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
+
 Gitee 仓库地址：https://gitee.com/V_Vincen/hexo-theme-livemylife
 
 ### [预览 LiveMyLife 博客 ➾](https://v-vincen.github.io/)
