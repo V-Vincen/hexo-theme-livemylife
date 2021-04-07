@@ -14,7 +14,8 @@ _config_livemylife.yml
 !themes/livemylife/_config.yml
 
 source/_posts/en/**
-!source/_posts/en/Hexo-Theme-LiveMyLife/**
+!source/_posts/en/Hexo-Theme-LiveMyLife
+!source/_posts/en/Hexo-Theme-LiveMyLife/*.png
 !source/_posts/en/Hexo-Theme-LiveMyLife.md
 
 source/img/**
