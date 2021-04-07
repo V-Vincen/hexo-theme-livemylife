@@ -9,11 +9,3 @@ public/*
 _config_.yml
 .DS_Store
 .idea/*
-
-_config_livemylife.yml
-!themes/livemylife/_config.yml
-
-
-
-.gitlab-ci.yml
-db.json
