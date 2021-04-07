@@ -277,7 +277,7 @@ gitment:
 ```
 
 #### Disqus
-如果你想要使用 [Disqus](https://disqus.com/) 评论系统，则必须具有代理。
+如果你想要使用 [Disqus](https://disqus.com/) 评论系统，则必须有代理。
 ```yml
 # Disqus settings
 disqus_username: your-disqus-ID
