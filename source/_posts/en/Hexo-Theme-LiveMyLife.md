@@ -11,24 +11,20 @@ categories:
 - Hexo-Theme-LiveMyLife
 ---
 
-
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
 > This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
 >   
 
 ## Repo
-
 Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
-
 Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
 
-## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
+### [View LiveMyLife Blog ➾](https://v-vincen.github.io/)
 
 ![LiveMyLife Desktop](livemylife-desktop.png)
 
 ## Quick Start
-
 I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
 
 Let's begin!!!
@@ -158,7 +154,7 @@ jsdelivr:
 **Note:** The theme of Hexo-theme-livemylife has a large number of css、js and images, in order to improve access speed, the theme for all of the resource files are made JsDelivr CDN. But only for Github Pages deployment. -> Docs：[How to apply JsDelivr CDN in Hexo-theme-livemylife Theme](https://v-vincen.github.io/en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/)
 
 ### Site Settings
-Put customized pictures in img directory.
+Put customized pictures in `img` directory.
 ```yml
 # Site settings
 SEOTitle: JavaDev | 一如Java深似海
@@ -458,7 +454,7 @@ mouseclick:
     - '#FF0033'
 ```
 
-*Mouseclick preview：*
+*Mouseclick preview:*
 ![mouseclick](mouseclick.png)
 
 
@@ -466,7 +462,7 @@ mouseclick:
 ```yml
 ribbonDynamic: true
 ```
-*Ribbon preview：*
+*Ribbon preview:*
 ![ribbon](ribbon.png)
 
 
@@ -474,7 +470,7 @@ ribbonDynamic: true
 ```yml
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
-*BgLineCanvas preview：*
+*BgLineCanvas preview:*
 ![bglinecanvas](bglinecanvas.png)
 
 

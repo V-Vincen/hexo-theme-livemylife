@@ -1,20 +1,11 @@
----
-title: Hexo-Theme-LiveMyLife
-catalog: true
-date: 2020-04-17 02:34:17
-subtitle: A succinct hexo theme...
-lang: cn
-header-img: /img/header_img/lml_bg.jpg
-tags:
-- Hexo-Theme-LiveMyLife
-categories:
-- Hexo-Theme-LiveMyLife
----
+# Hexo-Theme-LiveMyLife
 
 > 移植 [Hux Blog](https://github.com/Huxpro/huxpro.github.io) 的主题，感谢 [Huxpro](https://github.com/Huxpro) 设计了如此完美的主题。
 >
 > 由 [Vincent](https://v-vincen.github.io/) 创建的 LiveMyLife 的主题修改来源 [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech)，参考主题 [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu)，感谢 [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu)。
 >   
+
+[README](/README.md)
 
 ## 仓库
 Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
@@ -22,7 +13,7 @@ Gitee 仓库地址：https://gitee.com/V_Vincen/hexo-theme-livemylife
 
 ### [预览 LiveMyLife 博客 ➾](https://v-vincen.github.io/)
 
-![LiveMyLife Desktop](livemylife-desktop.png)
+![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
 ## 快速开始
 为了方便起见，我发布了整个项目，因此您可以按照下面的说明进行操作，然后就可以轻松自定义您自己的博客！
@@ -112,7 +103,7 @@ langselect:
     # tw: 正體中文
 
 i18n_dir: :lang  
-permalink: :lang/:title/ 
+permalink: :lang/:title/
 new_post_name: :lang/:title.md
 
 # hexo-generator-i18n config
@@ -134,11 +125,11 @@ archive_generator:
 
 *English 预览：*
 
-![en](langen.png)
+![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
 
 *Chinese 预览：*
 
-![cn](langcn.png)
+![cn](/source/_posts/en/Hexo-Theme-LiveMyLife/langcn.png)
 
 
 ### CDN 配置
@@ -186,7 +177,7 @@ wave: true
 ```
 *案例：*
 
-![wave](wave.png)
+![wave](/source/_posts/en/Hexo-Theme-LiveMyLife/wave.png)
 
 
 ### 社交网络服务设置
@@ -319,7 +310,7 @@ home_posts_tag: true
 ```
 *案例：*
 
-![home_posts_tag-true](home_posts_tag-true.png)
+![home_posts_tag-true](/source/_posts/en/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
 
 
 ### Markdown 渲染器
@@ -368,7 +359,7 @@ Hexo-theme-livemylife 主题添加了文章顶部功能，只要在您的 markdo
 
 *案例：*
 
-![top](top.png)
+![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
 
 ### 文章字数统计设置
 WordCount 是 Hexo 的文章字数统计插件. 有关详细的配置方法，请参见 [WordCount](https://github.com/willin/hexo-wordcount) 文档。
@@ -421,10 +412,10 @@ themecolor:
   mode: dark # themecolor mode light or dark, default light
 ```
 *明亮主题模式预览：*
-![light theme](light.png)
+![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
 
 *黑暗主题模式预览：*
-![dark theme](dark.png)
+![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
 
 
 ### 鼠标点击效果设置
@@ -455,7 +446,7 @@ mouseclick:
 ```
 
 *鼠标点击效果预览：*
-![mouseclick](mouseclick.png)
+![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
 
 ### 背景绸带效果设置
@@ -463,7 +454,7 @@ mouseclick:
 ribbonDynamic: true
 ```
 *背景绸带效果预览：*
-![ribbon](ribbon.png)
+![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
 
 ### 背景线画布效果设置
@@ -471,7 +462,7 @@ ribbonDynamic: true
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
 *背景线画布效果预览：*
-![bglinecanvas](bglinecanvas.png)
+![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 
 ### 搜索设置

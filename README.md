@@ -3,7 +3,9 @@
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
 > This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
+> 
 
+[中文说明](/README_CN.md)
 
 ## Repo
 
@@ -12,7 +14,7 @@ Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
 Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
 
 
-## [View Live LiveMyLife Blog →](https://v-vincen.github.io/)
+### [View LiveMyLife Blog ➾](https://v-vincen.github.io/)
 
 
 ![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)

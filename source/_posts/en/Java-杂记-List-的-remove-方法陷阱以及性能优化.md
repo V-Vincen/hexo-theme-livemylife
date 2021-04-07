@@ -3,7 +3,7 @@ title: '[Java 杂记] List 的 remove() 方法陷阱以及性能优化'
 catalog: true
 date: 2020-01-06 13:41:10
 subtitle: List 的 remove() 方法陷阱
-header-img: /img/java杂记/categories_bg5.png
+header-img: /img/header_img/categories_bg5.jpg
 tags:
 - Java 杂记
 ---
