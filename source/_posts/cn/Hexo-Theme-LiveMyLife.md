@@ -58,7 +58,7 @@ $ hexo init blog
 ### 初始化
 ```shell
 cd blog
-rm -rf _config.yml package.json scaffolds source themes yarn.lock #just keep node_modules
+rm -rf scaffolds source themes _config.landscape.yml _config.yml package.json yarn.lock #just keep node_modules
 git clone https://github.com/V-Vincen/hexo-theme-livemylife.git
 mv hexo-theme-livemylife/* ./
 rm -rf hexo-theme-livemylife
