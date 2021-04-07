@@ -12,3 +12,25 @@ _config_.yml
 
 _config_livemylife.yml
 !themes/livemylife/_config.yml
+
+source/_posts/en/**
+!source/_posts/en/Hexo-Theme-LiveMyLife
+!source/_posts/en/Hexo-Theme-LiveMyLife.md
+
+source/img/**
+!source/img/avatar/fatpeople.jpg
+!source/img/avatar/roguerabbit.jpg
+!source/img/header_img/404_bg.jpg
+!source/img/header_img/archive_bg.jpg
+!source/img/header_img/archive_bg2.jpg
+!source/img/header_img/archive_bg3.jpg
+!source/img/header_img/categories_bg.jpg
+!source/img/header_img/lml_bg.jpg
+!source/img/header_img/lml_bg8.jpg
+!source/img/header_img/newhome_bg.jpg
+!source/img/header_img/tag_bg.jpg
+!source/img/scenery/about_bg.jpg
+!source/img/scenery/about_bg2.jpg
+!source/img/scenery/about_bg4.jpg
+!source/img/scenery/treat_me_to_coffee.png
+!source/img/signature/vincent-white.png
