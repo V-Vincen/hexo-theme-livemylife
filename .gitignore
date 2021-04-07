@@ -39,3 +39,6 @@ source/img/**
 !source/img/scenery/treat_me_to_coffee.png
 !source/img/signature/
 !source/img/signature/vincent-white.png
+
+.gitlab-ci.yml
+db.json
