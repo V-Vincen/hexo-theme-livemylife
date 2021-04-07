@@ -123,7 +123,6 @@ archive_generator:
   daily: false
   order_by: -date
 ```
-
 *English 预览：*
 
 ![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
@@ -357,7 +356,6 @@ async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 top: true
 ```
 Hexo-theme-livemylife 主题添加了文章顶部功能，只要在您的 markdown 笔记中添加属性`sticky: number` 配置，文章按此数字排序。
-
 *案例：*
 
 ![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
@@ -413,9 +411,11 @@ themecolor:
   mode: dark # themecolor mode light or dark, default light
 ```
 *明亮主题模式预览：*
+
 ![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
 
 *黑暗主题模式预览：*
+
 ![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
 
 
@@ -445,8 +445,8 @@ mouseclick:
     - '#66CC99'
     - '#FF0033'
 ```
-
 *鼠标点击效果预览：*
+
 ![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
 
@@ -455,6 +455,7 @@ mouseclick:
 ribbonDynamic: true
 ```
 *背景绸带效果预览：*
+
 ![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
 
@@ -463,6 +464,7 @@ ribbonDynamic: true
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
 *背景线画布效果预览：*
+
 ![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 

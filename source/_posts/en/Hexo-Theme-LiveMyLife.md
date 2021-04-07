@@ -130,7 +130,6 @@ archive_generator:
   daily: false
   order_by: -date
 ```
-
 *English preview:*
 
 ![en](langen.png)
@@ -365,7 +364,6 @@ async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 top: true
 ```
 Hexo-theme-livemylife has added the article top function, just add `sticky: number` configuration to your markdown notes, articles are sorted by this number.
-
 *Example:*
 
 ![top](top.png)
@@ -421,9 +419,11 @@ themecolor:
   mode: dark # themecolor mode light or dark, default light
 ```
 *Light theme preview:*
+
 ![light theme](light.png)
 
 *Dark theme preview:*
+
 ![dark theme](dark.png)
 
 
@@ -453,8 +453,8 @@ mouseclick:
     - '#66CC99'
     - '#FF0033'
 ```
-
 *Mouseclick preview:*
+
 ![mouseclick](mouseclick.png)
 
 
@@ -463,6 +463,7 @@ mouseclick:
 ribbonDynamic: true
 ```
 *Ribbon preview:*
+
 ![ribbon](ribbon.png)
 
 
@@ -471,6 +472,7 @@ ribbonDynamic: true
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
 *BgLineCanvas preview:*
+
 ![bglinecanvas](bglinecanvas.png)
 
 

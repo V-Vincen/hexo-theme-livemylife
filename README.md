@@ -3,7 +3,7 @@
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
 > This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
-> 
+>
 
 [中文说明](/README_CN.md)
 
@@ -126,7 +126,6 @@ archive_generator:
   daily: false
   order_by: -date
 ```
-
 *English preview:*
 
 ![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
@@ -362,7 +361,6 @@ async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 top: true
 ```
 Hexo-theme-livemylife has added the article top function, just add `sticky: number` configuration to your markdown notes, articles are sorted by this number.
-
 *Example:*
 
 ![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
@@ -450,8 +448,7 @@ mouseclick:
     - '#66CC99'
     - '#FF0033'
 ```
-
-*Mouseclick preview：*
+*Mouseclick preview:*
 
 ![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
@@ -460,7 +457,7 @@ mouseclick:
 ```yml
 ribbonDynamic: true
 ```
-*Ribbon preview：*
+*Ribbon preview:*
 
 ![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
@@ -469,7 +466,7 @@ ribbonDynamic: true
 ```yml
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
-*BgLineCanvas preview：*
+*BgLineCanvas preview:*
 
 ![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
