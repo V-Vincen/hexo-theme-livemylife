@@ -339,6 +339,7 @@ li.archive-list-item:hover a {
 .gitter-open-chat-button:focus, .gitter-open-chat-button:hover {
   text-decoration: none;
 }
+
 /* language CSS */
 #lang-select {
   opacity: 0;
@@ -397,4 +398,28 @@ li.archive-list-item:hover a {
 /* 滚动条边角样式 */
 ::-webkit-scrollbar-corner {
   background: white;
+}
+
+#menu-switch:hover {
+  background: #f3f3f3;
+  opacity: 1;
+}
+
+#menu-switch {
+  display: block;
+  position: fixed;
+  right: 150px;
+  bottom: 20px;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #999;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.sidebar-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
