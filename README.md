@@ -21,7 +21,7 @@ Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
 
 ## Quick Start
 
-I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
+I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customize your own blog!
 
 Let's begin!!!
 
@@ -250,7 +250,7 @@ gitalk:
   clientSecret:                   # 'GitHub Application Client Secret'
   perPage: 10                     # Pagination size, with maximum 100.
   pagerDirection: last            # Comment sorting direction, available values are last and first.
-  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logged in user is belong to the admin users. You can create it manually by setting this option to true
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token                    # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
