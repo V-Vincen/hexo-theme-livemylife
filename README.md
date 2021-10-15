@@ -306,7 +306,7 @@ baidu_push: true
 
 
 ### Go to top icon Setup
-My icon is using point, you can change to your own icon at `sourcre/css/images`.
+My icon is using point, you can change to your own icon at `source/css/images`.
 
 ### Post tag
 You can decide to show post tags or not.
@@ -402,7 +402,7 @@ share: true
 ```
 
 ### Viewer Config
-Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `sourcre/js/viewer/pic-viewer.js` to change it.
+Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `source/js/viewer/pic-viewer.js` to change it.
 ```yml
 # Viewer config
 viewer: true
