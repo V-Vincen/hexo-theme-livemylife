@@ -3,7 +3,7 @@ title: '[JDK8] 10 通用 Builder 创建对象'
 catalog: true
 lang: en
 date: 2021-04-21 15:28:39
-subtitle:  
+subtitle:  你可以 new 一个对象...
 header-img: /img/header_img/categories_bg7.jpg
 tags:
 - JDK8

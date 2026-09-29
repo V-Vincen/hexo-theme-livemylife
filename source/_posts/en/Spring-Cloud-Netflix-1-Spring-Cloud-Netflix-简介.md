@@ -10,7 +10,7 @@ tags:
 
 ## 目前市场上主流的套微服务架构解决方案：
 
-- <font color=red>**Spring Boot + Spring Cloud Netflix = Java 原生云开发**</font>
+- <font color=red> **Spring Boot + Spring Cloud Netflix = Java 原生云开发** </font>
 - **Spring Boot + Dubbo + Zookeeper**
 
 ## 概述

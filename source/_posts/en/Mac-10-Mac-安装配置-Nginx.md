@@ -33,7 +33,7 @@ brew services start nginx
 ![1](1.png)
 
 ### 查看 nginx 是否启动成功
-在浏览器中访问：在浏览器中访问：[http://localhost:8080](https://v_vincen.gitee.io/404.html)，如果出现如下界面，则说明启动成功。，如果出现如下界面，则说明启动成功。
+在浏览器中访问：在浏览器中访问：[http://localhost:18080](https://v-vincen.github.io/404.html)，如果出现如下界面，则说明启动成功。，如果出现如下界面，则说明启动成功。
 
 ![2](2.png)
 

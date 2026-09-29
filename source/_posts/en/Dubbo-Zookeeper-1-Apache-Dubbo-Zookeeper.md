@@ -10,7 +10,7 @@ tags:
 
 ## 目前市场上主流的套微服务架构解决方案：
 - **Spring Boot + Spring Cloud Netflix = Java 原生云开发**
-- <font color=red>**Spring Boot + Dubbo + Zookeeper**</font>
+- <font color=red> **Spring Boot + Dubbo + Zookeeper** </font>
 
 ## 概述
 - `Apache Dubbo (incubating) |ˈdʌbəʊ|` 是一款高性能、轻量级的开源 Java RPC 框架。
