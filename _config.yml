@@ -160,11 +160,7 @@ ba_track_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 sitemap:
   path: sitemap.xml
 
-## Baidusitemap
-baidusitemap:
-    path: baidusitemap.xml
-
-baidu_push: true
+# 百度站长平台可直接提交标准 sitemap.xml，无需旧版专用生成器或自动推送脚本。
 
 # Custom Setting End
 
@@ -264,6 +260,9 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
+
+# 在浏览器端渲染文章中的 $...$ 与 \\(...\\) 数学公式。
+mathjax: true
 
 
 # Build Settings
