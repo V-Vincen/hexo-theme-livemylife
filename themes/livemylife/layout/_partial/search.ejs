@@ -57,7 +57,7 @@
     }
     // get search zip version
     $.get('<%- config.root %><%= config.search.versionPath %>?t=' + (+new Date()), function (res) {
-      if (localStorage.getItem('searchVersion') !== res) {
+      if (localStorage.getItem('searchVersion') !== res || !localStorage.getItem('searchJson')) {
         localStorage.setItem('searchVersion', res);
         initSearchJson();
       }
@@ -67,10 +67,10 @@
       initLoad(['<%- config.root %><%= config.search.zipPath %>'], {
         loadOptions: {
           success: function (obj) {
-            localStorage.setItem('searchJson', obj['<%= config.search.path %>'])
+            localStorage.setItem('searchJson', obj['<%= config.search.path %>']);
           },
           error: function (e) {
-            return console.log(e)
+            console.error('Unable to load the local search index.', e);
           }
         },
         returnOptions: {
@@ -84,11 +84,45 @@
     // search function;
     var searchFunc = function (search_id, content_id) {
       'use strict';
-      isfetched = true;
-      var datas = JSON.parse(localStorage.getItem('searchJson'));
-      // console.log(search_id)
       var input = document.getElementById(search_id);
       var resultContent = document.getElementById(content_id);
+      var storedSearchData = localStorage.getItem('searchJson');
+      if (!storedSearchData) {
+        resultContent.innerHTML = '<div id="no-result">Loading search index…</div>';
+        proceedsearch();
+        return;
+      }
+
+      var datas;
+      try {
+        datas = JSON.parse(storedSearchData);
+      } catch (error) {
+        localStorage.removeItem('searchJson');
+        resultContent.innerHTML = '<div id="no-result">Search index could not be loaded. Please try again.</div>';
+        proceedsearch();
+        return;
+      }
+      if (!Array.isArray(datas)) {
+        resultContent.innerHTML = '<div id="no-result">Search index is unavailable.</div>';
+        proceedsearch();
+        return;
+      }
+      isfetched = true;
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>'"]/g, function (character) {
+          return ({'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'})[character];
+        });
+      }
+
+      function safeUrl(value) {
+        try {
+          var url = decodeURIComponent(value || '');
+          return /^(?:https?:)?\/\//i.test(url) || /^(?:\/|\.\/|\.\.\/)/.test(url) ? url : '#';
+        } catch (error) {
+          return '#';
+        }
+      }
       var inputEventFunction = function () {
         var searchText = input.value.trim().toLowerCase();
         var keywords = searchText.split(/[\s\-]+/);
@@ -110,9 +144,9 @@
               ? data.content.trim().replace(/<[^>]+>/g, "")
               : '';
             var contentInLowerCase = content.toLowerCase();
-            var articleUrl = decodeURIComponent(data.url);
+            var articleUrl = safeUrl(data.url);
 
-            var date = data.date;
+            var date = data.date || '';
             var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
             var imgUrl = data.header_img;
             <% if(config['jsdelivr']) { %>
@@ -233,12 +267,12 @@
                 var result = '';
                 var prevEnd = slice.start;
                 slice.hits.forEach(function (hit) {
-                  result += text.substring(prevEnd, hit.position);
+                  result += escapeHtml(text.substring(prevEnd, hit.position));
                   var end = hit.position + hit.length;
-                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  result += '<b class="search-keyword">' + escapeHtml(text.substring(hit.position, end)) + '</b>';
                   prevEnd = end;
                 });
-                result += text.substring(prevEnd, slice.end);
+                result += escapeHtml(text.substring(prevEnd, slice.end));
                 return result;
               }
               var resultItem = '';
@@ -248,14 +282,14 @@
               // "...</p></a>"; }); resultItem += "</li>";
 
               if (slicesOfTitle.length != 0) {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+                resultItem += "<a target='_blank' rel='noopener noreferrer' href='" + escapeHtml(articleUrl) + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + escapeHtml(dateTime) + "</time>";
               } else {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+                resultItem += "<a target='_blank' rel='noopener noreferrer' href='" + escapeHtml(articleUrl) + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + escapeHtml(title) + "</div><time class='search-result-date'>" + escapeHtml(dateTime) + "</time>";
               }
               slicesOfContent.forEach(function (slice) {
                 resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
               });
-              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + escapeHtml(safeUrl(imgUrl)) + "' width='64' height='48' alt=''></div></a>";
 
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }

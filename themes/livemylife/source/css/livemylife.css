@@ -7,6 +7,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Do not show the browser's blue focus ring after a mouse click. Keep a
+   visible focus indicator for keyboard navigation via :focus-visible. */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;

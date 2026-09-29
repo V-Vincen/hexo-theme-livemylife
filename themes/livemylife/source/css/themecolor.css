@@ -969,6 +969,9 @@ textarea.gt-header-textarea::placeholder {
   width: 60px;
   min-width: 60px;
   height: 60px;
+  background: transparent;
+  border: 0;
+  font: inherit;
 }
 
 .material-icons {

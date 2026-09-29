@@ -21,21 +21,13 @@
             <a href="<%= config.root %>"><%= __('Home') %></a>
           </li>
 
-          <% site.pages.forEach(function(page){ %>
-          <% if(page.title){ %>
+          <% var navPages = []; %>
+          <% site.pages.forEach(function(page){ if (page.title) navPages.push(page); }); %>
+          <% ['Categories', 'Tags', 'Archives', 'About'].forEach(function(navTitle){ %>
+          <% var navPage = navPages.find(function(page){ return page.title === navTitle; }); %>
+          <% if (navPage) { %>
           <li>
-            <a href="<%= config.root %><%= page.path.replace('index.html', '') %>">
-              <% if(page.title === 'Archives'){ %>
-              <%= __('Archives') %>
-              <% }else if (page.title === 'About'){ %>
-              <%= __('About') %>
-              <% }else if (page.title === 'Categories'){ %>
-              <%= __('Categories') %>
-              <% }else if (page.title === 'Tags'){ %>
-              <%= __('Tags') %>
-              <% } %>
-              %>
-            </a>
+            <a href="<%= config.root %><%= navPage.path.replace('index.html', '') %>"><%= __(navTitle) %></a>
           </li>
           <% } %>
           <% }); %>

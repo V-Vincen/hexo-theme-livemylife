@@ -17,7 +17,7 @@
 
           <% if (config.github_username) { %>
             <li>
-              <a target="_blank" href="https://github.com/<%= config.github_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/<%= config.github_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -28,7 +28,7 @@
 
           <% if (config.twitter_username) { %>
             <li>
-              <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/<%= config.twitter_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -39,7 +39,7 @@
 
           <% if (config.instagram_username) { %>
             <li>
-              <a target="_blank" href="https://www.instagram.com/<%= config.instagram_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/<%= config.instagram_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
@@ -50,7 +50,7 @@
 
           <% if (config.facebook_username) { %>
             <li>
-              <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/<%= config.facebook_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -61,7 +61,7 @@
 
           <% if (config.linkedin_username) { %>
             <li>
-              <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -72,7 +72,7 @@
 
           <% if (config.zhihu_username) { %>
             <li>
-              <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -83,7 +83,7 @@
 
           <% if (config.weibo_username) { %>
             <li>
-              <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+              <a target="_blank" rel="noopener noreferrer" href="http://weibo.com/<%= config.weibo_username %>">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -161,7 +161,7 @@
 
   <% if (config.bglinecanvas) { %>
     <!-- Line start -->
-    <script async="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/line.js"></script>
+    <script async type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/line.js"></script>
     <!-- Line end -->
   <% } %>
 
@@ -173,9 +173,9 @@
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="<%- config.root %>js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <script async type="text/javascript" src="<%- config.root %>js/catalog.js"></script>
   <!-- totop(rocket) -->
-  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+  <script async type="text/javascript" src="<%- config.root %>js/totop.js"></script>
 
   <% if (config.busuanzi) { %>
     <!-- Busuanzi JavaScript -->
@@ -206,7 +206,7 @@
 
   <% if (config.bglinecanvas) { %>
     <!-- Line start -->
-    <script async="text/javascript" src="<%- config.root %>js/line.js"></script>
+    <script async type="text/javascript" src="<%- config.root %>js/line.js"></script>
     <!-- Line end -->
   <% } %>
 
@@ -230,8 +230,12 @@
     }
     imgUrl.forEach(item => {
       let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
+      // Only rewrite site-relative assets. External, data, and empty sources must
+      // remain untouched or they become invalid CDN URLs.
+      if (oldUrl && /^(?:\/|\.\.\/|\.\/)/.test(oldUrl)) {
+        let newUrl = (jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
     });
   </script>
   <!-- CDN: jsdelivr end -->
