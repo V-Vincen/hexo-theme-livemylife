@@ -283,6 +283,7 @@ wordcount: true
 # Busuanzi Settings
 ## Dependencies: https://busuanzi.ibruce.info/
 ## Docs: https://ibruce.info/
+##
 busuanzi: true
 
 
@@ -317,7 +318,7 @@ themecolor:
 
 # Mouseclick config
 mouseclick:
-  enable: true
+  enable: false
   content:
     - The first step is as good as half over...
     - Laugh and grow fat...

@@ -148,7 +148,7 @@
     <!-- LangSelect end -->
   <% } %>
 
-  <% if (config.mouseclick) { %>
+  <% if (config.mouseclick && config.mouseclick.enable) { %>
     <!-- Mouseclick -->
     <script type="text/javascript" src="<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io/js/mouseclick.js"  content='<%= config.mouseclick.content %>' color='<%= config.mouseclick.color %>' ></script>
     <!-- Mouseclick -->
@@ -194,7 +194,7 @@
     <!-- LangSelect end -->
   <% } %>
 
-  <% if (config.mouseclick) { %>
+  <% if (config.mouseclick && config.mouseclick.enable) { %>
     <!-- Mouseclick -->
     <script type="text/javascript" src="<%- config.root %>js/mouseclick.js" content='<%= config.mouseclick.content %>' color='<%= config.mouseclick.color %>'></script>
   <% } %>
